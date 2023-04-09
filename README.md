@@ -1,5 +1,5 @@
 # FoundInTheFjords_202304
-A narrative-based single player VR experience exploring life below water. Cleaned up version to get rid of LFS and other issues
+A narrative-based single player VR experience exploring life below water. 
 
 ## Development
 ### Getting your environment set up
@@ -10,3 +10,6 @@ A narrative-based single player VR experience exploring life below water. Cleane
 1. You're ready to go!
 
 ## Viewing
+
+## Additional Comments
+1. Cleaned up version to get rid of LFS and other issues
