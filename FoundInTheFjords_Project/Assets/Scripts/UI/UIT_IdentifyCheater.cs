@@ -47,14 +47,16 @@ public class UIT_IdentifyCheater : UITransition
 
     protected IEnumerator CorrectResponse()
     {
+        foreach (CanvasGroup panel in identifyThief.GetComponentsInChildren<CanvasGroup>())
+        {
+            panel.interactable = false;
+        }
 
-        
         yield return new WaitForSeconds(0.5f);
         //Fade Panels
         foreach (CanvasGroup panel in identifyThief.GetComponentsInChildren<CanvasGroup>())
         {
             panel.DOFade(0f, 1.5f);
-            panel.interactable = false;
             panel.blocksRaycasts = false;
         }
         //play voiceover 10
