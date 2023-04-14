@@ -49,7 +49,7 @@ public class SetMoveToObjectParameters : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!CompareTag("stunnedHerring"))
+        if (!other.CompareTag("stunnedHerring"))
         {
             move.targetTransform.position = transform.position + (transform.position - other.transform.position) * 5;
         }

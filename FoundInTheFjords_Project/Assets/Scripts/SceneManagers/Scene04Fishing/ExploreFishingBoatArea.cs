@@ -73,6 +73,7 @@ public class ExploreFishingBoatArea : MonoBehaviour
         //Set Clara Transform
         clara.SetParent(zodiac);
         clara.localPosition = new Vector3(5.5f, -1f, 5f);
+        clara.eulerAngles = new Vector3(0, 60, 0);
 
         moveToMom.distance = Vector3.Distance(moveToMom.targetTransform.position, moveToMom.transform.position);
         while (moveToMom.distance > moveToMom.minDistance)

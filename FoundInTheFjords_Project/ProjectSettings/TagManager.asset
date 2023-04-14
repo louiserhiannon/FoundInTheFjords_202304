@@ -8,6 +8,9 @@ TagManager:
   - shoal
   - stunnedHerring
   - net
+  - Snorkeler
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX

@@ -6,10 +6,11 @@ using UnityEngine.UI;
 using DG.Tweening;
 using JetBrains.Annotations;
 using UnityEngine.XR.Interaction.Toolkit;
-
+using UnityEditor.Rendering;
 
 public class JellyInteractions : MonoBehaviour
 {
+    public GameObject mom;
     public Canvas jellyCanvas;
     public CanvasGroup firstPanel;
     private AudioSource jellyAudioSource;
@@ -19,6 +20,7 @@ public class JellyInteractions : MonoBehaviour
     public MeshRenderer interactionSignifier;
     private Color originalColour;
     public MovementControls moveControls;
+    public Transform snorkeler01Target;
     public MoveToObject moveToSnorkeler;
     public MoveToObject rotateToNora;
     public AudioSource zodiacDriverAudioSource;
@@ -36,16 +38,21 @@ public class JellyInteractions : MonoBehaviour
     private float voiceover31Duration = 9.2f;
     private float voiceover32Duration = 9f;
     private float voiceover33Duration = 1.5f;
-    private float voiceover34Duration = 7.7f;
+    private float voiceover34Duration = 11.5f;
     private float voiceover35Duration = 1.3f;
     private float voiceover36Duration = 10.4f;
     private float voiceover37Duration = 1.2f;
     private float voiceover38Duration = 8.6f;
-    private float voiceover39Duration = 2.8f;
+    private float voiceover39Duration = 5.1f;
     public string coroutineName;
     public bool firstSelectionAudio = true;
     public bool firstSelectionUI = true;
     private bool coroutineStarted = false;
+    public Transform snorkeler01;
+    public Transform snorkeler02;
+    public Transform snorkeler03;
+    public float speed;
+    public MeetSnorkeler meetSnorkleler;
 
 
 
@@ -94,6 +101,9 @@ public class JellyInteractions : MonoBehaviour
             {
                 jellyAudioSource.PlayOneShot(jellyClip);
                 firstSelectionAudio = false;
+                //make mom uninteractable
+                mom.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
+                interactionSignifier.gameObject.SetActive(false);
             }
             else
             {
@@ -117,6 +127,9 @@ public class JellyInteractions : MonoBehaviour
                 StartCoroutine(ShowButton());
                 
                 firstSelectionUI = false;
+                //make mom uninteractable
+                mom.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
+                interactionSignifier.gameObject.SetActive(false);
             }
 
         }
@@ -158,13 +171,26 @@ public class JellyInteractions : MonoBehaviour
         //Play voiceover 31
         zodiacDriverAudioSource.PlayOneShot(voiceover31);
         yield return new WaitForSeconds(voiceover31Duration);
+
+        //make mom uninteractable
+        mom.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
+        interactionSignifier.gameObject.SetActive(false);
+
         //Play voiceover 32
         claraAudioSource.PlayOneShot(voiceover32);
         yield return new WaitForSeconds(voiceover32Duration);
         //Play voiceover 33
         zodiacDriverAudioSource.PlayOneShot(voiceover33);
-        yield return new WaitForSeconds(voiceover33Duration);
         //Play snorkeler animation
+        //set targettransform1 rotation to 270
+        snorkeler01Target.eulerAngles = new Vector3(snorkeler01Target.eulerAngles.x, 270, snorkeler01Target.eulerAngles.z);
+        StartCoroutine(SnorkelerSlide(snorkeler01));
+        yield return new WaitForSeconds(voiceover33Duration / 3);
+        StartCoroutine(SnorkelerSlide(snorkeler02));
+        yield return new WaitForSeconds(voiceover33Duration / 3);
+        StartCoroutine(SnorkelerSlide(snorkeler03));
+        yield return new WaitForSeconds(voiceover33Duration / 3);
+
         //Play voiceover 34
         claraAudioSource.PlayOneShot(voiceover34);
         yield return new WaitForSeconds(voiceover34Duration);
@@ -179,26 +205,12 @@ public class JellyInteractions : MonoBehaviour
         yield return new WaitForSeconds(voiceover37Duration);
         //Play voiceover 38
         claraAudioSource.PlayOneShot(voiceover38);
+        
         yield return new WaitForSeconds(voiceover38Duration);
-        //disable controls
-        moveControls.DeactivateMovementControls();
-        //move to face snorkeler
-        moveToSnorkeler.distance = Vector3.Distance(moveToSnorkeler.targetTransform.position, moveToSnorkeler.transform.position);
-        while (moveToSnorkeler.distance > moveToSnorkeler.minDistance)
-        {
-            moveToSnorkeler.MoveToMinimumDistance();
-            yield return null;
-        }
 
-        //rotate to align to mom
-
-        while (moveToSnorkeler.transform.eulerAngles.y < moveToSnorkeler.targetTransform.eulerAngles.y - 2 || moveToSnorkeler.transform.eulerAngles.y > moveToSnorkeler.targetTransform.eulerAngles.y + 2)
-        {
-            moveToSnorkeler.RotateToFace();
-            rotateToNora.RotateToFace();
-            yield return null;
-            //xRRig.transform.rotation != moveToMom.targetTransform.rotation
-        }
+        meetSnorkleler.interactWithSnorkeler = true;
+        //make target snorkeler glow
+        StartGlow(snorkeler01);
 
         //Play voiceover 39
         claraAudioSource.PlayOneShot(voiceover39);
@@ -206,6 +218,48 @@ public class JellyInteractions : MonoBehaviour
         //Activate mirror actions on snorkeler
 
         coroutineStarted = false;
+
+    }
+
+    public IEnumerator SnorkelerSlide(Transform snorkeler)
+    {
+        
+        snorkeler.GetComponent<Animator>().SetTrigger("Trigger_Slide");
+        yield return new WaitForSeconds(0.5f);
+        float time = 0;
+        while (time < 1.8f)
+        {
+            snorkeler.Translate((snorkeler.transform.forward - snorkeler.transform.up) * speed * Time.deltaTime);
+            time+= Time.deltaTime;
+            yield return null;
+        }
+
+        while (snorkeler.position.y < 0.1f)
+        {
+            snorkeler.Translate((snorkeler.transform.forward + snorkeler.transform.up) * speed);
+            yield return null;
+        }
+
+        var moveSnorkeler = snorkeler.GetComponent<MoveToObject>();
+        moveSnorkeler.distance = Vector3.Distance(snorkeler.position, moveSnorkeler.targetTransform.position);
+        while(moveSnorkeler.distance > moveSnorkeler.minDistance)
+        {
+            moveSnorkeler.MoveToMinimumDistance();
+            yield return null;
+        }
+        while (moveSnorkeler.transform.eulerAngles.y > moveSnorkeler.targetTransform.eulerAngles.y + 5 || moveSnorkeler.transform.eulerAngles.y < moveSnorkeler.targetTransform.eulerAngles.y - 5)
+        {
+            moveSnorkeler.RotateToAlign();
+            yield return null;
+        }
+
+
+    }
+    public void StartGlow(Transform snorkeler)
+    {
+        Material material = snorkeler.GetComponentInChildren<SkinnedMeshRenderer>().materials[6];
+        Color activeColour = Color.green;
+        material.color = activeColour;
 
     }
 
