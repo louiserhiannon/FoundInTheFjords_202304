@@ -10,6 +10,7 @@ public class SceneManager_Fishing : SceneManager
     public HumpbackSwimAnimation humpbackAnimation;
     public GameObject momInteractionSignifier;
     public ExploreFishingBoatArea testExplore;
+    public GameObject ladder;
 
     protected override void Awake()
     {
@@ -19,6 +20,7 @@ public class SceneManager_Fishing : SceneManager
         //humpbackAnimation.StartSwim();
         orcaMom.GetComponent<XRSimpleInteractable>().enabled = false;
         momInteractionSignifier.SetActive(false);
+        ladder.SetActive(false);
 
         //start test coroutine
         StartCoroutine(testExplore.ExploreSurroundings01());

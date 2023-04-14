@@ -67,7 +67,7 @@ public class UIT_SeeScientists : UITransition
         }
 
         //Add rotate to align
-        while (xRRig.transform.eulerAngles.y < moveToClara.targetTransform.eulerAngles.y - 2 || xRRig.transform.eulerAngles.y > moveToClara.targetTransform.eulerAngles.y + 2)
+        while (orcaMom.transform.eulerAngles.y < moveToClara.targetTransform.eulerAngles.y - 2 || orcaMom.transform.eulerAngles.y > moveToClara.targetTransform.eulerAngles.y + 2)
         {
             moveToClara.RotateToAlign();
             yield return null;
@@ -77,6 +77,9 @@ public class UIT_SeeScientists : UITransition
 
         //deparent Nora from Mom
         xRRig.transform.SetParent(null);
+
+        //activate movement controls
+        moveControls.ActivateMovementControls();
 
         //Play voiceover 26
         claraAudioSource.PlayOneShot(voiceover26);
@@ -100,8 +103,7 @@ public class UIT_SeeScientists : UITransition
         // Play voiceover 30
         claraAudioSource.PlayOneShot(voiceover30);
         yield return new WaitForSeconds(voiceover30Duration);
-        //activate movement controls
-        moveControls.ActivateMovementControls();
+        
         //reset and enable mom's interactability
         orcaMom.GetComponent<JellyInteractions>().coroutineName = "IntroduceSnorkelers";
         orcaMom.GetComponent<XRSimpleInteractable>().enabled = true;
