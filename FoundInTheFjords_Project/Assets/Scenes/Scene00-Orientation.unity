@@ -11269,6 +11269,7 @@ GameObject:
   - component: {fileID: 7927522056632500605}
   - component: {fileID: 7927522056632500606}
   - component: {fileID: 336025334806236334}
+  - component: {fileID: 7927522056632500607}
   m_Layer: 5
   m_Name: JellyInfoCanvas
   m_TagString: Untagged
@@ -11308,6 +11309,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 358763928}
+--- !u!114 &7927522056632500607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7927522056632500601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07f270ac36c49789466c75ceb88424c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gainBoostDb: 0
+  enableAcoustics: 0
+  reverbSendDb: 0
 --- !u!135 &7927522056982299468
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12007,6 +12024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5491338807f801b498f6ddcb3cd4b72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mom: {fileID: 0}
   jellyCanvas: {fileID: 7927522056632500578}
   firstPanel: {fileID: 492443672}
   jellyClip: {fileID: 8300000, guid: 092e0a7e51b86794ea5464909db5700c, type: 3}
@@ -12014,6 +12032,7 @@ MonoBehaviour:
   clipDuration: 11.5
   interactionSignifier: {fileID: 7927522056982299507}
   moveControls: {fileID: 0}
+  snorkeler01Target: {fileID: 0}
   moveToSnorkeler: {fileID: 0}
   rotateToNora: {fileID: 0}
   zodiacDriverAudioSource: {fileID: 0}
@@ -12031,6 +12050,11 @@ MonoBehaviour:
   coroutineName: 
   firstSelectionAudio: 1
   firstSelectionUI: 1
+  snorkeler01: {fileID: 0}
+  snorkeler02: {fileID: 0}
+  snorkeler03: {fileID: 0}
+  speed: 0
+  meetSnorkleler: {fileID: 0}
 --- !u!114 &8787245387076002717
 MonoBehaviour:
   m_ObjectHideFlags: 0
