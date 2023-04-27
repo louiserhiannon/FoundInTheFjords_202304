@@ -14,8 +14,11 @@ public class AmbientSoundController : MonoBehaviour
             for (int i = 0; i < clips.Count; i++)
             {
                 sources[i].PlayOneShot(clips[i]);
+                //sources[i].clip = clips[i];
+                //sources[i].Play();
             }
         }
+        
     }
 
     

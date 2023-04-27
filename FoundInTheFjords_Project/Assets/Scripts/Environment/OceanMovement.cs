@@ -96,7 +96,6 @@ public class OceanMovement : MonoBehaviour
         {
             waveManager.flowSpeedY = -1 * speed / 20f;
         }
-        Debug.Log(waveManager.flowSpeedY);
-        
+
     }
 }
