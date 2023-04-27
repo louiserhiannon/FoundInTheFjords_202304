@@ -7762,7 +7762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5491338807f801b498f6ddcb3cd4b72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mom: {fileID: 0}
+  interactableObject: {fileID: 496574008}
   jellyCanvas: {fileID: 740355368}
   firstPanel: {fileID: 1188328155}
   jellyClip: {fileID: 8300000, guid: 5f24b5d7a85b74343b572482c6caf970, type: 3}
@@ -8965,7 +8965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5491338807f801b498f6ddcb3cd4b72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mom: {fileID: 0}
+  interactableObject: {fileID: 508634335}
   jellyCanvas: {fileID: 697635375}
   firstPanel: {fileID: 1099133284}
   jellyClip: {fileID: 8300000, guid: 5f24b5d7a85b74343b572482c6caf970, type: 3}
@@ -27905,7 +27905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5491338807f801b498f6ddcb3cd4b72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mom: {fileID: 1245079175}
+  interactableObject: {fileID: 1245079175}
   jellyCanvas: {fileID: 1010638648}
   firstPanel: {fileID: 2135474303}
   jellyClip: {fileID: 8300000, guid: 5f24b5d7a85b74343b572482c6caf970, type: 3}
@@ -60022,7 +60022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5491338807f801b498f6ddcb3cd4b72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mom: {fileID: 0}
+  interactableObject: {fileID: 1676964814}
   jellyCanvas: {fileID: 1876206991}
   firstPanel: {fileID: 1911681531}
   jellyClip: {fileID: 0}
@@ -62346,6 +62346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37368b67598420a4c86ffffb2d69c39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flockerPrefab: {fileID: 0}
   allFlockers:
   - {fileID: 823362927}
   - {fileID: 1596484817}
@@ -72446,7 +72447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5491338807f801b498f6ddcb3cd4b72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mom: {fileID: 0}
+  interactableObject: {fileID: 2127196794}
   jellyCanvas: {fileID: 1394244729}
   firstPanel: {fileID: 666747241}
   jellyClip: {fileID: 0}

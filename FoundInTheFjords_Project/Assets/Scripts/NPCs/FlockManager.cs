@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlockManager : MonoBehaviour
 {
+    public GameObject flockerPrefab; 
     public static FlockManager FM;
     public List<GameObject> allFlockers;
     public int numFlockers;
@@ -37,6 +38,14 @@ public class FlockManager : MonoBehaviour
     public virtual void Start()
     {
         FM = this;
+        //allFlockers = new GameObject[numFlockers];
+        for (int i = 0; i < numFlockers; i++)
+        {
+            Vector3 pos = this.transform.position + new Vector3(Random.Range(-outerLimits.x, outerLimits.x), Random.Range(-outerLimits.y, outerLimits.y), Random.Range(-outerLimits.z, outerLimits.z));
+            //allFlockers[i] = Instantiate(flockerPrefab, pos, Quaternion.identity);
+            allFlockers.Add(Instantiate(flockerPrefab, pos, Quaternion.identity));
+
+        }
         goalPosition = this.transform.position;
     }
 

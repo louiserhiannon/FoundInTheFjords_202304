@@ -24166,6 +24166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1874332069}
   - component: {fileID: 1874332070}
+  - component: {fileID: 1874332071}
   m_Layer: 0
   m_Name: CarouselTransform
   m_TagString: Untagged
@@ -24287,6 +24288,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1874332071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874332067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07f270ac36c49789466c75ceb88424c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gainBoostDb: 0
+  enableAcoustics: 0
+  reverbSendDb: 0
 --- !u!1 &1894510920
 GameObject:
   m_ObjectHideFlags: 0
@@ -26985,7 +27002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5423541977375984498}
-  - component: {fileID: 5423541977375984499}
+  - component: {fileID: 5423541977375984501}
   m_Layer: 0
   m_Name: FlockManager_Herring
   m_TagString: shoal
@@ -27008,7 +27025,7 @@ Transform:
   m_Father: {fileID: 1874332069}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5423541977375984499
+--- !u!114 &5423541977375984501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27017,9 +27034,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5423541977375984496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f73c6e7d38c397c4986027a0586c49ba, type: 3}
+  m_Script: {fileID: 11500000, guid: c2ecf0d5137b75542ba61e8d5f4fc942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flockerPrefab: {fileID: 4341182251155103877, guid: 3e8c81530e537be4a912facc6ec8b266,
+    type: 3}
   allFlockers: []
   numFlockers: 50
   outerLimits: {x: 3, y: 5, z: 3}
@@ -27028,7 +27047,7 @@ MonoBehaviour:
   maxSpeed: 1
   neighbourDistance: 15
   avoidDistance: 1.03
-  flockRotationSpeed: 4
+  flockRotationSpeed: 2
   boundsRotationSpeed: 2
   goalSensitivity: 100
   flockSensitivity: 100
@@ -27755,6 +27774,7 @@ GameObject:
   - component: {fileID: 3241124769390590655}
   - component: {fileID: 7720223858939322189}
   - component: {fileID: 7720223858939322190}
+  - component: {fileID: 7720223858939322191}
   m_Layer: 0
   m_Name: Orca_BasicAnimations_Female
   m_TagString: Untagged
@@ -27876,6 +27896,22 @@ MonoBehaviour:
   speed: 4
   rotationSpeed: 2
   targetTransform: {fileID: 1874332069}
+--- !u!114 &7720223858939322191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7720223858939322188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07f270ac36c49789466c75ceb88424c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gainBoostDb: 0
+  enableAcoustics: 0
+  reverbSendDb: 0
 --- !u!4 &7734789511806081648
 Transform:
   m_ObjectHideFlags: 0
@@ -28222,12 +28258,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5491338807f801b498f6ddcb3cd4b72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactableObject: {fileID: 5155869525546214266}
   jellyCanvas: {fileID: 2118385988}
   firstPanel: {fileID: 1894510922}
   jellyClip: {fileID: 0}
   firstButton: {fileID: 113100617}
   clipDuration: 0
   interactionSignifier: {fileID: 2162264957067945489}
+  moveControls: {fileID: 0}
+  snorkeler01Target: {fileID: 0}
+  moveToSnorkeler: {fileID: 0}
+  rotateToNora: {fileID: 0}
+  zodiacDriverAudioSource: {fileID: 0}
+  claraAudioSource: {fileID: 0}
+  noraAudioSource: {fileID: 0}
+  voiceover31: {fileID: 0}
+  voiceover32: {fileID: 0}
+  voiceover33: {fileID: 0}
+  voiceover34: {fileID: 0}
+  voiceover35: {fileID: 0}
+  voiceover36: {fileID: 0}
+  voiceover37: {fileID: 0}
+  voiceover38: {fileID: 0}
+  voiceover39: {fileID: 0}
+  coroutineName: 
+  firstSelectionAudio: 1
+  firstSelectionUI: 1
+  snorkeler01: {fileID: 0}
+  snorkeler02: {fileID: 0}
+  snorkeler03: {fileID: 0}
+  speed: 0
+  meetSnorkleler: {fileID: 0}
 --- !u!1 &8620942485447390919
 GameObject:
   m_ObjectHideFlags: 0
@@ -28341,12 +28402,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5491338807f801b498f6ddcb3cd4b72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactableObject: {fileID: 3546123837639973346}
   jellyCanvas: {fileID: 1395978303}
   firstPanel: {fileID: 758404196}
   jellyClip: {fileID: 0}
   firstButton: {fileID: 301484924}
   clipDuration: 0
   interactionSignifier: {fileID: 7546590785956584585}
+  moveControls: {fileID: 0}
+  snorkeler01Target: {fileID: 0}
+  moveToSnorkeler: {fileID: 0}
+  rotateToNora: {fileID: 0}
+  zodiacDriverAudioSource: {fileID: 0}
+  claraAudioSource: {fileID: 0}
+  noraAudioSource: {fileID: 0}
+  voiceover31: {fileID: 0}
+  voiceover32: {fileID: 0}
+  voiceover33: {fileID: 0}
+  voiceover34: {fileID: 0}
+  voiceover35: {fileID: 0}
+  voiceover36: {fileID: 0}
+  voiceover37: {fileID: 0}
+  voiceover38: {fileID: 0}
+  voiceover39: {fileID: 0}
+  coroutineName: 
+  firstSelectionAudio: 1
+  firstSelectionUI: 1
+  snorkeler01: {fileID: 0}
+  snorkeler02: {fileID: 0}
+  snorkeler03: {fileID: 0}
+  speed: 0
+  meetSnorkleler: {fileID: 0}
 --- !u!1 &8674207898729864121
 GameObject:
   m_ObjectHideFlags: 0

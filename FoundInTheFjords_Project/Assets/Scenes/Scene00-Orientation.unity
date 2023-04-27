@@ -8204,7 +8204,7 @@ MonoBehaviour:
   nextPanelButton: {fileID: 105940239}
   audioSource: {fileID: 336025334806236334}
   clip: {fileID: 8300000, guid: a6ef4f46590e7274d8d0e751e758a317, type: 3}
-  audioClipDuration: 11.5
+  audioClipDuration: 9.8
 --- !u!114 &2080667230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12024,12 +12024,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5491338807f801b498f6ddcb3cd4b72b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mom: {fileID: 0}
+  interactableObject: {fileID: 4001601988310582808}
   jellyCanvas: {fileID: 7927522056632500578}
   firstPanel: {fileID: 492443672}
   jellyClip: {fileID: 8300000, guid: 092e0a7e51b86794ea5464909db5700c, type: 3}
-  firstButton: {fileID: 9040361886047961208}
-  clipDuration: 11.5
+  firstButton: {fileID: 2080667228}
+  clipDuration: 10
   interactionSignifier: {fileID: 7927522056982299507}
   moveControls: {fileID: 0}
   snorkeler01Target: {fileID: 0}

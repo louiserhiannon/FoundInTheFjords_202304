@@ -10,7 +10,7 @@ using UnityEditor.Rendering;
 
 public class JellyInteractions : MonoBehaviour
 {
-    public GameObject mom;
+    public GameObject interactableObject;
     public Canvas jellyCanvas;
     public CanvasGroup firstPanel;
     private AudioSource jellyAudioSource;
@@ -102,7 +102,7 @@ public class JellyInteractions : MonoBehaviour
                 jellyAudioSource.PlayOneShot(jellyClip);
                 firstSelectionAudio = false;
                 //make mom uninteractable
-                mom.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
+                interactableObject.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
                 interactionSignifier.gameObject.SetActive(false);
             }
             else
@@ -128,7 +128,7 @@ public class JellyInteractions : MonoBehaviour
                 
                 firstSelectionUI = false;
                 //make mom uninteractable
-                mom.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
+                interactableObject.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
                 interactionSignifier.gameObject.SetActive(false);
             }
 
@@ -173,7 +173,7 @@ public class JellyInteractions : MonoBehaviour
         yield return new WaitForSeconds(voiceover31Duration);
 
         //make mom uninteractable
-        mom.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
+        interactableObject.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
         interactionSignifier.gameObject.SetActive(false);
 
         //Play voiceover 32
