@@ -16,14 +16,14 @@ public class SceneManager_Fishing : SceneManager
     {
         base.Awake();
         //start Scene04IntroCoroutine
-        //StartCoroutine(fishingSceneIntro.Scene04Intro());
-        //humpbackAnimation.StartSwim();
+        StartCoroutine(fishingSceneIntro.Scene04Intro());
+        humpbackAnimation.StartSwim();
         orcaMom.GetComponent<XRSimpleInteractable>().enabled = false;
         momInteractionSignifier.SetActive(false);
         ladder.SetActive(false);
 
         //start test coroutine
-        StartCoroutine(testExplore.ExploreSurroundings01());
+        //StartCoroutine(testExplore.ExploreSurroundings01());
 
 
 
