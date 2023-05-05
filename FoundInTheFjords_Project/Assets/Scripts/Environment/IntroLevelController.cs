@@ -7,6 +7,7 @@ public class IntroLevelController : MonoBehaviour
     //controls the zoom animation and voiceover for the intro scene
     public Transform xRRig;
     public Animator xrRigZoomAnimator;
+    public Animator pinAnimator;
     public float cameraZoom01Duration = 17f;
     public float cameraZoom02Duration;
     public float cameraZoom03Duration;
@@ -15,6 +16,7 @@ public class IntroLevelController : MonoBehaviour
     public AudioClip introVoiceover02;
     public AudioClip introVoiceover03;
     public AudioClip introVoiceover04;
+    public AudioClip splash;
     public float clipDuration01;
     public float clipDuration02;
     public float clipDuration03;
@@ -23,6 +25,7 @@ public class IntroLevelController : MonoBehaviour
     public GameObject earthPlain;
     public GameObject earthOrcaDistribution;
     public GameObject locationPin;
+    public Material underwaterSkybox;
     
 
 
@@ -100,9 +103,18 @@ public class IntroLevelController : MonoBehaviour
         {
             xrRigZoomAnimator.SetTrigger("CameraZoom03");
         }
+        if (pinAnimator!= null)
+        {
+            pinAnimator.SetTrigger("Trigger_ScaleDown");
+        }
         //wait for end of animation
-        yield return new WaitForSeconds(cameraZoom03Duration);
+        yield return new WaitForSeconds(cameraZoom03Duration-0.5f);
+        //change skybox
+        RenderSettings.skybox = underwaterSkybox;
+        audioSource.PlayOneShot(splash);
+        yield return new WaitForSeconds(5.0f);
         //Load next scene
+        ChangeScene.instance.SceneSwitch("Scene00-Orientation");
 
     }
 }

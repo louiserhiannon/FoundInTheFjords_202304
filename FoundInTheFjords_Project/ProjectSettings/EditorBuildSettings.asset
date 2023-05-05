@@ -6,8 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Intro.unity
+    guid: 5c92416e96cd89d419304506103a1085
+  - enabled: 1
+    path: Assets/Scenes/Scene00-Orientation.unity
+    guid: a03caba7e47b87f4d8281d7f50e6a6c9
+  - enabled: 1
+    path: Assets/Scenes/Scene01-Exploration.unity
+    guid: e05332ac8c35fd14abc70c675923072a
+  - enabled: 1
+    path: Assets/Scenes/Scene02-CarouselFeeding.unity
+    guid: ab17a7cd523d317498c7b170bbb170b7
+  - enabled: 1
+    path: Assets/Scenes/Scene03-Locomotion.unity
+    guid: 8f4a54473eb5c9a4983dba7b0ce61977
+  - enabled: 1
+    path: Assets/Scenes/Scene04-Fishing.unity
+    guid: 6a6ec40488b0af841a7a3811b6b149ca
+  - enabled: 1
+    path: Assets/Scenes/Scene05-360Zodiac.unity
+    guid: eb3211c18e9334d4cb189f79215b88e7
+  - enabled: 1
+    path: Assets/Scenes/Scene06-CalltoAction.unity
+    guid: 35d578d5f7761b944b2b61cca6ec3462
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 88f0fda094d221e4cb486bd27e938f1a,
       type: 2}

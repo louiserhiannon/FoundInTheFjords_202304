@@ -19,3 +19,4 @@ snow_03_ao_4k.png filter=lfs diff=lfs merge=lfs -text
 snow_03_nor_4k.png filter=lfs diff=lfs merge=lfs -text
 metaXRAudioUnity.dll.old() filter=lfs diff=lfs merge=lfs -text
 metaXRAudioUnity.dll.old0 filter=lfs diff=lfs merge=lfs -text
+Earth2kTexture.png filter=lfs diff=lfs merge=lfs -text

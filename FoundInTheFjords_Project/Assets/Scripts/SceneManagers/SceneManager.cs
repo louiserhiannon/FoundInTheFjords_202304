@@ -4,41 +4,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class SceneManager : MonoBehaviour
+namespace FoundInTheFjordsSceneManager
 {
-    public List<Canvas> canvasList;
-    public GameObject orcaMom;
-    protected Animator orcaMomAnimator;
-    public GameObject xRRig;
-
-
-    protected virtual void Awake()
+    public class SceneManager : MonoBehaviour
     {
-        //Disable Panels
-        for (int i = 0; i < canvasList.Count; i++)
+        public List<Canvas> canvasList;
+        public GameObject orcaMom;
+        protected Animator orcaMomAnimator;
+        public GameObject xRRig;
+        public MovementControls moveControls;
+        
+
+
+        protected virtual void Awake()
         {
-            foreach (CanvasGroup panel in canvasList[i].GetComponentsInChildren<CanvasGroup>())
+            //Disable Panels
+            for (int i = 0; i < canvasList.Count; i++)
             {
-                panel.alpha = 0;
-                panel.interactable = false;
-                panel.blocksRaycasts = false;
+                foreach (CanvasGroup panel in canvasList[i].GetComponentsInChildren<CanvasGroup>())
+                {
+                    panel.alpha = 0;
+                    panel.interactable = false;
+                    panel.blocksRaycasts = false;
+                }
             }
+
+
+            //Disable Move Controls
+            moveControls.DeActivateEatControls();
+
+            //Disable Eat Controller
+            moveControls.DeActivateEatControls();
+
+            //Get orca mom animator component
+            if(orcaMom != null)
+            {
+                orcaMomAnimator = orcaMom.GetComponent<Animator>();
+            }
+
+
+
         }
 
 
-        //Disable Move Controls
-        xRRig.GetComponent<LocomotionController_General>().enabled = false;
-        xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = false;
-
-        //Disable Eat Controller
-        xRRig.GetComponent<EatingController>().enabled = false;
-        
-        //Get orca mom animator component
-        orcaMomAnimator = orcaMom.GetComponent<Animator>();
-        
-
-        
     }
-
-
 }
+
