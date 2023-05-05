@@ -15,25 +15,54 @@ public class MovementControls : MonoBehaviour
     }
     public void ActivateMovementControls()
     {
-        xRRig.GetComponent<LocomotionController_General>().enabled = true;
-        xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = true;
+        if (xRRig.GetComponent<LocomotionController_General>() != null)
+        {
+            xRRig.GetComponent<LocomotionController_General>().enabled = true;
+        }
+        else if (xRRig.GetComponent<LocomotionController_Orientation>() != null)
+        {
+            xRRig.GetComponent<LocomotionController_Orientation>().enabled = true;
+        }
+
+        if (xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>() != null)
+        {
+            xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = true;
+        }
     }
 
     public void DeactivateMovementControls()
     {
-        xRRig.GetComponent<LocomotionController_General>().enabled = false;
-        xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = false;
+        if (xRRig.GetComponent<LocomotionController_General>() != null)
+        {
+            xRRig.GetComponent<LocomotionController_General>().enabled = false;
+        }
+        else if (xRRig.GetComponent<LocomotionController_Orientation>() != null)
+        {
+            xRRig.GetComponent<LocomotionController_Orientation>().enabled = false;
+        }
+
+        if (xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>() != null)
+        {
+            xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = false;
+        }
     }
 
     public void ActivateEatControls()
     {
-        xRRig.GetComponent<EatingController>().enabled = true;
-        xRRig.GetComponent<EatingController>().targetActive = true;
+        if (xRRig.GetComponent<EatingController>() != null)
+        {
+            xRRig.GetComponent<EatingController>().enabled = true;
+            xRRig.GetComponent<EatingController>().targetActive = true;
+        }
+        
     }
 
     public void DeActivateEatControls()
     {
-        xRRig.GetComponent<EatingController>().enabled = false;
-        xRRig.GetComponent<EatingController>().targetActive = false;
+        if (xRRig.GetComponent<EatingController>() != null)
+        {
+            xRRig.GetComponent<EatingController>().enabled = false;
+            xRRig.GetComponent<EatingController>().targetActive = false;
+        }
     }
 }

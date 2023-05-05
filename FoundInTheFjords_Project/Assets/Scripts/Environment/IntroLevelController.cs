@@ -112,8 +112,9 @@ public class IntroLevelController : MonoBehaviour
         //change skybox
         RenderSettings.skybox = underwaterSkybox;
         audioSource.PlayOneShot(splash);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(5.0f);
         //Load next scene
+        ChangeScene.instance.SceneSwitch("Scene00-Orientation");
 
     }
 }

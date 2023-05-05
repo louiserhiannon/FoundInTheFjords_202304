@@ -60478,6 +60478,7 @@ GameObject:
   - component: {fileID: 1694216345}
   - component: {fileID: 1694216347}
   - component: {fileID: 1694216348}
+  - component: {fileID: 1694216349}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -60574,6 +60575,18 @@ MonoBehaviour:
   momAudioSource: {fileID: 1245079177}
   voiceover23: {fileID: 8300000, guid: 26c656590c1d516468f580b24ad263b8, type: 3}
   voiceover24: {fileID: 8300000, guid: 26ccfa811c1f57a4a925f56db9d267fa, type: 3}
+--- !u!114 &1694216349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694216344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0bba6784a55404eb7a5d43a19afc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1699441976
 GameObject:
   m_ObjectHideFlags: 0

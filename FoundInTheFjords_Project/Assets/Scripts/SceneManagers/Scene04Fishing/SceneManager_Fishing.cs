@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-
+using FoundInTheFjordsSceneManager;
 public class SceneManager_Fishing : SceneManager
 {
     public FishingSceneIntro fishingSceneIntro;
