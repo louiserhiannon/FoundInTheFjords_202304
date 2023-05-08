@@ -6,63 +6,71 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class MovementControls : MonoBehaviour
 {
     public static MovementControls MC;
-    private GameObject xRRig;
+    //private GameObject xRRig;
 
     private void Awake()
     {
-        xRRig = this.gameObject;
+        //xRRig = this.gameObject;
         MC = this;
     }
     public void ActivateMovementControls()
     {
-        if (xRRig.GetComponent<LocomotionController_General>() != null)
+        if (TryGetComponent<LocomotionController_General>(out LocomotionController_General general))
         {
-            xRRig.GetComponent<LocomotionController_General>().enabled = true;
+            general.enabled = true;
         }
-        else if (xRRig.GetComponent<LocomotionController_Orientation>() != null)
+        else if (TryGetComponent<LocomotionController_Orientation>(out LocomotionController_Orientation orientation))
         {
-            xRRig.GetComponent<LocomotionController_Orientation>().enabled = true;
+            orientation.enabled = true;
         }
 
-        if (xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>() != null)
+        if (GetComponentInChildren<ActionBasedSnapTurnProvider>() != null)
         {
-            xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = true;
+            GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = true;
         }
     }
 
     public void DeactivateMovementControls()
     {
-        if (xRRig.GetComponent<LocomotionController_General>() != null)
+        if (TryGetComponent<LocomotionController_General>(out LocomotionController_General general))
         {
-            xRRig.GetComponent<LocomotionController_General>().enabled = false;
+            Debug.Log("general locomotion controller present");
+            general.enabled = false;
         }
-        else if (xRRig.GetComponent<LocomotionController_Orientation>() != null)
+        else if (TryGetComponent<LocomotionController_Orientation>(out LocomotionController_Orientation orientation))
         {
-            xRRig.GetComponent<LocomotionController_Orientation>().enabled = false;
+            Debug.Log("general locomotion controller not present; orientation controller present");
+            orientation.enabled = false;
         }
+        else
+        {
+            Debug.Log("no locomotion controller present");
+        }
+            
 
-        if (xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>() != null)
+        if (GetComponentInChildren<ActionBasedSnapTurnProvider>() != null)
         {
-            xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = false;
+            GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = false;
         }
+        
     }
 
     public void ActivateEatControls()
     {
-        if (xRRig.GetComponent<EatingController>() != null)
+        if (TryGetComponent<EatingController>(out EatingController eat))
         {
-            xRRig.GetComponent<EatingController>().enabled = true;
-            xRRig.GetComponent<EatingController>().targetActive = true;
+            eat.enabled = true;
+            eat.targetActive = true;
         }
         
     }
 
     public void DeActivateEatControls()
     {
-        if (xRRig.GetComponent<EatingController>() != null)
+        if (TryGetComponent<EatingController>(out EatingController eat))
         {
-            xRRig.GetComponent<EatingController>().enabled = false;
-            xRRig.GetComponent<EatingController>().targetActive = false;
+            eat.enabled = false;
+             eat.targetActive = false;
         }
     }
 }

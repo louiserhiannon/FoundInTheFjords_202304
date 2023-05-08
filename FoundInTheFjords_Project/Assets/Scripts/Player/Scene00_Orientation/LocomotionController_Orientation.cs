@@ -46,7 +46,18 @@ public class LocomotionController_Orientation : LocomotionController
             transform.localEulerAngles = new Vector3 (0, transform.localEulerAngles.y, transform.localEulerAngles.z);
         }
 
-        xrRig.transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+        if(moveSpeed > 0)
+        {
+            if (DepthCalculator.dc.headsetDepthCorrected < 0.5f)
+            {
+                xrRig.transform.Translate(currentSpeed * Time.deltaTime * transform.forward, Space.World);
+            }
+        }
+        else
+        {
+            xrRig.transform.Translate(currentSpeed * Time.deltaTime * transform.forward, Space.World);
+        }
+        
 
         //Vector3.up
     }
