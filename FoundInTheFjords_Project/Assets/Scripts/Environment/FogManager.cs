@@ -41,39 +41,43 @@ public class FogManager : MonoBehaviour
         //headsetDepthCorrected = headsetDepth - 2f;
 
         //when the camera is above the water surface
-        if (DepthCalculator.dc.headsetDepthCorrected >= 0)
+        if(DepthCalculator.dc != null)
         {
-            //Switch off fog
-            RenderSettings.fog = false;
-            //turn down light
-            RenderSettings.ambientIntensity = 2f;
-            SwitchOffDistortion();
-        }
-        else
-        {
-            //switch on fog using exponential squared setting
-            RenderSettings.fog = true;
-            RenderSettings.fogMode = FogMode.ExponentialSquared;
-            RenderSettings.ambientIntensity = 3f;
-            
-
-            //when the rig is shallower than the max fog depth (note that depth is a negative value so shallower depths correspond to larger [less negative] numbers)
-            if (DepthCalculator.dc.headsetDepth > maxFogDepth)
+            if (DepthCalculator.dc.headsetDepthCorrected >= 0)
             {
-                
-                //the fog density is a linear interpolation from min to max based on depth
-                fogFactor = DepthCalculator.dc.headsetDepthCorrected / maxFogDepth;
-                RenderSettings.fogDensity = minFogDensity + fogFactor * (maxFogDensity - minFogDensity);
+                //Switch off fog
+                RenderSettings.fog = false;
+                //turn down light
+                RenderSettings.ambientIntensity = 2f;
+                SwitchOffDistortion();
             }
-
             else
             {
-                //Once below the max depth, fog is set to the max density.
-                RenderSettings.fogDensity = maxFogDensity;
-            }
+                //switch on fog using exponential squared setting
+                RenderSettings.fog = true;
+                RenderSettings.fogMode = FogMode.ExponentialSquared;
+                RenderSettings.ambientIntensity = 3f;
 
-            ControlDistortion();
+
+                //when the rig is shallower than the max fog depth (note that depth is a negative value so shallower depths correspond to larger [less negative] numbers)
+                if (DepthCalculator.dc.headsetDepth > maxFogDepth)
+                {
+
+                    //the fog density is a linear interpolation from min to max based on depth
+                    fogFactor = DepthCalculator.dc.headsetDepthCorrected / maxFogDepth;
+                    RenderSettings.fogDensity = minFogDensity + fogFactor * (maxFogDensity - minFogDensity);
+                }
+
+                else
+                {
+                    //Once below the max depth, fog is set to the max density.
+                    RenderSettings.fogDensity = maxFogDensity;
+                }
+
+                ControlDistortion();
+            }
         }
+        
         
 
     }

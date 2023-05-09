@@ -28,11 +28,6 @@ public class UIT_Orientation : MonoBehaviour
 
     public IEnumerator OrientationPart2()
     {
-        //switch controller models back
-        leftFin.SetActive(true);
-        rightFin.SetActive(true);
-        leftController.SetActive(false);
-        rightController.SetActive(false);
         //fade canvas panels
         foreach (CanvasGroup panel in controllerInstructions.GetComponentsInChildren<CanvasGroup>())
         {

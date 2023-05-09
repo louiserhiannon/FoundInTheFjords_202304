@@ -10,6 +10,7 @@ public class JellyInteractionBasic : MonoBehaviour
     public MeshRenderer interactionSignifier;
     private Color originalColour;
     public Level00Coroutines level00;
+    public Level01Coroutines level01;
 
 
 
@@ -34,6 +35,11 @@ public class JellyInteractionBasic : MonoBehaviour
     public void PerformAction00(string coroutineName)
     {
         level00.StartCustomCoroutine(coroutineName);
+    }
+
+    public void PerformAction01(string coroutineName)
+    {
+        level01.StartCustomCoroutine(coroutineName);
     }
 
 

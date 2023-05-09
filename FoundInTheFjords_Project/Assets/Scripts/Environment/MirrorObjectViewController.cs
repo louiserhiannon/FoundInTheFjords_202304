@@ -21,26 +21,34 @@ public class MirrorObjectViewController : MonoBehaviour
 
     void Update()
     {
-        if (DepthCalculator.dc.headsetDepthCorrected >= 0)
+        if(DepthCalculator.dc != null)
         {
-            //switches off mirror orca, mirror jelly, and upper seabox
-            for (int i = 0; i < mirrorObjects.Count; i++)
+            if (mirrorObjects[0] != null)
             {
-                mirrorObjects[i].SetActive(false);
+                if (DepthCalculator.dc.headsetDepthCorrected >= 0)
+                {
+                    //switches off mirror orca, mirror jelly, and upper seabox
+                    for (int i = 0; i < mirrorObjects.Count; i++)
+                    {
+                        mirrorObjects[i].SetActive(false);
+                    }
+                    terrain.SetActive(true);
+                    SetSurfaceAlpha();
+                }
+                else
+                {
+                    //switches on mirror objects, mirror jelly, and upper seabox
+                    for (int i = 0; i < mirrorObjects.Count; i++)
+                    {
+                        mirrorObjects[i].SetActive(true);
+                    }
+                    terrain.SetActive(false);
+                    ResetSurfaceAlpha();
+                }
             }
-            terrain.SetActive(true);
-            SetSurfaceAlpha();
+            
         }
-        else
-        {
-            //switches on mirror objects, mirror jelly, and upper seabox
-            for (int i = 0; i < mirrorObjects.Count; i++)
-            {
-                mirrorObjects[i].SetActive(true);
-            }
-            terrain.SetActive(false);
-            ResetSurfaceAlpha();
-        }
+        
     }
     private void SetSurfaceAlpha()
     {
@@ -52,7 +60,7 @@ public class MirrorObjectViewController : MonoBehaviour
     private void ResetSurfaceAlpha()
     {
         surfaceColour = surfaceMaterial.color;
-        surfaceColour.a = 0.3f;
+        surfaceColour.a = 0.5f;
         surfaceMaterial.color = surfaceColour;
     }
 }

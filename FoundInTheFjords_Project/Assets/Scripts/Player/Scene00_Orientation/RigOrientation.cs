@@ -9,12 +9,10 @@ public class RigOrientation : MonoBehaviour
     //protected float headsetDepth; //y-coordinate (height) of camera in world space
     //[SerializeField]
     //protected float headsetDepthCorrected;// corrected depth that takes into account that ocean surface is at y = 2 (due to sky box)
-    private float rotationAbove = 180f;
-    private float rotationBelow = 90f;
-    
-    
-
-
+    //private float rotationAbove = 180f;
+    //private float rotationBelow = 90f;
+    private bool underwater = true;
+    public Transform headset;
 
     // Update is called once per frame
     void Update()
@@ -25,11 +23,31 @@ public class RigOrientation : MonoBehaviour
         //when the camera is above the water surface
         if (DepthCalculator.dc.headsetDepthCorrected >= 0)
         {
-            transform.localEulerAngles = new Vector3(rotationAbove, transform.localEulerAngles.y, transform.localEulerAngles.z);
+            RotateAboveWater();
         }
         else
         {
-            transform.localEulerAngles = new Vector3(rotationBelow, transform.localEulerAngles.y, transform.localEulerAngles.z);
+            RotateBelowWater();
+        }
+    }
+
+    private void RotateAboveWater()
+    {
+        if (underwater)
+        {
+            float rotationX = headset.localEulerAngles.x + 90;
+            headset.localEulerAngles = new Vector3(rotationX, headset.localEulerAngles.y, headset.localEulerAngles.z);
+            underwater = false;
+        }
+    }
+
+    private void RotateBelowWater()
+    {
+        if (!underwater)
+        {
+            float rotationX = headset.localEulerAngles.x - 90;
+            headset.localEulerAngles = new Vector3(rotationX, headset.localEulerAngles.y, headset.localEulerAngles.z);
+            underwater = true;
         }
     }
 }

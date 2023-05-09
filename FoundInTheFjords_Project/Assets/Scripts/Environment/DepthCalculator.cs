@@ -12,13 +12,24 @@ public class DepthCalculator : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        dc = this;
+        if (dc == null)
+        {
+            dc = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(this);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        headsetDepth = headset.position.y;
-        headsetDepthCorrected = headsetDepth - 2f;
+        if (headset != null)
+        {
+            headsetDepth = headset.position.y;
+            headsetDepthCorrected = headsetDepth - 2f;
+        }
     }
 }
