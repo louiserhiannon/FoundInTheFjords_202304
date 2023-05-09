@@ -14,6 +14,7 @@ namespace FoundInTheFjordsSceneManager
         public GameObject xRRig;
         public MovementControls moveControls;
         
+        
 
 
         protected virtual void Awake()
@@ -31,7 +32,7 @@ namespace FoundInTheFjordsSceneManager
 
 
             //Disable Move Controls
-            moveControls.DeActivateEatControls();
+            moveControls.DeactivateMovementControls();
 
             //Disable Eat Controller
             moveControls.DeActivateEatControls();

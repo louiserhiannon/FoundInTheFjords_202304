@@ -1624,6 +1624,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "UIPressed_Left",
+                    "type": "Button",
+                    "id": "7ca28c4a-593f-46b9-937e-1c4f2d312b75",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Activate_Right",
                     "type": "Button",
                     "id": "65e0f99a-32b6-4a1e-abfa-5674e366a2c6",
@@ -1633,9 +1642,27 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Activate_Left",
+                    "type": "Button",
+                    "id": "9876b8e1-5da3-40d5-b126-5849e04a9e93",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Select_Right",
                     "type": "Button",
                     "id": "15a305c8-3b6a-4403-bf8d-7d4a7ef0fbeb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Select_Left",
+                    "type": "Button",
+                    "id": "e0465166-964f-428d-a2c4-98007e9f92b4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -1673,6 +1700,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Select_Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "463eed38-2a16-4d90-a900-323e04f73a5e",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UIPressed_Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3b1d5f14-74c4-487c-b513-73ea43d964b1",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Activate_Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d9a3ddda-6bd9-4537-a391-79928039a4db",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select_Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

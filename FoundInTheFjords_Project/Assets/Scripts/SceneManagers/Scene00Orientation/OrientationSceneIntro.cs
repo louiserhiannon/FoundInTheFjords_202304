@@ -21,7 +21,7 @@ public class OrientationSceneIntro : MonoBehaviour
     public GameObject rightController;
     public CanvasGroup subtitlePanel;
     public List<CanvasGroup> subtitleSnippets;
-    public MovementControls moveControls;
+    
     public IEnumerator Scene00Intro()
     {
         yield return new WaitForSeconds(2f);
@@ -50,13 +50,14 @@ public class OrientationSceneIntro : MonoBehaviour
         yield return new WaitForSeconds(1f);
         //show instructional panel and switch out fins for controllers
         controllerInstructions.DOFade(1.0f, 1.5f);
+        controllerInstructions.interactable = true;
+        controllerInstructions.blocksRaycasts = true; 
         
         leftFin.SetActive(false);
         rightFin.SetActive(false);
         leftController.SetActive(true);
         rightController.SetActive(true);
-        //Switch on locomotion controls
-        moveControls.ActivateMovementControls();
+        
 
         //pause for learning and practice
         yield return new WaitForSeconds(15f);

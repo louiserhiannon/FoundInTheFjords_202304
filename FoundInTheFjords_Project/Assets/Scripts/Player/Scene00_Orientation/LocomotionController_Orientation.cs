@@ -10,7 +10,7 @@ public class LocomotionController_Orientation : LocomotionController
     [SerializeField] private Vector3 newLocalEulerAngle;
     private Vector3 rotateAxis = new Vector3(-1, 0, 0);
     public float angularSpeed;
-    public Transform jellyTransform;
+    //public Transform jellyTransform;
 
     public override void MoveForwardRelativeToCamera(float relativeForwardSpeed)
     {
@@ -38,15 +38,27 @@ public class LocomotionController_Orientation : LocomotionController
         if(transform.localEulerAngles.x > 0f && transform.localEulerAngles.x <= 90f && currentSpeed > 0f)
         {
             transform.Rotate(rotateAxis, angularSpeed * Time.deltaTime, Space.Self);
-            jellyTransform.Rotate(rotateAxis, angularSpeed * Time.deltaTime, Space.Self);
+            //jellyTransform.Rotate(rotateAxis, angularSpeed * Time.deltaTime, Space.Self);
         }
         
-        if(transform.localEulerAngles.x < 0f)
+        if(transform.localEulerAngles.x <= 0f)
         {
             transform.localEulerAngles = new Vector3 (0, transform.localEulerAngles.y, transform.localEulerAngles.z);
         }
 
-        xrRig.transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
+        //if(moveSpeed > 0)
+        //{
+        //    if (DepthCalculator.dc.headsetDepthCorrected < 0.5f)
+        //    {
+        //        xrRig.transform.Translate(currentSpeed * Time.deltaTime * transform.forward, Space.World);
+        //    }
+        //}
+        //else
+        //{
+        //    xrRig.transform.Translate(currentSpeed * Time.deltaTime * transform.forward, Space.World);
+        //}
+
+        transform.Translate(currentSpeed * Time.deltaTime * transform.forward, Space.World);
 
         //Vector3.up
     }
@@ -58,7 +70,7 @@ public class LocomotionController_Orientation : LocomotionController
         //translate sideways
         sidewaysSpeed = relativeSidewaysSpeed * maxTranslateSpeed;
         Vector3 sidewaysVector = new Vector3(sidewaysSpeed, 0, 0); 
-        xrRig.transform.Translate(sidewaysVector * Time.deltaTime, Space.World);
+        transform.Translate(sidewaysVector * Time.deltaTime, Space.World);
 
         //Rotate along local z axis
         spinAngleMax = 35f;
@@ -67,8 +79,8 @@ public class LocomotionController_Orientation : LocomotionController
         desiredAngle = -relativeSidewaysSpeed * spinAngleMax; //desired angle is between -25 (right) and +25 (left)
         rotationToDesiredAngle = (desiredAngle - currentAngle) / smoothingFactor;
         updatedAngle = currentAngle + rotationToDesiredAngle;
-        newLocalEulerAngle = new Vector3(xrRig.transform.localEulerAngles.x, xrRig.transform.localEulerAngles.y, updatedAngle);
-        xrRig.transform.localEulerAngles = newLocalEulerAngle;
+        newLocalEulerAngle = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, updatedAngle);
+        transform.localEulerAngles = newLocalEulerAngle;
 
         currentAngle = updatedAngle;
 
