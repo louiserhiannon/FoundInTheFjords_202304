@@ -30,6 +30,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene06-CalltoAction.unity
     guid: 35d578d5f7761b944b2b61cca6ec3462
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4b9a2f27cb90fd844b19008773a93535,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 88f0fda094d221e4cb486bd27e938f1a,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 86bdd47598029964e9c103d46ea447eb,
