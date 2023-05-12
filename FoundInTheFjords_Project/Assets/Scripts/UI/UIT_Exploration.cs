@@ -34,6 +34,7 @@ public class UIT_Exploration : MonoBehaviour
         //start mom swimming
         orcaMomAnimator.SetTrigger("Trigger_Swim");
 
+
         StartCoroutine(FadePanels());
 
         while(momToClara.distance > momToClara.minDistance)

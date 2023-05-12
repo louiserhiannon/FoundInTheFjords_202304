@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 7704940592670919019}
   - component: {fileID: 7704940592670919018}
   m_Layer: 0
-  m_Name: SDGJelly_SimpleMaterialSlots
+  m_Name: SDGJelly_Friends
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,7 +174,7 @@ SkinnedMeshRenderer:
   - {fileID: 2100000, guid: 82e3c778721216c4db67b32230d90c54, type: 2}
   - {fileID: 2100000, guid: 85ce8dcdde615b24b820df82148669d1, type: 2}
   - {fileID: 2100000, guid: 11612d00ee115e4408b056fdf8cd5682, type: 2}
-  - {fileID: 2100000, guid: 2330a1cff77bc4042a434d61ece36628, type: 2}
+  - {fileID: 2100000, guid: 723916f25e5d52648a7a782eff8e80c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -229,6 +229,13 @@ MonoBehaviour:
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -297,6 +304,7 @@ MonoBehaviour:
       m_Calls: []
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -451,7 +459,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!95 &7704940592670919020
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -468,7 +476,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7704940592670919019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,3 +509,4 @@ MonoBehaviour:
   interactableObject: {fileID: 5532020196333613163}
   interactionSignifier: {fileID: 1650500459}
   level00: {fileID: 0}
+  level01: {fileID: 0}

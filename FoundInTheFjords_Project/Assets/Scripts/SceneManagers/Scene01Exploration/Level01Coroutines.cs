@@ -35,7 +35,9 @@ public class Level01Coroutines : MonoBehaviour
 
         //start voiceover 06
         headsetAudioSource.PlayOneShot(voiceoverClips[1]);
+        subtitleSnippets[10].DOFade(1, 1);
         yield return new WaitForSeconds(voiceoverDurations[2]);
+        subtitleSnippets[10].DOFade(0, 1);
 
         //start voiceover 07 and subtitles
         claraAudioSource.PlayOneShot(voiceoverClips[2]);
@@ -64,12 +66,14 @@ public class Level01Coroutines : MonoBehaviour
         subtitleSnippets[8].DOFade(0, 1);
         yield return new WaitForSeconds(1f);
 
-        //start voiceover 08
-        headsetAudioSource.PlayOneShot(voiceoverClips[4]);
+        //start voiceover 08 and subtitles
+        headsetAudioSource.PlayOneShot(voiceoverClips[3]);
+        subtitleSnippets[11].DOFade(1, 1);
         yield return new WaitForSeconds(voiceoverDurations[10]);
+        subtitleSnippets[11].DOFade(0, 1);
 
         //start voiceover 09 and subtitles
-        claraAudioSource.PlayOneShot(voiceoverClips[5]);
+        claraAudioSource.PlayOneShot(voiceoverClips[4]);
         subtitleSnippets[9].DOFade(1, 1);
         //wait for duration of clip
         yield return new WaitForSeconds(voiceoverDurations[11]);
