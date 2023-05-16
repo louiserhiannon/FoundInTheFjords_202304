@@ -118,7 +118,7 @@ QualitySettings:
       type: 2}
     excludedTargetPlatforms: []
   - serializedVersion: 2
-    name: CustomVR
+    name: CustomVR (Quest2)
     pixelLightCount: 2
     shadows: 2
     shadowResolution: 1

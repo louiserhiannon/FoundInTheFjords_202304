@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene01-Exploration.unity
     guid: e05332ac8c35fd14abc70c675923072a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene02-CarouselFeeding.unity
     guid: ab17a7cd523d317498c7b170bbb170b7
   - enabled: 0
@@ -30,6 +30,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene06-CalltoAction.unity
     guid: 35d578d5f7761b944b2b61cca6ec3462
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4b9a2f27cb90fd844b19008773a93535,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 88f0fda094d221e4cb486bd27e938f1a,
       type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 86bdd47598029964e9c103d46ea447eb,

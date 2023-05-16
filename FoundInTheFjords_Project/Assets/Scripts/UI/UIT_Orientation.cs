@@ -19,6 +19,8 @@ public class UIT_Orientation : MonoBehaviour
     public CanvasGroup subtitlePanel;
     public List<CanvasGroup> subtitleSnippets;
     public ActionBasedSnapTurnProvider snapTurnProvider;
+    public GameObject claraInteractionSignifierActual;
+    public GameObject claraInteractionSignifierReflected;
     
     
     public void FinishMovementOrientation()
@@ -63,9 +65,11 @@ public class UIT_Orientation : MonoBehaviour
         subtitleSnippets[1].DOFade(0, 1);
         yield return new WaitForSeconds(1f);
 
-        //start voiceover 04 and subtitles
+        //start voiceover 06 and subtitles
         claraAudioSource.PlayOneShot(voiceoverClips[2]);
         subtitleSnippets[2].DOFade(1, 1);
+        claraInteractionSignifierActual.SetActive(true);
+        claraInteractionSignifierReflected.SetActive(true); 
         //wait for duration of clip
         yield return new WaitForSeconds(voiceover06Duration);
         subtitleSnippets[2].DOFade(0, 1);
