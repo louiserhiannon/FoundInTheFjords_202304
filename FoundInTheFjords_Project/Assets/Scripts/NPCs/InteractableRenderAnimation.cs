@@ -5,10 +5,10 @@ using UnityEngine;
 public class InteractableRenderAnimation : MonoBehaviour
 {
     private Material pulsatingMaterial;
-    private float maxEmissiveIntensity;
-    private float emissiveIntensity;
+    //private float maxEmissiveIntensity;
+    //private float emissiveIntensity;
     private Color baseColour;
-    private Color HDRColour;
+    //private Color HDRColour;
     private float colourFactor;
     public float correctionFactor;
 
@@ -16,8 +16,8 @@ public class InteractableRenderAnimation : MonoBehaviour
     void Start()
     {
         pulsatingMaterial= GetComponent<MeshRenderer>().material;
-        maxEmissiveIntensity = 1f;
-        HDRColour = Color.cyan;
+        //maxEmissiveIntensity = 1f;
+        //HDRColour = Color.cyan;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class InteractableRenderAnimation : MonoBehaviour
     {
         colourFactor = (Mathf.Sin(Time.time * correctionFactor) + 1) / 2;
         SetAlpha(colourFactor);
-        SetEmission(colourFactor);
+        //SetEmission(colourFactor);
         
     }
 
@@ -36,9 +36,9 @@ public class InteractableRenderAnimation : MonoBehaviour
         pulsatingMaterial.color = baseColour;
     }
 
-    private void SetEmission(float intensity)
-    {
-        emissiveIntensity = colourFactor * maxEmissiveIntensity;
-        pulsatingMaterial.SetColor("_EmissiveColor", HDRColour * emissiveIntensity);
-    }
+    //private void SetEmission(float intensity)
+    //{
+    //    emissiveIntensity = colourFactor * maxEmissiveIntensity;
+    //    pulsatingMaterial.SetColor("_EmissiveColor", HDRColour * emissiveIntensity);
+    //}
 }

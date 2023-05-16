@@ -13,7 +13,6 @@ public class Level01Coroutines : MonoBehaviour
     public CanvasGroup subtitlePanel;
     public List<CanvasGroup> subtitleSnippets;
     public GameObject momInteractionSignifier;
-    public GameObject mom;
     public void StartCustomCoroutine(string name)
     {
         StartCoroutine(name);
@@ -82,7 +81,6 @@ public class Level01Coroutines : MonoBehaviour
 
         subtitlePanel.DOFade(0, 1);
         momInteractionSignifier.SetActive(true);
-        mom.GetComponent<XRSimpleInteractable>().enabled = true;
     }
 
 }

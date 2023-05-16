@@ -10,7 +10,10 @@ public class SceneManager_Exploration : SceneManager
     public GameObject leftController;
     public GameObject rightController;
     public GameObject momInteractionSignifier;
-    public GameObject mom;
+    public GameObject claraInteractionSignifier;
+
+
+
 
     protected override void Awake()
     {
@@ -21,7 +24,9 @@ public class SceneManager_Exploration : SceneManager
         leftController.SetActive(false);
         rightController.SetActive(false);
         momInteractionSignifier.SetActive(false);
-        mom.GetComponent<XRSimpleInteractable>().enabled = false;
+        claraInteractionSignifier.SetActive(false);
+
+
 
     }
 }

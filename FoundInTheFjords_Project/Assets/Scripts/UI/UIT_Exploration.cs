@@ -17,6 +17,7 @@ public class UIT_Exploration : MonoBehaviour
     public GameObject rightController;
     public CanvasGroup subtitlePanel;
     public ParticleSystem bubbles;
+    public GameObject claraInteractionSignifier;
     
     public Animator orcaMomAnimator;
     public MoveToObject momToClara;
@@ -90,6 +91,7 @@ public class UIT_Exploration : MonoBehaviour
 
         //start voiceover 04 and subtitles
         momAudioSource.PlayOneShot(voiceoverClips[3]);
+        claraInteractionSignifier.SetActive(true);
         bubbles.Play();
         subtitleSnippets[6].DOFade(1, 1);
         //wait for duration of subtitle snippet

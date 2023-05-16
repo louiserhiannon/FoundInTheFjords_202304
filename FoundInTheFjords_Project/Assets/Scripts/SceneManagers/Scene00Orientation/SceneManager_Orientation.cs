@@ -7,6 +7,9 @@ public class SceneManager_Orientation : SceneManager
     public OrientationSceneIntro orientationSceneIntro;
     public GameObject leftController;
     public GameObject rightController;
+    public GameObject claraInteractionSignifierActual;
+    public GameObject claraInteractionSignifierReflected;
+
 
     protected override void Awake()
     {
@@ -16,6 +19,9 @@ public class SceneManager_Orientation : SceneManager
         //deactivate controller models
         leftController.SetActive(false);
         rightController.SetActive(false);
+        
+        claraInteractionSignifierActual.SetActive(false);
+        claraInteractionSignifierReflected.SetActive(false);
 
     }
 }
