@@ -47,6 +47,8 @@ public class UITransition : MonoBehaviour
 
    
 
+   
+
     protected IEnumerator SwitchPanel()
     {
         foreach (CanvasGroup panel in infoUI.GetComponentsInChildren<CanvasGroup>())
