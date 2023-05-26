@@ -9306,9 +9306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdd5327d5b7fa44eaae947f05141d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoUI: {fileID: 426676888}
-  nextPanel: {fileID: 0}
-  audioSource: {fileID: 0}
   orcaMomSounds: {fileID: 5423431237446012028}
   baitballSounds: {fileID: 1874332070}
   orcaMomAnimator: {fileID: 5423431237446012031}
@@ -9519,6 +9516,7 @@ MonoBehaviour:
   orcas: []
   orcaFlees: []
   tailslapTutorial: {fileID: 337554332}
+  herringScales: {fileID: 0}
 --- !u!114 &337554334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13376,9 +13374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdd5327d5b7fa44eaae947f05141d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoUI: {fileID: 426676888}
-  nextPanel: {fileID: 0}
-  audioSource: {fileID: 0}
   orcaMomSounds: {fileID: 5423431237446012028}
   baitballSounds: {fileID: 1874332070}
   orcaMomAnimator: {fileID: 5423431237446012031}
@@ -17857,9 +17852,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdd5327d5b7fa44eaae947f05141d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infoUI: {fileID: 426676888}
-  nextPanel: {fileID: 0}
-  audioSource: {fileID: 0}
   orcaMomSounds: {fileID: 0}
   baitballSounds: {fileID: 1874332070}
   orcaMomAnimator: {fileID: 0}
@@ -18709,6 +18701,7 @@ MonoBehaviour:
   eat_simple: 0
   eat_tailslap: 0
   eat_fishing: 0
+  herringStorageArea: {fileID: 1761638557}
 --- !u!54 &914657182
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -37629,6 +37622,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722111688}
   m_CullTransparentMesh: 1
+--- !u!1 &1761638555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761638557}
+  - component: {fileID: 1761638556}
+  m_Layer: 0
+  m_Name: HerringStorageArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1761638556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761638555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f49d374929674247a0a5276cb9fcf54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  herringPrefab: {fileID: 1600125091261569732, guid: e2023b2da4c927d4fac46c00598fcf04,
+    type: 3}
+  numberOfHerring: 50
+  herringList: []
+  useGravity: 0
+--- !u!4 &1761638557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761638555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 52.3, y: -4.9, z: 22.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1767859502
 GameObject:
   m_ObjectHideFlags: 0

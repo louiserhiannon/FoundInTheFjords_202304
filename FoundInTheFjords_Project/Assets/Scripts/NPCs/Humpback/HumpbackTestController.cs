@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class HumpbackTestController : MonoBehaviour
 {
     public HumpbackSwimAnimation animationController;
@@ -15,6 +16,7 @@ public class HumpbackTestController : MonoBehaviour
     public List<Transform> orcas;
     public List<MoveToObject> orcaFlees;
     public TailSlapTutorial tailslapTutorial;
+    public ParticleSystem herringScales;
 
     // Start is called before the first frame update
     private void Awake()
@@ -43,7 +45,7 @@ public class HumpbackTestController : MonoBehaviour
 
         //orca swim off
         StartCoroutine(OrcaSwimAway());
-        Debug.Log("orca swim away");
+        //Debug.Log("orca swim away");
 
         MovementControls.MC.ActivateMovementControls();
 
@@ -67,7 +69,7 @@ public class HumpbackTestController : MonoBehaviour
             yield return null;
         }
 
-        //Destroy herring
+        //Destroy herring (deactivate)
         for (int i = FlockManager.FM.numFlockers - 1; i > -1 ; i--)
         {
             if(i%6 == 0)
@@ -76,10 +78,14 @@ public class HumpbackTestController : MonoBehaviour
             }
             else
             {
-                Destroy(FlockManager.FM.allFlockers[i]);
+                
+                FlockManager.FM.allFlockers[i].SetActive(false);
                 FlockManager.FM.allFlockers.RemoveAt(i);
             }
         }
+
+        //start herring scales particle system
+        herringScales.Play();
 
         tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17);
 
@@ -93,6 +99,8 @@ public class HumpbackTestController : MonoBehaviour
             humpbackSwimToBaitball.MoveToMinimumDistance();
             yield return null;
         }
+
+        humpbackSwimToBaitball.gameObject.SetActive(false);
 
     }
 
@@ -150,6 +158,11 @@ public class HumpbackTestController : MonoBehaviour
                 orcaFlees[i].MoveToMinimumDistance();
             }
             yield return null;
+        }
+
+        for (int i = 0; i < orcaFlees.Count; i++)
+        {
+            orcaFlees[i].gameObject.SetActive(false);
         }
 
 

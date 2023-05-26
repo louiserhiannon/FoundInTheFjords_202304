@@ -9,6 +9,7 @@ public class Eatable : MonoBehaviour
     private Color nonHoverColor;
     private float lifetime = 0;
     public bool hoverActivated = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +20,26 @@ public class Eatable : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        lifetime = 0;
+    }
+
     private void Update()
     {
         lifetime += Time.deltaTime;
         if(lifetime >= EatingController.EC.herringLifetime)
         {
-            Destroy(gameObject);
+            transform.position = HerringSpawner.HS.transform.position;
+            gameObject.SetActive(false);
+            if(TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+            {
+                rigidbody.useGravity = false;
+                rigidbody.isKinematic = true;
+            }
             for (int i = EatingController.EC.eatableHerrings.Count - 1; i > -1; i--)
             {
-                if (EatingController.EC.eatableHerrings[i] == null)
+                if (!EatingController.EC.eatableHerrings[i].gameObject.activeSelf)
                 {
                     EatingController.EC.eatableHerrings.RemoveAt(i);
                 }

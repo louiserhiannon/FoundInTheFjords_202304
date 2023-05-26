@@ -15,9 +15,11 @@ public class HerringSwim : MonoBehaviour
         swim.speed = Random.Range(SpawnEatableHerring.SH.minSpeed, SpawnEatableHerring.SH.maxSpeed);
         swim.rotationSpeed = Random.Range(SpawnEatableHerring.SH.minRotateSpeed, SpawnEatableHerring.SH.maxRotateSpeed);
         herringTarget = Instantiate(herringTargetPrefab, transform.position + 50 * Random.onUnitSphere, Quaternion.identity);
+        this.gameObject.SetActive(false);
     }
 
-    private void Start()
+    
+    private void OnEnable()
     {
         swim.targetTransform = herringTarget.transform;
         swim.distance = Vector3.Distance(transform.position, swim.targetTransform.position);

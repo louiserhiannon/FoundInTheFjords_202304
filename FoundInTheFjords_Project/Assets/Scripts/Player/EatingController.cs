@@ -25,6 +25,7 @@ public class EatingController : PlayerInputController
     public bool eat_simple = false;
     public bool eat_tailslap = false;
     public bool eat_fishing = false;
+    public Transform herringStorageArea;
     
 
     //public Eatable eatenHerring;
@@ -98,7 +99,13 @@ public class EatingController : PlayerInputController
             else if (eatableHerrings[0] != null)
             {
                 //Destroy Active Herring and remove from list
-                Destroy(eatableHerrings[0].gameObject);
+                eatableHerrings[0].gameObject.SetActive(false);
+                eatableHerrings[0].transform.position = HerringSpawner.HS.transform.position;
+                if (eatableHerrings[0].TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+                {
+                    rigidbody.useGravity = false;
+                    rigidbody.isKinematic = true;
+                }
                 eatableHerrings.Clear();
                 //increase count by 1
                 eatenHerringCount++;

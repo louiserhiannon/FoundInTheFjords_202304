@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,6 +27,7 @@ public class TailslapController : PlayerInputController
     public AudioClip voiceover12;
     public TMP_Text tailChargeTextNew;
     public TMP_Text chargedTextNew;
+    
 
     protected override void Awake()
     {
@@ -91,14 +93,47 @@ public class TailslapController : PlayerInputController
 
     private void SpawnHerring()
     {
+        int count = 0;
         int spawnedHerringCount = Random.Range(CarouselManager.CM.minSpawnedHerring, CarouselManager.CM.maxSpawnedHerring);
 
-        for (int i = 0; i < spawnedHerringCount; i++)
+        for (int i = 0; i < HerringSpawner.HS.herringList.Count; i++)
         {
-            Vector3 pos = transform.position + transform.forward + 1.5f * transform.up;
-            pos += new Vector3(Random.Range(-CarouselManager.CM.spawnOffsetX, CarouselManager.CM.spawnOffsetX), Random.Range(-CarouselManager.CM.spawnOffsetY, CarouselManager.CM.spawnOffsetY), Random.Range(-CarouselManager.CM.spawnOffsetZ, CarouselManager.CM.spawnOffsetZ));
-            Instantiate(CarouselManager.CM.stunnedHerringPrefab, pos, Random.rotation);
+            if (count < spawnedHerringCount)
+            {
+                
+                if (!HerringSpawner.HS.herringList[i].activeSelf)
+                {
+                    Vector3 pos = transform.position + transform.forward + 1.5f * transform.up;
+                    pos += new Vector3(Random.Range(-CarouselManager.CM.spawnOffsetX, CarouselManager.CM.spawnOffsetX), Random.Range(-CarouselManager.CM.spawnOffsetY, CarouselManager.CM.spawnOffsetY), Random.Range(-CarouselManager.CM.spawnOffsetZ, CarouselManager.CM.spawnOffsetZ));
+                    HerringSpawner.HS.herringList[i].transform.position = pos;
+                    HerringSpawner.HS.herringList[i].SetActive(true);
+                    if (HerringSpawner.HS.herringList[i].TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+                    {
+                        if (HerringSpawner.HS.useGravity)
+                        {
+                            rigidbody.useGravity = true;
+                            rigidbody.isKinematic = false;
+                        }
+
+                    }
+                    count++;
+                }
+
+            }
+            else
+            {
+                break;
+            }
         }
+
+        //for (int i = 0; i < spawnedHerringCount; i++)
+        //{
+        //    Vector3 pos = transform.position + transform.forward + 1.5f * transform.up;
+        //    pos += new Vector3(Random.Range(-CarouselManager.CM.spawnOffsetX, CarouselManager.CM.spawnOffsetX), Random.Range(-CarouselManager.CM.spawnOffsetY, CarouselManager.CM.spawnOffsetY), Random.Range(-CarouselManager.CM.spawnOffsetZ, CarouselManager.CM.spawnOffsetZ));
+        //    //Instantiate(CarouselManager.CM.stunnedHerringPrefab, pos, Random.rotation);
+            
+
+        //}
     }
 
     private IEnumerator TailslapVibration()

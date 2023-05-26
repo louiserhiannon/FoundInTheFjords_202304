@@ -19,6 +19,7 @@ public class CarouselMotion : MonoBehaviour
     private Animator tailslapAnimator;
     public bool isCarouselFeeding = true;
     
+    
 
 
     void Start()
@@ -33,6 +34,7 @@ public class CarouselMotion : MonoBehaviour
         maxDistance = 7.0f;
         Vector3 direction = (transform.position - parentTransform.position).normalized;
         transform.Translate(initialOffset * direction);
+       
         
 
     }
@@ -131,6 +133,40 @@ public class CarouselMotion : MonoBehaviour
         }
     }
 
+    private void SpawnStunnedHerring()
+    {
+        int count = 0;
+        int spawnedHerringCount = Random.Range(CarouselManager.CM.minSpawnedHerring, CarouselManager.CM.maxSpawnedHerring);
+
+        for (int i = 0; i < HerringSpawner.HS.herringList.Count; i++)
+        {
+            if (count < spawnedHerringCount)
+            {
+                if (!HerringSpawner.HS.herringList[i].activeSelf)
+                {
+                    Vector3 pos = transform.position + transform.forward + 1.5f * transform.up;
+                    pos += new Vector3(Random.Range(-CarouselManager.CM.spawnOffsetX, CarouselManager.CM.spawnOffsetX), Random.Range(-CarouselManager.CM.spawnOffsetY, CarouselManager.CM.spawnOffsetY), Random.Range(-CarouselManager.CM.spawnOffsetZ, CarouselManager.CM.spawnOffsetZ));
+                    HerringSpawner.HS.herringList[i].transform.position = pos;
+                    HerringSpawner.HS.herringList[i].SetActive(true);
+                    if (HerringSpawner.HS.herringList[i].TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+                    {
+                        if (HerringSpawner.HS.useGravity)
+                        {
+                            rigidbody.useGravity = true;
+                            rigidbody.isKinematic = false;
+                        }
+
+                    }
+                    count++;
+                }
+
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
     IEnumerator TailslapAnimation()
     {
 
@@ -141,14 +177,16 @@ public class CarouselMotion : MonoBehaviour
             yield return new WaitForSeconds(1.5f);
 
             //Spawn stunned herring
-            int spawnedHerringCount = Random.Range(CarouselManager.CM.minSpawnedHerring, CarouselManager.CM.maxSpawnedHerring);
 
-            for (int i = 0; i < spawnedHerringCount; i++)
-            {
-                Vector3 pos = transform.position + 0.3f * (parentTransform.position - transform.position);
-                pos += new Vector3(Random.Range(-CarouselManager.CM.spawnOffsetX, CarouselManager.CM.spawnOffsetX), Random.Range(-CarouselManager.CM.spawnOffsetY, CarouselManager.CM.spawnOffsetY), Random.Range(-CarouselManager.CM.spawnOffsetZ, CarouselManager.CM.spawnOffsetZ));
-                Instantiate(CarouselManager.CM.stunnedHerringPrefab, pos, Random.rotation);
-            }
+            SpawnStunnedHerring();
+            //int spawnedHerringCount = Random.Range(CarouselManager.CM.minSpawnedHerring, CarouselManager.CM.maxSpawnedHerring);
+
+            //for (int i = 0; i < spawnedHerringCount; i++)
+            //{
+            //    Vector3 pos = transform.position + 0.3f * (parentTransform.position - transform.position);
+            //    pos += new Vector3(Random.Range(-CarouselManager.CM.spawnOffsetX, CarouselManager.CM.spawnOffsetX), Random.Range(-CarouselManager.CM.spawnOffsetY, CarouselManager.CM.spawnOffsetY), Random.Range(-CarouselManager.CM.spawnOffsetZ, CarouselManager.CM.spawnOffsetZ));
+            //    Instantiate(CarouselManager.CM.stunnedHerringPrefab, pos, Random.rotation);
+            //}
 
             yield return new WaitForSeconds(1.5f);
 

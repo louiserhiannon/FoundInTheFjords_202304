@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class UIT_locateBaitball : UITransition
+public class UIT_locateBaitball : MonoBehaviour
 {
     public AudioSource orcaMomSounds;
     public AudioSource baitballSounds;
@@ -31,7 +31,7 @@ public class UIT_locateBaitball : UITransition
    
 
     
-    public override void UINext()
+    public void UINext()
     {
         if(isRight)
         {
