@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class HumpbackTestController : MonoBehaviour
 {
     public HumpbackSwimAnimation animationController;
@@ -15,6 +16,9 @@ public class HumpbackTestController : MonoBehaviour
     public List<Transform> orcas;
     public List<MoveToObject> orcaFlees;
     public TailSlapTutorial tailslapTutorial;
+    public ParticleSystem herringScales;
+    public List<GameObject> interactionSignifiers;
+    
 
     // Start is called before the first frame update
     private void Awake()
@@ -43,7 +47,7 @@ public class HumpbackTestController : MonoBehaviour
 
         //orca swim off
         StartCoroutine(OrcaSwimAway());
-        Debug.Log("orca swim away");
+        //Debug.Log("orca swim away");
 
         MovementControls.MC.ActivateMovementControls();
 
@@ -67,21 +71,31 @@ public class HumpbackTestController : MonoBehaviour
             yield return null;
         }
 
-        //Destroy herring
-        for (int i = FlockManager.FM.numFlockers - 1; i > -1 ; i--)
+        //Destroy herring (deactivate)
+        for (int i = FlockManager_Circular.FM.numFlockers - 1; i > -1 ; i--)
         {
-            if(i%6 == 0)
+            if(i%20 == 0)
             {
                 
             }
             else
             {
-                Destroy(FlockManager.FM.allFlockers[i]);
-                FlockManager.FM.allFlockers.RemoveAt(i);
+
+                FlockManager_Circular.FM.allFlockers[i].SetActive(false);
+                FlockManager_Circular.FM.allFlockers.RemoveAt(i);
             }
         }
 
+        //start herring scales particle system
+        herringScales.Play();
+
         tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17);
+
+        //activate interaction Signifiers
+        for(int  i = 0; i < interactionSignifiers.Count; i++)
+        {
+            interactionSignifiers[i].SetActive(true);
+        }
 
         humpbackSwimToBaitball.targetTransform = humpbackFleeTarget;
         humpbackSwimToBaitball.distance = Vector3.Distance(humpbackSwimToBaitball.targetTransform.position, humpbackSwimToBaitball.transform.position);
@@ -93,6 +107,8 @@ public class HumpbackTestController : MonoBehaviour
             humpbackSwimToBaitball.MoveToMinimumDistance();
             yield return null;
         }
+
+        humpbackSwimToBaitball.gameObject.SetActive(false);
 
     }
 
@@ -108,7 +124,7 @@ public class HumpbackTestController : MonoBehaviour
     public IEnumerator OrcaSwimAway()
     {
         
-        for (int i = 0; i < CarouselManager.CM.allAxes.Length; i++)
+        for (int i = 0; i < CarouselManager.CM.allAxes.Count; i++)
         {
             //stop axis rotation
             CarouselManager.CM.allAxes[i].GetComponent<RotateCarouselAxis>().isRotating = false;
@@ -150,6 +166,11 @@ public class HumpbackTestController : MonoBehaviour
                 orcaFlees[i].MoveToMinimumDistance();
             }
             yield return null;
+        }
+
+        for (int i = 0; i < orcaFlees.Count; i++)
+        {
+            orcaFlees[i].gameObject.SetActive(false);
         }
 
 

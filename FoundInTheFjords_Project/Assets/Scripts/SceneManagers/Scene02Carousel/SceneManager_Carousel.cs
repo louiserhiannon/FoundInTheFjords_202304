@@ -9,6 +9,10 @@ public class SceneManager_Carousel : SceneManager
 {
     public CarouselSceneIntro carouselSceneIntro;
     public GameObject flockManager;
+    public GameObject migrationInteractionSignifier;
+    public GameObject ecosystemInteractionSignifier;
+    public GameObject momInteractionSignifier;
+    
     
    
 
@@ -19,13 +23,18 @@ public class SceneManager_Carousel : SceneManager
         orcaMomAnimator.SetTrigger("Trigger_Swim");
 
         //Disable flock manager
-        flockManager.GetComponent<FlockManager>().enabled = false;
+        flockManager.GetComponent<FlockManager_Circular>().enabled = false;
 
         //disable tailslap controller
         xRRig.GetComponent<TailslapController>().enabled = false;
 
         //Start Scene02IntroCoroutine
         StartCoroutine(carouselSceneIntro.Scene02Intro());
+
+        migrationInteractionSignifier.SetActive(false);
+        ecosystemInteractionSignifier.SetActive(false);
+        momInteractionSignifier.SetActive(false);
+        
 
     }
 

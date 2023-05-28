@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CarouselManager : MonoBehaviour
@@ -7,7 +8,7 @@ public class CarouselManager : MonoBehaviour
     public static CarouselManager CM;
     public GameObject axisPrefab;
     public int numOrca;
-    public GameObject[] allAxes;
+    public List<GameObject> allAxes;
     public Transform carouselTransform;
     //public GameObject orcaPrefab;
     //public GameObject[] orcas;
@@ -61,12 +62,12 @@ public class CarouselManager : MonoBehaviour
     public void SpawnCarouselOrca()
     {
         //instantiate "numOrca" of axes at random orientations
-        allAxes = new GameObject[numOrca];
         for(int i = 0; i < numOrca; i++)
         {
             Quaternion axisRotation = Random.rotation;
-            allAxes[i] = Instantiate(axisPrefab, transform.position, axisRotation, carouselTransform);
+            allAxes.Add(Instantiate(axisPrefab, transform.position, axisRotation, carouselTransform));
 
+            allAxes[i].GetComponentInChildren<CarouselMotion>().SetRadialOffset(i);
             //hide them (look at earth elevator for code)
 
         }

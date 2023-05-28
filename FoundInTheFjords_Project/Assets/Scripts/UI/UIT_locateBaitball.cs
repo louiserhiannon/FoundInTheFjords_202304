@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class UIT_locateBaitball : UITransition
+public class UIT_locateBaitball : MonoBehaviour
 {
     public AudioSource orcaMomSounds;
     public AudioSource baitballSounds;
@@ -31,7 +31,7 @@ public class UIT_locateBaitball : UITransition
    
 
     
-    public override void UINext()
+    public void UINext()
     {
         if(isRight)
         {
@@ -75,8 +75,9 @@ public class UIT_locateBaitball : UITransition
             panel.blocksRaycasts = false;
         }
 
+        //start orca carousel animation
         //Start Carousel Animation
-        carouselTransform.GetComponentInChildren<FlockManager>().enabled = true;
+        carouselTransform.GetComponentInChildren<FlockManager_Circular>().enabled = true;
         CarouselManager.CM.SpawnCarouselOrca();
         //for (int i = 0; i < CarouselManager.CM.allAxes.Length; i++)
         //{

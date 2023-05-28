@@ -9,6 +9,7 @@ public class InteractableObject : MonoBehaviour
     private Color originalColour;
     public Level00Coroutines level00;
     public Level01Coroutines level01;
+    public Level02Coroutines level02;
     public CanvasGroup panel;
 
     private void Awake()
@@ -46,6 +47,16 @@ public class InteractableObject : MonoBehaviour
             this.gameObject.SetActive(false);
         }
         
+    }
+
+    public void PerformAction02(string coroutineName)
+    {
+        if (level02 != null)
+        {
+            level02.StartCustomCoroutine(coroutineName);
+            this.gameObject.SetActive(false);
+        }
+
     }
 
     public void ShowPanel()

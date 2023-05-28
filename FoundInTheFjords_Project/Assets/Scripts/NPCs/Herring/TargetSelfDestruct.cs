@@ -13,7 +13,12 @@ public class TargetSelfDestruct : MonoBehaviour
         lifetime += Time.deltaTime;
         if (lifetime >= EatingController.EC.herringLifetime)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            if (TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+            {
+                rigidbody.useGravity = false;
+                rigidbody.isKinematic = true;
+            }
         }
     }
 }

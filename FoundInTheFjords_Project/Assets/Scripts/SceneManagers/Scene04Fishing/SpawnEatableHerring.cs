@@ -10,6 +10,8 @@ public class SpawnEatableHerring : MonoBehaviour
     public float maxSpeed;
     public float minRotateSpeed;
     public float maxRotateSpeed;
+    public int numberOfSpawners;
+    private int count = 0;
 
     private void Awake()
     {
@@ -18,7 +20,7 @@ public class SpawnEatableHerring : MonoBehaviour
 
     void Update()
     {
-        if (Random.Range(1, 1000) < 8)
+        if (Random.Range(1, 1000) < 15)
         {
            Spawn();    
         }
@@ -27,7 +29,33 @@ public class SpawnEatableHerring : MonoBehaviour
     public void Spawn()
     {
         
-        Instantiate(herringPrefab, transform.position, Quaternion.identity);
+        for (int i = 0; i < HerringSpawner.HS.herringList.Count; i++)
+        {
+            if (count < numberOfSpawners)
+            {
+                if (!HerringSpawner.HS.herringList[i].activeSelf)
+                {
+                    HerringSpawner.HS.herringList[i].SetActive(true);
+                    if (HerringSpawner.HS.herringList[i].TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+                    {
+                        if (HerringSpawner.HS.useGravity)
+                        {
+                            rigidbody.useGravity = true;
+                            rigidbody.isKinematic = false;
+                        }
+                        
+                    }
+                    count++;
+                }
+                
+            }
+            else
+            {
+                break;
+            }
+        }
+        
+        //Instantiate(herringPrefab, transform.position, Quaternion.identity);
         
         
     }

@@ -9,10 +9,10 @@ public class UITransition : MonoBehaviour
 {
     public Canvas infoUI;
     public CanvasGroup nextPanel;
-    public CanvasGroup nextPanelButton;
+    //public CanvasGroup nextPanelButton;
     public AudioSource audioSource;
-    public AudioClip clip;
-    public float audioClipDuration;
+    //public AudioClip clip;
+    //public float audioClipDuration;
     
     
 
@@ -22,10 +22,10 @@ public class UITransition : MonoBehaviour
         
         if (nextPanel != null)
         {
-            if(clip == null)
-            {
-                audioClipDuration = 0;
-            }
+            //if(clip == null)
+            //{
+            //    audioClipDuration = 0;
+            //}
             StartCoroutine(SwitchPanel()); 
             
         }
@@ -47,6 +47,8 @@ public class UITransition : MonoBehaviour
 
    
 
+   
+
     protected IEnumerator SwitchPanel()
     {
         foreach (CanvasGroup panel in infoUI.GetComponentsInChildren<CanvasGroup>())
@@ -61,18 +63,18 @@ public class UITransition : MonoBehaviour
         nextPanel.interactable = true;
         nextPanel.blocksRaycasts = true;
 
-        yield return new WaitForSeconds(0.5f);
-        if(clip != null)
-        {
-            audioSource.PlayOneShot(clip);
-            Debug.Log("clip should be playing");
-        }
+        //yield return new WaitForSeconds(0.5f);
+        //if(clip != null)
+        //{
+        //    audioSource.PlayOneShot(clip);
+        //    Debug.Log("clip should be playing");
+        //}
 
-        yield return new WaitForSeconds(audioClipDuration);
+        //yield return new WaitForSeconds(audioClipDuration);
 
-        nextPanelButton.DOFade(1f, 1.5f);
-        nextPanelButton.interactable = true;
-        nextPanelButton.blocksRaycasts = true;
+        //nextPanelButton.DOFade(1f, 1.5f);
+        //nextPanelButton.interactable = true;
+        //nextPanelButton.blocksRaycasts = true;
         //SEE IF YOU CAN DELAY THE APPEARANCE OF BUTTON - Perhaps put on different panel?
         //add something in code to make it look like I'm doing something
     }

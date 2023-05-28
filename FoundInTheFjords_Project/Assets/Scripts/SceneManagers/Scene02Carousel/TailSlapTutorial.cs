@@ -159,9 +159,11 @@ public class TailSlapTutorial : MonoBehaviour
 
         //activate movement controls
         MovementControls.MC.ActivateMovementControls();
+        Debug.Log("movement controls should be activated");
 
         //activate eating controller
         MovementControls.MC.ActivateEatControls();
+        Debug.Log("eating controls should be activated");
 
         //set counter type bool to tailslap
         EatingController.EC.eat_tailslap = true;
