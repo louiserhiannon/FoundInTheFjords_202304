@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BubbleController : MonoBehaviour
 {
-    [SerializeField] private bool isPlaying = false;
+    [SerializeField] private bool makeBubbles = true;
     private ParticleSystem bubbles;
     void Start()
     {
@@ -12,22 +12,25 @@ public class BubbleController : MonoBehaviour
         StartCoroutine(PlayBubbles());
     }
 
-    private void Update()
-    {
-        if(!isPlaying)
-        {
-            StartCoroutine(PlayBubbles());
-        }
-    }
+    //private void Update()
+    //{
+    //    if(!isPlaying)
+    //    {
+    //        StartCoroutine(PlayBubbles());
+    //    }
+    //}
 
     private IEnumerator PlayBubbles()
     {
-
-        isPlaying = true;
-        yield return new WaitForSeconds(Random.Range(7f, 15f));
-        bubbles.Play();
-        yield return new WaitForSeconds(Random.Range(2f, 4f));
-        bubbles.Stop();
-        isPlaying = false;
+        while (makeBubbles)
+        {
+            yield return new WaitForSeconds(Random.Range(7f, 15f));
+            bubbles.Play();
+            yield return new WaitForSeconds(Random.Range(2f, 4f));
+            bubbles.Stop();
+            yield return null;
+        }
+        //isPlaying = true;
+        
     }
 }

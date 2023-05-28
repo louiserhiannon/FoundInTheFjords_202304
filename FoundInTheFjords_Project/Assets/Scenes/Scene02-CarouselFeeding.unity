@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: ab17a7cd523d317498c7b170bbb170b7
+  m_OcclusionCullingData: {fileID: 36300000, guid: 7c8862bcba188b349be909c67c00198d,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -97,7 +98,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: c0702ca338d30aa4f99cb6b021a690e0,
+    type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 558ff2e86d4134e43b1ab77d2c693f82,
     type: 2}
 --- !u!196 &4
@@ -9488,7 +9490,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baccee45f57328e47b3357bfd678113d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeScene: {fileID: 337554334}
   momAudioSource: {fileID: 5423431237446012028}
   voiceover18: {fileID: 8300000, guid: ef2431a2d8673f142b70cf7e1c2e7c13, type: 3}
 --- !u!1 &349694051
@@ -18441,7 +18442,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914657174}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 017c5e3933235514c9520e1dace2a4b2, type: 3}
   m_Name: 
@@ -36169,7 +36170,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 127
+  m_StaticEditorFlags: 111
   m_IsActive: 1
 --- !u!114 &1665495845
 MonoBehaviour:
@@ -43485,7 +43486,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 125
   m_IsActive: 1
 --- !u!4 &742277606376428711
 Transform:
@@ -43905,7 +43906,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1469700120553098437
 Transform:
