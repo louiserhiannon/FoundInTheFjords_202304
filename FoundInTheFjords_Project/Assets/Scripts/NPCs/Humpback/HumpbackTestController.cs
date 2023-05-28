@@ -17,6 +17,8 @@ public class HumpbackTestController : MonoBehaviour
     public List<MoveToObject> orcaFlees;
     public TailSlapTutorial tailslapTutorial;
     public ParticleSystem herringScales;
+    public List<GameObject> interactionSignifiers;
+    
 
     // Start is called before the first frame update
     private void Awake()
@@ -70,17 +72,17 @@ public class HumpbackTestController : MonoBehaviour
         }
 
         //Destroy herring (deactivate)
-        for (int i = FlockManager.FM.numFlockers - 1; i > -1 ; i--)
+        for (int i = FlockManager_Circular.FM.numFlockers - 1; i > -1 ; i--)
         {
-            if(i%6 == 0)
+            if(i%20 == 0)
             {
                 
             }
             else
             {
-                
-                FlockManager.FM.allFlockers[i].SetActive(false);
-                FlockManager.FM.allFlockers.RemoveAt(i);
+
+                FlockManager_Circular.FM.allFlockers[i].SetActive(false);
+                FlockManager_Circular.FM.allFlockers.RemoveAt(i);
             }
         }
 
@@ -88,6 +90,12 @@ public class HumpbackTestController : MonoBehaviour
         herringScales.Play();
 
         tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17);
+
+        //activate interaction Signifiers
+        for(int  i = 0; i < interactionSignifiers.Count; i++)
+        {
+            interactionSignifiers[i].SetActive(true);
+        }
 
         humpbackSwimToBaitball.targetTransform = humpbackFleeTarget;
         humpbackSwimToBaitball.distance = Vector3.Distance(humpbackSwimToBaitball.targetTransform.position, humpbackSwimToBaitball.transform.position);
@@ -116,7 +124,7 @@ public class HumpbackTestController : MonoBehaviour
     public IEnumerator OrcaSwimAway()
     {
         
-        for (int i = 0; i < CarouselManager.CM.allAxes.Length; i++)
+        for (int i = 0; i < CarouselManager.CM.allAxes.Count; i++)
         {
             //stop axis rotation
             CarouselManager.CM.allAxes[i].GetComponent<RotateCarouselAxis>().isRotating = false;

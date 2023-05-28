@@ -75,8 +75,9 @@ public class UIT_locateBaitball : MonoBehaviour
             panel.blocksRaycasts = false;
         }
 
+        //start orca carousel animation
         //Start Carousel Animation
-        carouselTransform.GetComponentInChildren<FlockManager>().enabled = true;
+        carouselTransform.GetComponentInChildren<FlockManager_Circular>().enabled = true;
         CarouselManager.CM.SpawnCarouselOrca();
         //for (int i = 0; i < CarouselManager.CM.allAxes.Length; i++)
         //{

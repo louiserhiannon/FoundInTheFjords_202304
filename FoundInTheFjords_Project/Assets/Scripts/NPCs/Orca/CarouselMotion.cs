@@ -9,15 +9,16 @@ public class CarouselMotion : MonoBehaviour
     [SerializeField] private float rotateAngle;
     [SerializeField] private float targetOffset;
     [SerializeField] private float rotateDistance;
-    [SerializeField] private float timeShift;
-    [SerializeField] private float timeStretch;
-    [SerializeField] private float initialOffset;
+    //[SerializeField] private float timeShift;
+    //[SerializeField] private float timeStretch;
+    //[SerializeField] private float initialOffset;
     [SerializeField] private bool coroutineRunning = false;
     private float minDistance;
     private float maxDistance;
     //[SerializeField] private float maxSlapDistance = 6.0f;
     private Animator tailslapAnimator;
     public bool isCarouselFeeding = true;
+    private ParticleSystem bubbles;
     
     
 
@@ -27,13 +28,16 @@ public class CarouselMotion : MonoBehaviour
         parentTransform = transform.parent;
         tailslapAnimator= GetComponent<Animator>();
         rotateAngle = Random.Range(CarouselManager.CM.minSpeed, CarouselManager.CM.maxSpeed);
-        timeShift = Random.Range(CarouselManager.CM.minTimeShift, CarouselManager.CM.maxTimeShift);
-        timeStretch = Random.Range(CarouselManager.CM.minTimeStretch, CarouselManager.CM.maxTimeStretch);
-        initialOffset = Random.Range(-1f, 1f);
-        minDistance = 5.0f;
-        maxDistance = 7.0f;
-        Vector3 direction = (transform.position - parentTransform.position).normalized;
-        transform.Translate(initialOffset * direction);
+        //timeShift = Random.Range(CarouselManager.CM.minTimeShift, CarouselManager.CM.maxTimeShift);
+        //timeStretch = Random.Range(CarouselManager.CM.minTimeStretch, CarouselManager.CM.maxTimeStretch);
+        //initialOffset = Random.Range(-1f, 1f);
+        //minDistance = 5.0f;
+        //maxDistance = 7.0f;
+
+        bubbles = GetComponentInChildren<ParticleSystem>();
+
+        //Vector3 direction = (transform.position - parentTransform.position).normalized;
+        //transform.Translate(initialOffset * direction);
        
         
 
@@ -65,7 +69,7 @@ public class CarouselMotion : MonoBehaviour
 
             //calculates target distance from centre
 
-            RadialOffset();
+            //RadialOffset();
 
 
             //at randomized intervals, start coroutine that triggers tail slap and bite animation, returning to locomotion animation
@@ -87,17 +91,22 @@ public class CarouselMotion : MonoBehaviour
 
     }
 
-    private void RadialOffset()
+    public void SetRadialOffset(int i)
     {
-        float maxOffset = CarouselManager.CM.maxOffset;
-        if (Random.Range(1, CarouselManager.CM.distanceSensitivity) < 10)
-        {
-            maxOffset = Random.Range(CarouselManager.CM.minOffset, CarouselManager.CM.maxOffset);
-        }
-
-        Vector3 direction = (transform.position - parentTransform.position).normalized;
-        transform.Translate(maxOffset * (Mathf.Sin((Time.time + Time.deltaTime + timeShift) / timeStretch) - Mathf.Sin((Time.time + timeShift) / timeStretch)) * direction);
+        transform.Translate((i - 1) * -transform.parent.right);
     }
+
+    //private void RadialOffset()
+    //{
+    //    float maxOffset = CarouselManager.CM.maxOffset;
+    //    if (Random.Range(1, CarouselManager.CM.distanceSensitivity) < 10)
+    //    {
+    //        maxOffset = Random.Range(CarouselManager.CM.minOffset, CarouselManager.CM.maxOffset);
+    //    }
+
+    //    Vector3 direction = (transform.position - parentTransform.position).normalized;
+    //    transform.Translate(maxOffset * (Mathf.Sin((Time.time + Time.deltaTime + timeShift) / timeStretch) - Mathf.Sin((Time.time + timeShift) / timeStretch)) * direction);
+    //}
 
     private void RandomSpeed()
     {
@@ -144,7 +153,7 @@ public class CarouselMotion : MonoBehaviour
             {
                 if (!HerringSpawner.HS.herringList[i].activeSelf)
                 {
-                    Vector3 pos = transform.position + transform.forward + 1.5f * transform.up;
+                    Vector3 pos = transform.position - transform.forward - 1.5f * transform.up;
                     pos += new Vector3(Random.Range(-CarouselManager.CM.spawnOffsetX, CarouselManager.CM.spawnOffsetX), Random.Range(-CarouselManager.CM.spawnOffsetY, CarouselManager.CM.spawnOffsetY), Random.Range(-CarouselManager.CM.spawnOffsetZ, CarouselManager.CM.spawnOffsetZ));
                     HerringSpawner.HS.herringList[i].transform.position = pos;
                     HerringSpawner.HS.herringList[i].SetActive(true);
@@ -172,6 +181,9 @@ public class CarouselMotion : MonoBehaviour
 
         if (tailslapAnimator != null)
         {
+            bubbles.Play();
+            yield return new WaitForSeconds(3f);
+            bubbles.Stop();
             tailslapAnimator.SetTrigger("Trigger_TailSlap");
 
             yield return new WaitForSeconds(1.5f);
@@ -188,25 +200,27 @@ public class CarouselMotion : MonoBehaviour
             //    Instantiate(CarouselManager.CM.stunnedHerringPrefab, pos, Random.rotation);
             //}
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1.0f);
 
             tailslapAnimator.SetTrigger("Trigger_SlapToSwim");
 
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(2.2f);
 
             tailslapAnimator.SetTrigger("Trigger_Bite");
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1.2f);
 
             tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
 
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(2.2f);
 
             tailslapAnimator.SetTrigger("Trigger_Bite");
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1.2f);
 
             tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
+
+            yield return new WaitForSeconds(2.2f);
 
         }
 

@@ -32,7 +32,8 @@ public class Eatable : MonoBehaviour
         {
             transform.position = HerringSpawner.HS.transform.position;
             gameObject.SetActive(false);
-            if(TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+            OnHoverEnd();
+            if (TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
             {
                 rigidbody.useGravity = false;
                 rigidbody.isKinematic = true;
@@ -42,6 +43,7 @@ public class Eatable : MonoBehaviour
                 if (!EatingController.EC.eatableHerrings[i].gameObject.activeSelf)
                 {
                     EatingController.EC.eatableHerrings.RemoveAt(i);
+                    
                 }
             }
         }

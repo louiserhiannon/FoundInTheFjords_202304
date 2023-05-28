@@ -100,6 +100,7 @@ public class EatingController : PlayerInputController
             {
                 //Destroy Active Herring and remove from list
                 eatableHerrings[0].gameObject.SetActive(false);
+                eatableHerrings[0].GetComponent<Eatable>().OnHoverEnd();
                 eatableHerrings[0].transform.position = HerringSpawner.HS.transform.position;
                 if (eatableHerrings[0].TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
                 {

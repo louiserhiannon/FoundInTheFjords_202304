@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3540603618076111139}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dorsal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7042270954094163144}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail.R.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1445177833729422387}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jaw.B.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8115279399580449986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9203115543848306362}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jaw.T.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1469522836638728061}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jaw.T.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6953374183384992458}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dorsal.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1196283377785890820}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6177629735481141178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail.R.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5111572860689250606}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pect.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2489838154423823711}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dorsal.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7222284844286950787}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pect.R.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,8 +396,8 @@ GameObject:
   - component: {fileID: 247580131479528866}
   - component: {fileID: 7170928733439973144}
   - component: {fileID: 5807889042841072422}
-  m_Layer: 0
-  m_Name: Orca_BasicAnimations_Female_FinalLOD
+  m_Layer: 6
+  m_Name: Orca_Shoaling_Animated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -411,7 +411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2163750250537666768}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 6, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -431,8 +431,8 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2163750250537666768}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.013000369, y: 0.13004637, z: -0.81677103}
-  m_Size: 6.8594885
+  m_LocalReferencePoint: {x: -0.013000369, y: 0.13004625, z: -0.81677103}
+  m_Size: 6.8594866
   m_FadeMode: 0
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
@@ -529,7 +529,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 004ef07059ebc374ebb3bcf39340919d, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -548,7 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 581913552364292543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spine.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5926430536524549886}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spine.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1542292364149866693}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8440637483697937296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3216939059137112121}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -711,7 +711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1473934995494596799}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pect.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -744,7 +744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377667580647389148}
   - component: {fileID: 2807582573739867768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5079608675730068330}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -860,7 +860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7786518847641050890}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pect.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7318927181582243617}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pect.L.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -923,7 +923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2984358873318745266}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2194361073870130668}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jaw.T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -990,7 +990,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5865953704647179291}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spine.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3358488086875177328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jaw.B.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1054,7 +1054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3524833687488994011}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1086,7 +1086,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2534252764527317700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shoulder.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1118,7 +1118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5669194740415247987}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail.L.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1150,7 +1150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6848236802093125644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jaw.B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1182,7 +1182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4766027742711558356}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail.L.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1214,7 +1214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4813337990552845381}
   - component: {fileID: 937709346580919824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CarouselAxis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1259,7 +1259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4789626083521797968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pect.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,7 +1292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7111145791004040509}
   - component: {fileID: 3658750037204963983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1322,7 +1322,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7450305764395974671}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -1409,7 +1409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924535346102589909}
   - component: {fileID: 6435695411812032425}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1439,7 +1439,7 @@ SkinnedMeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7581893924742705918}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -1527,7 +1527,7 @@ GameObject:
   - component: {fileID: 4481798994178517018}
   - component: {fileID: 7518218339250996604}
   - component: {fileID: 418357698651931367}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bubbles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6337,7 +6337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1258926751713867179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6369,7 +6369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3620592255441827289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pect.L.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6401,7 +6401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5301690035653767273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shoulder.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6433,7 +6433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7637025925769347828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6447,7 +6447,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8314736518272452798}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
@@ -6455,7 +6455,7 @@ Transform:
   - {fileID: 2984358873318745266}
   m_Father: {fileID: 1534882837873136234}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &8519848607780920937
 GameObject:
   m_ObjectHideFlags: 0
@@ -6465,7 +6465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 787816392989027073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dorsal.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6496,7 +6496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 751223986102289873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6529,7 +6529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1929359071005322964}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pect.R.002_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6560,7 +6560,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1919823099993834649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Chest_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6591,7 +6591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5690679467223584080}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tail.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
