@@ -33,6 +33,9 @@ public class CarouselMotion : MonoBehaviour
         //initialOffset = Random.Range(-1f, 1f);
         //minDistance = 5.0f;
         //maxDistance = 7.0f;
+       
+        //Calculate current distance from centre
+        rotateDistance = Vector3.Distance(parentTransform.position, transform.position);
 
         bubbles = GetComponentInChildren<ParticleSystem>();
 
@@ -48,21 +51,21 @@ public class CarouselMotion : MonoBehaviour
         if (isCarouselFeeding)
         {
             //Calculate current distance from centre
-            rotateDistance = Vector3.Distance(parentTransform.position, transform.position);
+            //rotateDistance = Vector3.Distance(parentTransform.position, transform.position);
 
-            //calculate speed
-            if (CarouselManager.CM.controlSpeedWithDistance)
-            {
-                //CALCULATES SPEED BASED ON DISTANCE FROM AXIS
-                SpeedFromDistance();
-            }
+            ////calculate speed
+            //if (CarouselManager.CM.controlSpeedWithDistance)
+            //{
+            //    //CALCULATES SPEED BASED ON DISTANCE FROM AXIS
+            //    SpeedFromDistance();
+            //}
 
-            else
-            {
-                //CALCULATES RANDOM SPEED
+            //else
+            //{
+            //    //CALCULATES RANDOM SPEED
 
-                RandomSpeed();
-            }
+            //    RandomSpeed();
+            //}
 
             //rotates around axis at given speed
             transform.RotateAround(parentTransform.position, parentTransform.up, -rotateAngle * Time.deltaTime);
@@ -108,39 +111,39 @@ public class CarouselMotion : MonoBehaviour
     //    transform.Translate(maxOffset * (Mathf.Sin((Time.time + Time.deltaTime + timeShift) / timeStretch) - Mathf.Sin((Time.time + timeShift) / timeStretch)) * direction);
     //}
 
-    private void RandomSpeed()
-    {
-        if (rotateAngle <= CarouselManager.CM.maxSpeed && rotateAngle >= CarouselManager.CM.minSpeed)
-        {
-            rotateAngle += Random.Range(CarouselManager.CM.minAcceleration, CarouselManager.CM.maxAcceleration);
-        }
-        else if (rotateAngle > CarouselManager.CM.maxSpeed)
-        {
-            rotateAngle = CarouselManager.CM.maxSpeed;
-        }
-        else
-        {
-            rotateAngle = CarouselManager.CM.minSpeed;
-        }
-    }
+    //private void RandomSpeed()
+    //{
+    //    if (rotateAngle <= CarouselManager.CM.maxSpeed && rotateAngle >= CarouselManager.CM.minSpeed)
+    //    {
+    //        rotateAngle += Random.Range(CarouselManager.CM.minAcceleration, CarouselManager.CM.maxAcceleration);
+    //    }
+    //    else if (rotateAngle > CarouselManager.CM.maxSpeed)
+    //    {
+    //        rotateAngle = CarouselManager.CM.maxSpeed;
+    //    }
+    //    else
+    //    {
+    //        rotateAngle = CarouselManager.CM.minSpeed;
+    //    }
+    //}
 
-    private void SpeedFromDistance()
-    {
+    //private void SpeedFromDistance()
+    //{
         
 
-        if (rotateDistance < maxDistance && rotateDistance > minDistance)
-        {
-            rotateAngle = CarouselManager.CM.minSpeed + (maxDistance - rotateDistance) / (maxDistance - minDistance) * (CarouselManager.CM.maxSpeed - CarouselManager.CM.minSpeed);
-        }
-        else if (rotateDistance <= minDistance)
-        {
-            rotateAngle = CarouselManager.CM.maxSpeed;
-        }
-        else
-        {
-            rotateAngle = CarouselManager.CM.minSpeed;
-        }
-    }
+    //    if (rotateDistance < maxDistance && rotateDistance > minDistance)
+    //    {
+    //        rotateAngle = CarouselManager.CM.minSpeed + (maxDistance - rotateDistance) / (maxDistance - minDistance) * (CarouselManager.CM.maxSpeed - CarouselManager.CM.minSpeed);
+    //    }
+    //    else if (rotateDistance <= minDistance)
+    //    {
+    //        rotateAngle = CarouselManager.CM.maxSpeed;
+    //    }
+    //    else
+    //    {
+    //        rotateAngle = CarouselManager.CM.minSpeed;
+    //    }
+    //}
 
     private void SpawnStunnedHerring()
     {
@@ -181,50 +184,86 @@ public class CarouselMotion : MonoBehaviour
 
         if (tailslapAnimator != null)
         {
-            bubbles.Play();
-            yield return new WaitForSeconds(3f);
-            bubbles.Stop();
-            tailslapAnimator.SetTrigger("Trigger_TailSlap");
+            while (isCarouselFeeding)
+            {
+                bubbles.Play();
+                yield return new WaitForSeconds(3f);
+                bubbles.Stop();
+                tailslapAnimator.SetTrigger("Trigger_TailSlap");
+                yield return new WaitForSeconds(1.5f);
 
-            yield return new WaitForSeconds(1.5f);
+                SpawnStunnedHerring();
 
-            //Spawn stunned herring
+                yield return new WaitForSeconds(1.0f);
 
-            SpawnStunnedHerring();
-            //int spawnedHerringCount = Random.Range(CarouselManager.CM.minSpawnedHerring, CarouselManager.CM.maxSpawnedHerring);
+                tailslapAnimator.SetTrigger("Trigger_SlapToSwim");
 
-            //for (int i = 0; i < spawnedHerringCount; i++)
-            //{
-            //    Vector3 pos = transform.position + 0.3f * (parentTransform.position - transform.position);
-            //    pos += new Vector3(Random.Range(-CarouselManager.CM.spawnOffsetX, CarouselManager.CM.spawnOffsetX), Random.Range(-CarouselManager.CM.spawnOffsetY, CarouselManager.CM.spawnOffsetY), Random.Range(-CarouselManager.CM.spawnOffsetZ, CarouselManager.CM.spawnOffsetZ));
-            //    Instantiate(CarouselManager.CM.stunnedHerringPrefab, pos, Random.rotation);
-            //}
+                yield return new WaitForSeconds(2.2f);
 
-            yield return new WaitForSeconds(1.0f);
+                tailslapAnimator.SetTrigger("Trigger_Bite");
 
-            tailslapAnimator.SetTrigger("Trigger_SlapToSwim");
+                yield return new WaitForSeconds(1.2f);
 
-            yield return new WaitForSeconds(2.2f);
+                tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
 
-            tailslapAnimator.SetTrigger("Trigger_Bite");
+                yield return new WaitForSeconds(2.2f);
 
-            yield return new WaitForSeconds(1.2f);
+                tailslapAnimator.SetTrigger("Trigger_Bite");
 
-            tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
+                yield return new WaitForSeconds(1.2f);
 
-            yield return new WaitForSeconds(2.2f);
+                tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
 
-            tailslapAnimator.SetTrigger("Trigger_Bite");
+                yield return new WaitForSeconds(2.2f);
 
-            yield return new WaitForSeconds(1.2f);
+                yield return new WaitForSeconds(Random.Range(3f, 10f));
 
-            tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
+                yield return null;
+            }
+            //bubbles.Play();
+            //yield return new WaitForSeconds(3f);
+            //bubbles.Stop();
+            //tailslapAnimator.SetTrigger("Trigger_TailSlap");
 
-            yield return new WaitForSeconds(2.2f);
+            //yield return new WaitForSeconds(1.5f);
+
+            ////Spawn stunned herring
+
+            //SpawnStunnedHerring();
+            ////int spawnedHerringCount = Random.Range(CarouselManager.CM.minSpawnedHerring, CarouselManager.CM.maxSpawnedHerring);
+
+            ////for (int i = 0; i < spawnedHerringCount; i++)
+            ////{
+            ////    Vector3 pos = transform.position + 0.3f * (parentTransform.position - transform.position);
+            ////    pos += new Vector3(Random.Range(-CarouselManager.CM.spawnOffsetX, CarouselManager.CM.spawnOffsetX), Random.Range(-CarouselManager.CM.spawnOffsetY, CarouselManager.CM.spawnOffsetY), Random.Range(-CarouselManager.CM.spawnOffsetZ, CarouselManager.CM.spawnOffsetZ));
+            ////    Instantiate(CarouselManager.CM.stunnedHerringPrefab, pos, Random.rotation);
+            ////}
+
+            //yield return new WaitForSeconds(1.0f);
+
+            //tailslapAnimator.SetTrigger("Trigger_SlapToSwim");
+
+            //yield return new WaitForSeconds(2.2f);
+
+            //tailslapAnimator.SetTrigger("Trigger_Bite");
+
+            //yield return new WaitForSeconds(1.2f);
+
+            //tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
+
+            //yield return new WaitForSeconds(2.2f);
+
+            //tailslapAnimator.SetTrigger("Trigger_Bite");
+
+            //yield return new WaitForSeconds(1.2f);
+
+            //tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
+
+            //yield return new WaitForSeconds(2.2f);
 
         }
 
-         coroutineRunning = false; //allows corouting to be started again
+         //coroutineRunning = false; //allows corouting to be started again
 
     }
 }
