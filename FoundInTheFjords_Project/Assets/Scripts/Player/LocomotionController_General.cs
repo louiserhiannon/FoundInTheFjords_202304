@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class LocomotionController_General : LocomotionController
 {
-    public BoundingNetController net;
+    //public BoundingNetController net;
     public override void MoveForwardRelativeToCamera(float relativeForwardSpeed)
     {
         moveSpeed = relativeForwardSpeed * maxSpeed;
@@ -33,11 +33,11 @@ public class LocomotionController_General : LocomotionController
 
         cameraForward = mainCamera.transform.forward;
 
-        if (!net.canMove && moveSpeed > 0)
-        {
-            Debug.Log(net.canMove);
-            currentSpeed = 0;
-        }
+        //if (!net.canMove && moveSpeed > 0)
+        //{
+        //    Debug.Log(net.canMove);
+        //    currentSpeed = 0;
+        //}
         
         netCameraVector = currentSpeed * cameraForward;
         
@@ -70,29 +70,29 @@ public class LocomotionController_General : LocomotionController
         cameraRight.Normalize();
         sidewaysCameraVector = sidewaysSpeed * cameraRight;
 
-        if (net.canMove)
-        {
+        //if (net.canMove)
+        //{
             xrRig.transform.Translate(sidewaysCameraVector * Time.deltaTime, Space.World);
-        }
+        //}
         
 
     }
 
     public override void JumpUp(InputAction.CallbackContext context)
     {
-        if (net.canMove)
-        {
+        //if (net.canMove)
+        //{
             xrRig.Translate(0f, jumpAmount, 0f);
-        }
+        //}
             
     }
 
     public override void JumpDown(InputAction.CallbackContext context)
     {
-        if(net.canMove)
-        {
+        //if(net.canMove)
+        //{
             xrRig.Translate(0f, -jumpAmount, 0f);
-        }
+        //}
         
     }
 }

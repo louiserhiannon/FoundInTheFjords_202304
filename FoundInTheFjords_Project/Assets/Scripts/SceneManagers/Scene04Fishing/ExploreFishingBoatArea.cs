@@ -93,7 +93,7 @@ public class ExploreFishingBoatArea : MonoBehaviour
         MovementControls.MC.ActivateMovementControls();
 
         //make mom interactable
-        mom.gameObject.GetComponent<XRSimpleInteractable>().enabled = true;
+        momInteractionSignifier.GetComponent<XRSimpleInteractable>().enabled = true;
         momInteractionSignifier.SetActive(true);
 
 

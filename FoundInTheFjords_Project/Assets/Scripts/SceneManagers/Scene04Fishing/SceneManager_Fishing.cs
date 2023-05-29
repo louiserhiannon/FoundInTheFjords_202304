@@ -18,7 +18,7 @@ public class SceneManager_Fishing : SceneManager
         //start Scene04IntroCoroutine
         StartCoroutine(fishingSceneIntro.Scene04Intro());
         humpbackAnimation.StartSwim();
-        orcaMom.GetComponent<XRSimpleInteractable>().enabled = false;
+        orcaMom.GetComponentInChildren<XRSimpleInteractable>().enabled = false;
         momInteractionSignifier.SetActive(false);
         ladder.SetActive(false);
 

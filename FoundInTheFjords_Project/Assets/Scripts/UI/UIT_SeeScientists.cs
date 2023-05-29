@@ -23,6 +23,7 @@ public class UIT_SeeScientists : UITransition
     public AudioClip voiceover29;
     public AudioClip voiceover30;
     public CanvasGroup panel;
+    public List<GameObject> orcas;
     
     private float voiceover26Duration = 10f;
     private float voiceover27Duration = 8.5f;
@@ -47,7 +48,7 @@ public class UIT_SeeScientists : UITransition
         //deactivate movement controls
         moveControls.DeactivateMovementControls();
         //disable mom's interactability
-        orcaMom.GetComponent<XRSimpleInteractable>().enabled = false;
+        //orcaMom.GetComponentInChildren<XRSimpleInteractable>().enabled = false;
         momInteractionSignifier.SetActive(false);
         //Move Zodiac into place
         StartCoroutine(MoveZodiac());
@@ -78,6 +79,12 @@ public class UIT_SeeScientists : UITransition
         //deparent Nora from Mom
         xRRig.transform.SetParent(null);
 
+        //Deactivate other orca
+        for(int i = 0; i < orcas.Count; i++)
+        {
+            orcas[i].SetActive(false);
+        }
+
         //activate movement controls
         moveControls.ActivateMovementControls();
 
@@ -105,8 +112,8 @@ public class UIT_SeeScientists : UITransition
         yield return new WaitForSeconds(voiceover30Duration);
         
         //reset and enable mom's interactability
-        orcaMom.GetComponent<JellyInteractions>().coroutineName = "IntroduceSnorkelers";
-        orcaMom.GetComponent<XRSimpleInteractable>().enabled = true;
+        orcaMom.GetComponentInChildren<JellyInteractions>().coroutineName = "IntroduceSnorkelers";
+        //orcaMom.GetComponentInChildren<XRSimpleInteractable>().enabled = true;
         momInteractionSignifier.SetActive(true);
         //activate movement controls
         moveControls.ActivateMovementControls();

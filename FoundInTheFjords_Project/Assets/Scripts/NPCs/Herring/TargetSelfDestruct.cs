@@ -10,15 +10,19 @@ public class TargetSelfDestruct : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lifetime += Time.deltaTime;
-        if (lifetime >= EatingController.EC.herringLifetime)
+        if (gameObject.activeSelf)
         {
-            gameObject.SetActive(false);
-            if (TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+            lifetime += Time.deltaTime;
+            if (lifetime >= EatingController.EC.herringLifetime)
             {
-                rigidbody.useGravity = false;
-                rigidbody.isKinematic = true;
+                gameObject.SetActive(false);
+                if (TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+                {
+                    rigidbody.useGravity = false;
+                    rigidbody.isKinematic = true;
+                }
             }
         }
+        
     }
 }

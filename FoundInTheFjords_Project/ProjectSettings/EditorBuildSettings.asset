@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene04-Fishing.unity
     guid: 6a6ec40488b0af841a7a3811b6b149ca
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene05-360Zodiac.unity
     guid: eb3211c18e9334d4cb189f79215b88e7
   - enabled: 0
