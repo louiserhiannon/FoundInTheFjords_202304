@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 2185856683617186363}
   m_Layer: 0
   m_Name: HerringSingleEatableLOD
-  m_TagString: Untagged
+  m_TagString: stunnedHerring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,7 +225,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7587565648948953215}
-  - screenRelativeHeight: 0.01
+  - screenRelativeHeight: 0
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1965242912417201951}
@@ -325,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   herringTargetPrefab: {fileID: 3669500902927688519, guid: 25ba0575a64f276429a1e7eae1932f17,
     type: 3}
+  herringStorageArea: {fileID: 0}
 --- !u!1 &2658003536018903252
 GameObject:
   m_ObjectHideFlags: 0

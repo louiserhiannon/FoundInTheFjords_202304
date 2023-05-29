@@ -60,7 +60,7 @@ public class JellyInteractions : MonoBehaviour
     private void Awake()
     {
         //jellyCanvas = FindObjectOfType<Canvas>();
-        jellyAudioSource = GetComponent<AudioSource>();
+        jellyAudioSource = GetComponentInParent<AudioSource>();
         originalColour = interactionSignifier.material.color;
         DisablePanels();
 
@@ -102,8 +102,12 @@ public class JellyInteractions : MonoBehaviour
                 jellyAudioSource.PlayOneShot(jellyClip);
                 firstSelectionAudio = false;
                 //make mom uninteractable
-                interactableObject.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
-                interactionSignifier.gameObject.SetActive(false);
+                if (interactableObject.activeSelf)
+                {
+                    //interactableObject.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
+                    interactableObject.SetActive(false);
+                }
+                    
             }
             else
             {
@@ -128,8 +132,11 @@ public class JellyInteractions : MonoBehaviour
                 
                 firstSelectionUI = false;
                 //make mom uninteractable
-                interactableObject.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
-                interactionSignifier.gameObject.SetActive(false);
+                if (interactableObject.activeSelf)
+                {
+                    //interactableObject.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
+                    interactableObject.SetActive(false);
+                }
             }
 
         }
@@ -173,8 +180,8 @@ public class JellyInteractions : MonoBehaviour
         yield return new WaitForSeconds(voiceover31Duration);
 
         //make mom uninteractable
-        interactableObject.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
-        interactionSignifier.gameObject.SetActive(false);
+        //interactableObject.gameObject.GetComponent<XRSimpleInteractable>().enabled = false;
+        interactableObject.SetActive(false);
 
         //Play voiceover 32
         claraAudioSource.PlayOneShot(voiceover32);

@@ -6,6 +6,7 @@ public class HerringSwim : MonoBehaviour
 {
     private MoveToObject swim;
     public GameObject herringTargetPrefab;
+    public Transform herringStorageArea;
     private GameObject herringTarget;
 
     private void Awake()
@@ -14,8 +15,13 @@ public class HerringSwim : MonoBehaviour
         swim.minDistance = 0.5f;
         swim.speed = Random.Range(SpawnEatableHerring.SH.minSpeed, SpawnEatableHerring.SH.maxSpeed);
         swim.rotationSpeed = Random.Range(SpawnEatableHerring.SH.minRotateSpeed, SpawnEatableHerring.SH.maxRotateSpeed);
-        herringTarget = Instantiate(herringTargetPrefab, transform.position + 50 * Random.onUnitSphere, Quaternion.identity);
-        this.gameObject.SetActive(false);
+        Vector3 dir = new Vector3(Random.Range(1f,-1f), Random.Range(-1f,0f), Random.Range(-1f,0f)).normalized;
+        Vector3 pos = transform.position + dir * 25;
+        herringTarget = Instantiate(herringTargetPrefab, pos, Quaternion.identity);
+        swim.targetTransform = herringTarget.transform;
+        //herringTarget.SetActive(false);
+        herringStorageArea = transform;
+        //this.gameObject.SetActive(false);
     }
 
     
@@ -23,6 +29,7 @@ public class HerringSwim : MonoBehaviour
     {
         swim.targetTransform = herringTarget.transform;
         swim.distance = Vector3.Distance(transform.position, swim.targetTransform.position);
+        //herringTarget.SetActive(true);
         StartCoroutine(SwimFromNet());
     }
 
@@ -35,5 +42,12 @@ public class HerringSwim : MonoBehaviour
 
             yield return null;
         }
+
+        //if (gameObject.activeSelf)
+        //{
+        //    gameObject.SetActive(false);
+        //    gameObject.transform.position = herringStorageArea.position;
+        //}
+        
     }
 }

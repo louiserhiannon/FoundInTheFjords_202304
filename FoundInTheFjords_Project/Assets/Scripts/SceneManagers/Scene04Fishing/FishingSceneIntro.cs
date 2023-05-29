@@ -13,6 +13,7 @@ public class FishingSceneIntro : MonoBehaviour
     public Transform clara;
     public Transform mom;
     public AudioSource claraAudioSource;
+    public AudioSource momAudioSource;
     public AudioClip voiceover01;
     public AudioClip voiceover02;
     public AudioClip voiceover03;
@@ -92,10 +93,10 @@ public class FishingSceneIntro : MonoBehaviour
         }
 
         //Play Voiceover 4
-        claraAudioSource.PlayOneShot(voiceover04);
+        momAudioSource.PlayOneShot(voiceover04);
         yield return new WaitForSeconds(voiceover04Duration);
         //Play voiceover 5
-        claraAudioSource.PlayOneShot(voiceover05);
+        momAudioSource.PlayOneShot(voiceover05);
         yield return new WaitForSeconds(voiceover05Duration);
         //Show panels
         foreach (CanvasGroup panel in identifyThief.GetComponentsInChildren<CanvasGroup>())
