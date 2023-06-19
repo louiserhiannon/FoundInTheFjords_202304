@@ -112,7 +112,7 @@ public class LadderClimb : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        //Load next Scene
+        ChangeScene.instance.SceneSwitch("Scene05-360Zodiac");
 
     }
 }

@@ -13,6 +13,7 @@ public class RigOrientation : MonoBehaviour
     //private float rotationBelow = 90f;
     private bool underwater = true;
     public Transform headset;
+    public DepthCalculator depthCalculator;
 
     // Update is called once per frame
     void Update()
@@ -21,7 +22,7 @@ public class RigOrientation : MonoBehaviour
         //headsetDepthCorrected = headsetDepth - 2f;
 
         //when the camera is above the water surface
-        if (DepthCalculator.dc.headsetDepthCorrected >= 0)
+        if (depthCalculator.headsetDepthCorrected >= 0)
         {
             RotateAboveWater();
         }

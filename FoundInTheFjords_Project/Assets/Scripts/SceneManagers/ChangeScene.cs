@@ -8,14 +8,14 @@ public class ChangeScene : MonoBehaviour
     public static ChangeScene instance;
     private void Awake()
     {
-        if(instance == null)
+        if(instance != null && instance != this)
         {
-            instance = this;
-            DontDestroyOnLoad(this);
+            Destroy(this);
+
         }
         else
         {
-            Destroy(this);
+            instance = this;
         }
     }
 

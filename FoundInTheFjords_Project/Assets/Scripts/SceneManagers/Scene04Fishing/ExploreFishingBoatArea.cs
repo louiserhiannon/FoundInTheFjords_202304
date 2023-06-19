@@ -21,6 +21,7 @@ public class ExploreFishingBoatArea : MonoBehaviour
     public AudioClip voiceover24;
     private float voiceover23Duration = 12.5f;
     private float voiceover24Duration = 14.2f;
+    public EatingController eatingController;
 
     public IEnumerator ExploreSurroundings01()
     {
@@ -39,7 +40,7 @@ public class ExploreFishingBoatArea : MonoBehaviour
         }
 
         //reset herring count
-        EatingController.EC.eatenHerringCount = 0;
+        eatingController.eatenHerringCount = 0;
 
         //Set Target Transform
         moveToMom.targetTransform = mom;

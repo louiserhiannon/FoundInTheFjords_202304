@@ -12,6 +12,7 @@ public class MirrorObjectViewController : MonoBehaviour
     public MeshRenderer waterSurfaceRenderer;
     private Material surfaceMaterial;
     private Color surfaceColour;
+    public DepthCalculator depthCalculator;
 
     private void Start()
     {
@@ -21,11 +22,11 @@ public class MirrorObjectViewController : MonoBehaviour
 
     void Update()
     {
-        if(DepthCalculator.dc != null)
+        if(depthCalculator != null)
         {
             if (mirrorObjects[0] != null)
             {
-                if (DepthCalculator.dc.headsetDepthCorrected >= 0)
+                if (depthCalculator.headsetDepthCorrected >= 0)
                 {
                     //switches off mirror orca, mirror jelly, and upper seabox
                     for (int i = 0; i < mirrorObjects.Count; i++)
