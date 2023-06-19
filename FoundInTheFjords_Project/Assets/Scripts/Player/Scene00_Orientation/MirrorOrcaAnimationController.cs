@@ -41,6 +41,11 @@ public class MirrorOrcaAnimationController : PlayerInputController
     {
         base.TailSlap(value);
 
+        if(value < 0.9f)
+        {
+            sliderCharged.enabled = false;
+        }
+
         if (value < 0.05f)
         {
             if (tailCharged == true)
@@ -54,6 +59,7 @@ public class MirrorOrcaAnimationController : PlayerInputController
             tailCharged = false;
             chargedText.text = string.Empty;
             tailChargeText.text = string.Empty;
+            
 
         }
 

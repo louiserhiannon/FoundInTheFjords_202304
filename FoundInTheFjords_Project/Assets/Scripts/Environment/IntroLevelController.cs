@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IntroLevelController : MonoBehaviour
 {
     //controls the zoom animation and voiceover for the intro scene
     public Transform xRRig;
+    public GameObject earth;
     public Animator xrRigZoomAnimator;
     public Animator pinAnimator;
     public float cameraZoom01Duration = 17f;
@@ -25,7 +27,11 @@ public class IntroLevelController : MonoBehaviour
     public GameObject earthPlain;
     public GameObject earthOrcaDistribution;
     public GameObject locationPin;
-    public Material underwaterSkybox;
+    public GameObject underwaterPanorama;
+    public Image fishingBoat;
+    public Image containerBoat;
+    public Image tourists;
+    //public Material underwaterSkybox;
     
 
 
@@ -43,6 +49,10 @@ public class IntroLevelController : MonoBehaviour
         earthPlain.SetActive(true);
         earthOrcaDistribution.SetActive(false);
         locationPin.SetActive(false);
+        underwaterPanorama.SetActive(false);
+        fishingBoat.enabled = false;
+        containerBoat.enabled = false;
+        tourists.enabled = false;
     }
 
     protected IEnumerator IntroLevel()
@@ -71,6 +81,7 @@ public class IntroLevelController : MonoBehaviour
         yield return new WaitForSeconds(clipDuration02);
         //play voiceover 2b
         audioSource.PlayOneShot(introVoiceover03);
+        StartCoroutine(ShowPictures());
         //Deactivate plain model, activate orca distribution model
         earthPlain.SetActive(false);
         earthOrcaDistribution.SetActive(true);
@@ -96,8 +107,13 @@ public class IntroLevelController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         //Activate pin
         locationPin.SetActive(true);
+        while(earth.transform.eulerAngles.y > 90)
+        {
+            yield return null;
+        }
+        earth.GetComponent<EarthRotation>().isRotating = false;
         //Wait until almost the end of the clip
-        yield return new WaitForSeconds(clipDuration04-1f);
+        yield return new WaitForSeconds(11.5f);
         //Start Zoom03 animation
         if (xrRigZoomAnimator != null)
         {
@@ -110,11 +126,27 @@ public class IntroLevelController : MonoBehaviour
         //wait for end of animation
         yield return new WaitForSeconds(cameraZoom03Duration-0.5f);
         //change skybox
-        RenderSettings.skybox = underwaterSkybox;
+        //RenderSettings.skybox = underwaterSkybox;
+        underwaterPanorama.SetActive(true);
         audioSource.PlayOneShot(splash);
         yield return new WaitForSeconds(5.0f);
         //Load next scene
         ChangeScene.instance.SceneSwitch("Scene00-Orientation");
+
+    }
+
+    private IEnumerator ShowPictures()
+    {
+        yield return new WaitForSeconds(17.5f);
+        fishingBoat.enabled = true;
+        yield return new WaitForSeconds(1);
+        containerBoat.enabled = true;
+        yield return new WaitForSeconds(1);
+        tourists.enabled = true;
+        yield return new WaitForSeconds(6.5f);
+        fishingBoat.enabled = false;
+        containerBoat.enabled = false;
+        tourists.enabled = false;
 
     }
 }

@@ -8,11 +8,12 @@ public class EarthRotation : MonoBehaviour
 {
     public float rotateSpeed;
     public float rotationTime;
+    public bool isRotating = true;
 
     void Update()
     {
         //rotates the earth on a vertical axis until a specified time point is reached
-        if (Time.time <= rotationTime)
+        if (isRotating)
         {
             transform.Rotate(-Vector3.up, rotateSpeed * Time.deltaTime);
         }
