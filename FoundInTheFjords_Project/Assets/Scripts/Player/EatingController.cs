@@ -33,7 +33,15 @@ public class EatingController : PlayerInputController
     protected override void Awake()
     {
         base.Awake();
-        EatingController.EC = this;
+        if (EC != null && EC != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            EC = this;
+        }
+        
     }
     private void Start()
     {

@@ -70,6 +70,22 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
+    public void UpdateScene(string sceneName)
+    {
+        if(EatingController.EC != null)
+        {
+            Destroy(EatingController.EC);
+        }
+        if(MovementControls.MC != null)
+        {
+            Destroy(MovementControls.MC);
+        }
+        if (HerringSpawner.HS != null)
+        {
+            Destroy(HerringSpawner.HS);
+        }
 
+        ChangeScene.instance.SceneSwitch(sceneName);
+    }
 }
 

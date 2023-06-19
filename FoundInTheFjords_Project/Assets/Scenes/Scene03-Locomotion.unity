@@ -13606,6 +13606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a9b31475e22d54dba4f378debd6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  depthCalculator: {fileID: 0}
   maxFogDepth: 2
   maxFogDensity: 0.06
   minFogDensity: 0.03
@@ -14219,9 +14220,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 836212982}
-  - component: {fileID: 836212981}
   - component: {fileID: 836212983}
   - component: {fileID: 836212984}
+  - component: {fileID: 836212985}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -14229,18 +14230,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &836212981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836212980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da0bba6784a55404eb7a5d43a19afc13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &836212982
 Transform:
   m_ObjectHideFlags: 0
@@ -14312,6 +14301,18 @@ MonoBehaviour:
   - 4.3
   - 73
   - 5.2
+--- !u!114 &836212985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836212980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0bba6784a55404eb7a5d43a19afc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &837329875
 GameObject:
   m_ObjectHideFlags: 0

@@ -16220,10 +16220,10 @@ GameObject:
   - component: {fileID: 562568037}
   - component: {fileID: 562568038}
   - component: {fileID: 562568039}
-  - component: {fileID: 562568040}
   - component: {fileID: 562568042}
   - component: {fileID: 562568041}
   - component: {fileID: 562568043}
+  - component: {fileID: 562568044}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Untagged
@@ -16490,18 +16490,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &562568040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562568031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f77c99e0a4934a42a1c50f9fcfa6dc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &562568041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16547,7 +16535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d75e9aa00bcdb40bd3dd141e501848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveControls: {fileID: 562568040}
+  moveControls: {fileID: 0}
   snorkelerTransform: {fileID: 2139715330}
   speed: 0.5
   rotationSpeed: 0.2
@@ -16573,6 +16561,18 @@ MonoBehaviour:
   counterActive: 1
   counter: {fileID: 122720860}
   identitySwap: {fileID: 562568041}
+--- !u!114 &562568044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562568031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f77c99e0a4934a42a1c50f9fcfa6dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &565199540
 GameObject:
   m_ObjectHideFlags: 0
@@ -25210,7 +25210,7 @@ MonoBehaviour:
   orcaMom: {fileID: 1245079175}
   xRRig: {fileID: 562568031}
   momInteractionSignifier: {fileID: 5688143039969556470}
-  moveControls: {fileID: 562568040}
+  moveControls: {fileID: 0}
   moveZodiac: {fileID: 642161982496196072}
   moveToClara: {fileID: 1245079176}
   claraTargetTransform: {fileID: 468808715}
@@ -25614,7 +25614,7 @@ MonoBehaviour:
   nextPanel: {fileID: 0}
   audioSource: {fileID: 1300554442}
   eatingController: {fileID: 562568036}
-  moveControls: {fileID: 562568040}
+  moveControls: {fileID: 0}
   xRRig: {fileID: 562568031}
   isRight: 1
   orcaMomAudio: {fileID: 1245079177}
@@ -27699,7 +27699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &932985231
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28025,7 +28025,7 @@ MonoBehaviour:
   ladderParent: {fileID: 966481117}
   reverseParent: {fileID: 1744894739}
   sphere: {fileID: 675177590}
-  moveControls: {fileID: 562568040}
+  moveControls: {fileID: 0}
   moveSpeed: 0.5
 --- !u!54 &966481119
 Rigidbody:
@@ -38523,7 +38523,7 @@ MonoBehaviour:
   firstButton: {fileID: 834454186}
   clipDuration: 4
   interactionSignifier: {fileID: 5688143039969556459}
-  moveControls: {fileID: 562568040}
+  moveControls: {fileID: 0}
   snorkeler01Target: {fileID: 1007152118}
   moveToSnorkeler: {fileID: 562568037}
   rotateToNora: {fileID: 1969978576}
@@ -62300,7 +62300,7 @@ MonoBehaviour:
   nextPanel: {fileID: 0}
   audioSource: {fileID: 1300554442}
   eatingController: {fileID: 562568036}
-  moveControls: {fileID: 562568040}
+  moveControls: {fileID: 0}
   xRRig: {fileID: 562568031}
   isRight: 0
   orcaMomAudio: {fileID: 1245079177}
@@ -62520,7 +62520,7 @@ MonoBehaviour:
   voiceover45: {fileID: 8300000, guid: 4f5fc54c09a758649abd456446d72c19, type: 3}
   swirl: {fileID: 1276499552}
   scales: {fileID: 1668710350}
-  moveControls: {fileID: 562568040}
+  moveControls: {fileID: 0}
 --- !u!1 &1477268693
 GameObject:
   m_ObjectHideFlags: 0
@@ -75077,6 +75077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a9b31475e22d54dba4f378debd6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  depthCalculator: {fileID: 0}
   maxFogDepth: 7
   maxFogDensity: 0.06
   minFogDensity: 0.03
@@ -81280,7 +81281,7 @@ MonoBehaviour:
   ladderParent: {fileID: 1675655426}
   reverseParent: {fileID: 1936911369}
   sphere: {fileID: 30553714}
-  moveControls: {fileID: 562568040}
+  moveControls: {fileID: 0}
   moveSpeed: 0.5
 --- !u!54 &1675655428
 Rigidbody:
@@ -81373,9 +81374,9 @@ GameObject:
   - component: {fileID: 1694216345}
   - component: {fileID: 1694216347}
   - component: {fileID: 1694216348}
-  - component: {fileID: 1694216349}
   - component: {fileID: 1694216351}
   - component: {fileID: 1694216350}
+  - component: {fileID: 1694216352}
   m_Layer: 0
   m_Name: SceneInfoManager
   m_TagString: Untagged
@@ -81446,7 +81447,7 @@ MonoBehaviour:
   - {fileID: 7351510}
   orcaMom: {fileID: 1245079175}
   xRRig: {fileID: 562568031}
-  moveControls: {fileID: 562568040}
+  moveControls: {fileID: 0}
   fishingSceneIntro: {fileID: 1694216345}
   humpbackAnimation: {fileID: 5531665496830321814}
   momInteractionSignifier: {fileID: 5688143039969556470}
@@ -81476,18 +81477,7 @@ MonoBehaviour:
   momAudioSource: {fileID: 1245079177}
   voiceover23: {fileID: 8300000, guid: 26c656590c1d516468f580b24ad263b8, type: 3}
   voiceover24: {fileID: 8300000, guid: 26ccfa811c1f57a4a925f56db9d267fa, type: 3}
---- !u!114 &1694216349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694216344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da0bba6784a55404eb7a5d43a19afc13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  eatingController: {fileID: 0}
 --- !u!114 &1694216350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81520,6 +81510,18 @@ MonoBehaviour:
   numberOfHerring: 50
   herringList: []
   useGravity: 0
+--- !u!114 &1694216352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694216344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0bba6784a55404eb7a5d43a19afc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1697182639
 GameObject:
   m_ObjectHideFlags: 0
@@ -86819,7 +86821,7 @@ MonoBehaviour:
   nextPanel: {fileID: 0}
   audioSource: {fileID: 1300554442}
   eatingController: {fileID: 562568036}
-  moveControls: {fileID: 562568040}
+  moveControls: {fileID: 0}
   xRRig: {fileID: 562568031}
   isRight: 0
   orcaMomAudio: {fileID: 1245079177}
@@ -116080,7 +116082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6423900387213278802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70, y: -8.5, z: 70.8}
+  m_LocalPosition: {x: 53, y: -6.5, z: 53.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -116557,7 +116559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6661178853251027135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.6, y: -7.3, z: 87.8}
+  m_LocalPosition: {x: 38.6, y: -5.4, z: 70.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

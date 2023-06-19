@@ -6098,6 +6098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a9b31475e22d54dba4f378debd6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  depthCalculator: {fileID: 337554335}
   maxFogDepth: 7
   maxFogDensity: 0.06
   minFogDensity: 0.03
@@ -7618,7 +7619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &214896679
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9265,7 +9266,6 @@ GameObject:
   - component: {fileID: 337554331}
   - component: {fileID: 337554332}
   - component: {fileID: 337554333}
-  - component: {fileID: 337554334}
   - component: {fileID: 337554335}
   - component: {fileID: 337554336}
   m_Layer: 0
@@ -9451,18 +9451,6 @@ MonoBehaviour:
   - {fileID: 4252942300013286987}
   - {fileID: 1909330896087720588}
   - {fileID: 5337096869637666709}
---- !u!114 &337554334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337554327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da0bba6784a55404eb7a5d43a19afc13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &337554335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18434,7 +18422,6 @@ MonoBehaviour:
   updatedAngle: 0
   currentAngle: 0
   timeAtZero: 0
-  net: {fileID: 3887516797659023650}
 --- !u!114 &914657179
 MonoBehaviour:
   m_ObjectHideFlags: 0

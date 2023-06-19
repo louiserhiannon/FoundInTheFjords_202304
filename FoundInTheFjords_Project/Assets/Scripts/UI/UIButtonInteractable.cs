@@ -66,4 +66,6 @@ public class UIButtonInteractable : MonoBehaviour, IPointerEnterHandler, IPointe
         // exit hover animations
         transform.DOScale(startScale, hoverEndAnimationDuration);
     }
+
+
 }

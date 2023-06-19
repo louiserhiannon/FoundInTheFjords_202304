@@ -19,6 +19,18 @@ public class Level02Coroutines : MonoBehaviour
         //wait a bit
         yield return new WaitForSeconds(voiceover18Duration);
         //ChangeScene
+        if (EatingController.EC != null)
+        {
+            Destroy(EatingController.EC);
+        }
+        if (MovementControls.MC != null)
+        {
+            Destroy(MovementControls.MC);
+        }
+        if (HerringSpawner.HS != null)
+        {
+            Destroy(HerringSpawner.HS);
+        }
         ChangeScene.instance.SceneSwitch("Scene03-Locomotion");
         
         

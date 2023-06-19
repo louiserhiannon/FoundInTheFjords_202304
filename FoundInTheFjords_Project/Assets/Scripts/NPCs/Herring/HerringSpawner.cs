@@ -10,6 +10,7 @@ public class HerringSpawner : MonoBehaviour
     public List<GameObject> herringList;
     public bool useGravity;
 
+
     private void Awake()
     {
         HS = this;

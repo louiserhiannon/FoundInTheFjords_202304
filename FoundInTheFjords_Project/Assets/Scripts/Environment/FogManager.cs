@@ -12,6 +12,7 @@ public class FogManager : MonoBehaviour
     //[SerializeField]
     //protected float headsetDepth; //y-coordinate (height) of camera in world space
     //[SerializeField]
+    public DepthCalculator depthCalculator;
     protected float fogFactor; // normalized value (between 0 and 1) used to calculate fog density at a given depth
     [SerializeField]
     protected float maxFogDepth; // depth (negative height) at which fog density reaches maximum value
@@ -41,9 +42,9 @@ public class FogManager : MonoBehaviour
         //headsetDepthCorrected = headsetDepth - 2f;
 
         //when the camera is above the water surface
-        if(DepthCalculator.dc != null)
+        if(depthCalculator != null)
         {
-            if (DepthCalculator.dc.headsetDepthCorrected >= 0)
+            if (depthCalculator.headsetDepthCorrected >= 0)
             {
                 //Switch off fog
                 RenderSettings.fog = false;
@@ -60,11 +61,11 @@ public class FogManager : MonoBehaviour
 
 
                 //when the rig is shallower than the max fog depth (note that depth is a negative value so shallower depths correspond to larger [less negative] numbers)
-                if (DepthCalculator.dc.headsetDepth > maxFogDepth)
+                if (depthCalculator.headsetDepth > maxFogDepth)
                 {
 
                     //the fog density is a linear interpolation from min to max based on depth
-                    fogFactor = DepthCalculator.dc.headsetDepthCorrected / maxFogDepth;
+                    fogFactor = depthCalculator.headsetDepthCorrected / maxFogDepth;
                     RenderSettings.fogDensity = minFogDensity + fogFactor * (maxFogDensity - minFogDensity);
                 }
 
