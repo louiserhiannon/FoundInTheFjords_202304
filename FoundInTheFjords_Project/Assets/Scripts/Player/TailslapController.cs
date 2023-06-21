@@ -25,7 +25,7 @@ public class TailslapController : PlayerInputController
     public TailSlapTutorial tutorial;
     public AudioSource audioSource;
     public AudioClip voiceover12;
-    public TMP_Text tailChargeTextNew;
+    //public TMP_Text tailChargeTextNew;
     public TMP_Text chargedTextNew;
     
 
@@ -40,7 +40,7 @@ public class TailslapController : PlayerInputController
         base.Update();
         TailSlap(gripValue);
         distance = Vector3.Distance(transform.position, carouselTransform.position);
-        tailChargeTextNew.text = tailChargeText.text;
+        //tailChargeTextNew.text = tailChargeText.text;
         chargedTextNew.text = chargedText.text;
 
     }

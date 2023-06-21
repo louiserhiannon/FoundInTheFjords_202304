@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerInputController : MonoBehaviour
 {
@@ -14,11 +15,14 @@ public class PlayerInputController : MonoBehaviour
     protected float tailChargeRequired = 100f;
     public bool tailCharged = false;
     public float tailChargeDisplayed;
-    public TMP_Text tailChargeText;
+    //public TMP_Text tailChargeText;
     public TMP_Text chargedText;
     [SerializeField] protected float yvalue;
     [SerializeField] protected float xvalue;
     [SerializeField] protected float gripValue;
+    public Image sliderBackground;
+    public Image sliderCharging;
+    public Image sliderCharged;
 
 
 
@@ -29,12 +33,12 @@ public class PlayerInputController : MonoBehaviour
             chargedText.text = "Ready";
         }
 
-        if (tailChargeText != null)
-        {
-            tailChargeText.text = "Ready";
-        }
+        //if (tailChargeText != null)
+        //{
+        //    tailChargeText.text = "Ready";
+        //}
 
-
+        sliderCharged.enabled = false;
     }
 
     protected void OnEnable()
@@ -67,11 +71,15 @@ public class PlayerInputController : MonoBehaviour
     {
         slapCharge += value;
         tailChargeDisplayed = Mathf.Clamp(slapCharge, 0f, tailChargeRequired);
-        tailChargeText.text = tailChargeDisplayed.ToString();
+        //tailChargeText.text = tailChargeDisplayed.ToString();
+        float sliderPosition = tailChargeDisplayed / tailChargeRequired * 0.5f;
+        sliderCharging.rectTransform.anchorMax = new Vector2(sliderPosition, sliderCharging.rectTransform.anchorMax.y);
         if (slapCharge > tailChargeRequired) //there must be a better way of doing this that doesn't involve using the same if statement twice...
         {
             tailCharged = true;
             chargedText.text = "Charged";
+            sliderCharged.enabled = true;
+
         }
 
 
