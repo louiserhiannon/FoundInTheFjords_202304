@@ -128,6 +128,7 @@ public class IntroLevelController : MonoBehaviour
         //change skybox
         //RenderSettings.skybox = underwaterSkybox;
         underwaterPanorama.SetActive(true);
+        earth.SetActive(false);
         audioSource.PlayOneShot(splash);
         yield return new WaitForSeconds(5.0f);
         //Load next scene

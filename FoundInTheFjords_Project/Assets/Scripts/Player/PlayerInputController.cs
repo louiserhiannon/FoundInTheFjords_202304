@@ -15,7 +15,7 @@ public class PlayerInputController : MonoBehaviour
     protected float tailChargeRequired = 100f;
     public bool tailCharged = false;
     public float tailChargeDisplayed;
-    public TMP_Text tailChargeText;
+    //public TMP_Text tailChargeText;
     public TMP_Text chargedText;
     [SerializeField] protected float yvalue;
     [SerializeField] protected float xvalue;
@@ -33,10 +33,10 @@ public class PlayerInputController : MonoBehaviour
             chargedText.text = "Ready";
         }
 
-        if (tailChargeText != null)
-        {
-            tailChargeText.text = "Ready";
-        }
+        //if (tailChargeText != null)
+        //{
+        //    tailChargeText.text = "Ready";
+        //}
 
         sliderCharged.enabled = false;
     }
@@ -71,7 +71,7 @@ public class PlayerInputController : MonoBehaviour
     {
         slapCharge += value;
         tailChargeDisplayed = Mathf.Clamp(slapCharge, 0f, tailChargeRequired);
-        tailChargeText.text = tailChargeDisplayed.ToString();
+        //tailChargeText.text = tailChargeDisplayed.ToString();
         float sliderPosition = tailChargeDisplayed / tailChargeRequired * 0.5f;
         sliderCharging.rectTransform.anchorMax = new Vector2(sliderPosition, sliderCharging.rectTransform.anchorMax.y);
         if (slapCharge > tailChargeRequired) //there must be a better way of doing this that doesn't involve using the same if statement twice...

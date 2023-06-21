@@ -6,11 +6,14 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.UIElements;
 using System.Xml.Schema;
+using DG.Tweening;
 
 public class MirrorOrcaAnimationController : PlayerInputController
 {
     //Script to convert controller inputs into mirror animations on the orca reflection during orientation   
     private Animator mirrorOrcaAnimator;
+    
+    
     
     
 
@@ -40,10 +43,12 @@ public class MirrorOrcaAnimationController : PlayerInputController
     public override void TailSlap(float value)
     {
         base.TailSlap(value);
+        
 
         if(value < 0.9f)
         {
             sliderCharged.enabled = false;
+            
         }
 
         if (value < 0.05f)
@@ -53,15 +58,19 @@ public class MirrorOrcaAnimationController : PlayerInputController
                 if (mirrorOrcaAnimator != null)
                 {
                     mirrorOrcaAnimator.SetTrigger("Trigger_TailSlap");
+                    StartCoroutine(ShowReadyText());
+                    
                 }
             }
             slapCharge = 0f;
             tailCharged = false;
             chargedText.text = string.Empty;
-            tailChargeText.text = string.Empty;
+            //tailChargeText.text = string.Empty;
             
 
+
         }
+        
 
         
     }
@@ -83,6 +92,12 @@ public class MirrorOrcaAnimationController : PlayerInputController
             }
                 
         }
+    }
+
+    private IEnumerator ShowReadyText()
+    {
+        yield return new WaitForSeconds(4f);
+        chargedText.text = "Ready";
     }
 
     

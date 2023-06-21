@@ -1483,7 +1483,7 @@ GameObject:
   - component: {fileID: 1094584724}
   - component: {fileID: 1094584723}
   - component: {fileID: 1094584722}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2460,7 +2460,7 @@ GameObject:
   - component: {fileID: 2018865209}
   - component: {fileID: 2018865211}
   - component: {fileID: 2018865210}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

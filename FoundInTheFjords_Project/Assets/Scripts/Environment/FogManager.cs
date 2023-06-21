@@ -89,8 +89,22 @@ public class FogManager : MonoBehaviour
         underwaterDistortion.SetActive(true);
         //controls alpha of filter based on depth
         underwaterDistortionColor = underwaterDistortionRenderer.material.color;
-        underwaterDistortionColor.a = minAlpha + fogFactor * (maxAlpha - minAlpha);
+
+        if (depthCalculator.headsetDepth > maxFogDepth)
+        {
+
+            
+            underwaterDistortionColor.a = minAlpha + fogFactor * (maxAlpha - minAlpha);
+            
+        }
+
+        else
+        {
+            underwaterDistortionColor.a = maxAlpha;
+        }
+
         underwaterDistortionRenderer.material.color = underwaterDistortionColor;
+        
 
     }
 
