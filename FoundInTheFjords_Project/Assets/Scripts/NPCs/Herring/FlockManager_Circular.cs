@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FlockManager_Circular : MonoBehaviour
 {
-    public GameObject flockerPrefab;
+    //public GameObject flockerPrefab;
     public static FlockManager_Circular FM;
-    private GameObject flock;
+    public GameObject flock;
     public List<GameObject> allFlockers;
     public int numFlockers = 0;
-    public Transform carouselTransform;
+    //public Transform carouselTransform;
 
     [Header("Flocker Settings")]
     [Range(1.0f, 25.0f)]
@@ -28,13 +28,16 @@ public class FlockManager_Circular : MonoBehaviour
     void Start()
     {
         FM = this;
-        flock = Instantiate(flockerPrefab, transform.position, Quaternion.identity, carouselTransform);
+        //flock = Instantiate(flockerPrefab, transform.position, Quaternion.identity, carouselTransform);
+        flock.SetActive(true);
         foreach (Rigidbody r in flock.GetComponentsInChildren<Rigidbody>())
         {
             allFlockers.Add(r.gameObject);
             numFlockers++;
             Debug.Log(numFlockers);
         }
+        //flock.SetActive(false);
+       
 
 
     
@@ -52,4 +55,6 @@ public class FlockManager_Circular : MonoBehaviour
         //}
         
     }
+
+    
 }

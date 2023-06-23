@@ -12,6 +12,7 @@ public class SceneManager_Carousel : SceneManager
     public GameObject migrationInteractionSignifier;
     public GameObject ecosystemInteractionSignifier;
     public GameObject momInteractionSignifier;
+    public GameObject flock;
     
     
    
@@ -22,8 +23,9 @@ public class SceneManager_Carousel : SceneManager
         //Start orca mom swim animation
         orcaMomAnimator.SetTrigger("Trigger_Swim");
 
-        //Disable flock manager
+        //Disable flock manager and flock
         flockManager.GetComponent<FlockManager_Circular>().enabled = false;
+        flock.SetActive(false);
 
         //disable tailslap controller
         xRRig.GetComponent<TailslapController>().enabled = false;

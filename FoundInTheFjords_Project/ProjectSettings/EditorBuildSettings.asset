@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Scene00-Orientation.unity
     guid: a03caba7e47b87f4d8281d7f50e6a6c9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene01-Exploration.unity
     guid: e05332ac8c35fd14abc70c675923072a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Scene02-CarouselFeeding.unity
     guid: ab17a7cd523d317498c7b170bbb170b7
   - enabled: 0
