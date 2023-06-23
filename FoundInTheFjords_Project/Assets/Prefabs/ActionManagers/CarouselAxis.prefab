@@ -513,9 +513,6 @@ MonoBehaviour:
   rotateAngle: 0
   targetOffset: 0
   rotateDistance: 0
-  timeShift: 0
-  timeStretch: 0
-  initialOffset: 0
   coroutineRunning: 0
   isCarouselFeeding: 1
 --- !u!95 &5807889042841072422
@@ -529,7 +526,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 004ef07059ebc374ebb3bcf39340919d, type: 2}
-  m_CullingMode: 2
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -811,7 +808,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: -6518112880264578187, guid: 69745a7c6a0d9a94e9b2ce088c9bf314, type: 3}
   m_Bones:
@@ -1359,7 +1356,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: -1438335074947695323, guid: 69745a7c6a0d9a94e9b2ce088c9bf314, type: 3}
   m_Bones:
@@ -1476,7 +1473,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: -7035627313566692250, guid: 69745a7c6a0d9a94e9b2ce088c9bf314, type: 3}
   m_Bones:

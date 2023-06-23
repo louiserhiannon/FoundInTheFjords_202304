@@ -11,6 +11,7 @@ public class InteractableObject : MonoBehaviour
     public Level01Coroutines level01;
     public Level02Coroutines level02;
     public CanvasGroup panel;
+    public CanvasGroup secondaryPanel;
 
     private void Awake()
     {
@@ -67,6 +68,11 @@ public class InteractableObject : MonoBehaviour
             panel.blocksRaycasts = true;   
             panel.interactable = true;
             this.gameObject.SetActive(false);
+
+            if(secondaryPanel != null)
+            {
+                secondaryPanel.DOFade(1,1);
+            }
         }
     }
 

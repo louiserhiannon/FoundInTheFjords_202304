@@ -45,6 +45,7 @@ public class TailSlapTutorial : MonoBehaviour
     public HerringCounter herringCounter;
     public Transform safeDistance;
     public HumpbackTestController humpbackController;
+    
 
 
     
@@ -176,6 +177,12 @@ public class TailSlapTutorial : MonoBehaviour
         foreach (CanvasGroup panel in combinedCanvas.GetComponentsInChildren<CanvasGroup>())
         {
             panel.DOFade(1f, 1f);
+        }
+        //deactivate charged slider
+        var controller = xRRig.GetComponent<TailslapController>();
+        for(int i = 0; i < controller.chargedSliders.Count; i++)
+        {
+            controller.chargedSliders[i].enabled = false;
         }
         herringCounter.displayActive = true;
 

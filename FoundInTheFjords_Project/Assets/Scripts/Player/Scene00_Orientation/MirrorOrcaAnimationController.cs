@@ -47,7 +47,11 @@ public class MirrorOrcaAnimationController : PlayerInputController
 
         if(value < 0.9f)
         {
-            sliderCharged.enabled = false;
+            for(int i = 0; i < chargedSliders.Count; i++)
+            {
+                chargedSliders[i].enabled = false;
+            }
+            
             
         }
 

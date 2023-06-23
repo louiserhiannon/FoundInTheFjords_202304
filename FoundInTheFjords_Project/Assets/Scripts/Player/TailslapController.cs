@@ -4,6 +4,8 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 public class TailslapController : PlayerInputController
 {
@@ -26,7 +28,10 @@ public class TailslapController : PlayerInputController
     public AudioSource audioSource;
     public AudioClip voiceover12;
     //public TMP_Text tailChargeTextNew;
+    //public Image chargingSliderNew;
+    //public Image chargedSliderNew;
     public TMP_Text chargedTextNew;
+    
     
 
     protected override void Awake()
@@ -35,6 +40,8 @@ public class TailslapController : PlayerInputController
         directionOfShake = transform.up;
         
     }
+
+
     protected override void Update()
     {
         base.Update();
@@ -49,6 +56,7 @@ public class TailslapController : PlayerInputController
     {
         base.TailSlap(value);
         float lastValue = 0f;
+        
 
         if (value < 0.05f)
         {

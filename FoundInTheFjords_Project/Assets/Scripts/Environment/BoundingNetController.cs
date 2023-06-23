@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,11 +7,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class BoundingNetController : MonoBehaviour
 {
-    public bool canMove = true;
-    public ActionBasedSnapTurnProvider snapTurnProvider;
+    public CanvasGroup goBackPanel;
+    //public bool canMove = true;
+    //public ActionBasedSnapTurnProvider snapTurnProvider;
     private void Awake()
     {
-        snapTurnProvider.enableTurnLeftRight = true;
+        //snapTurnProvider.enableTurnLeftRight = true;
         this.gameObject.SetActive(false);
     }
 
@@ -20,12 +22,13 @@ public class BoundingNetController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             this.gameObject.SetActive(true);
-            canMove = false;
-            Debug.Log("canMove = false");
-            if (snapTurnProvider != null)
-            {
-                snapTurnProvider.enableTurnLeftRight = false;
-            }
+            goBackPanel.DOFade(1, 2);
+            //canMove = false;
+            //Debug.Log("canMove = false");
+            //if (snapTurnProvider != null)
+            //{
+            //    snapTurnProvider.enableTurnLeftRight = false;
+            //}
 
         }
             
@@ -36,12 +39,13 @@ public class BoundingNetController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             this.gameObject.SetActive(false);
-            canMove = true;
-            Debug.Log("canMove = true");
-            if (snapTurnProvider != null)
-            {
-                snapTurnProvider.enableTurnLeftRight = true;
-            }
+            goBackPanel.DOFade(0, 2);
+            //canMove = true;
+            //Debug.Log("canMove = true");
+            //if (snapTurnProvider != null)
+            //{
+            //    snapTurnProvider.enableTurnLeftRight = true;
+            //}
         }
         
     }
