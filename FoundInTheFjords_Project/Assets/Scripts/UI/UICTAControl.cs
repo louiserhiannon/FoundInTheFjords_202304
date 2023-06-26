@@ -2,14 +2,24 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class UICTAControl : MonoBehaviour
 {
     public Canvas cTACanvas;
+    public Canvas learnMoreCanvas;
+    public CanvasGroup introPanel;
+    public List<CanvasGroup> actionPanels;
 
     void Start()
     {
         foreach (CanvasGroup panel in cTACanvas.GetComponentsInChildren<CanvasGroup>())
+        {
+            panel.alpha = 0f;
+            panel.interactable = false;
+            panel.blocksRaycasts = false;
+        }
+        foreach (CanvasGroup panel in learnMoreCanvas.GetComponentsInChildren<CanvasGroup>())
         {
             panel.alpha = 0f;
             panel.interactable = false;
@@ -23,11 +33,17 @@ public class UICTAControl : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
 
-        foreach (CanvasGroup panel in cTACanvas.GetComponentsInChildren<CanvasGroup>())
+        introPanel.DOFade(1, 2);
+
+        yield return new WaitForSeconds(5f);
+
+        introPanel.DOFade(0, 2);
+
+        for (int i = 0; i < actionPanels.Count; i++)
         {
-            panel.DOFade(0.9f, 2.0f); 
-            panel.interactable = true;
-            panel.blocksRaycasts = true;
+            actionPanels[i].DOFade(1f, 2.0f);
+            actionPanels[i].interactable = true;
+            actionPanels[i].blocksRaycasts = true;
         }
     }
 }

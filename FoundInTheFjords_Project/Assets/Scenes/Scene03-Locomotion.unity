@@ -13606,7 +13606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a9b31475e22d54dba4f378debd6c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depthCalculator: {fileID: 0}
+  depthCalculator: {fileID: 836212983}
   maxFogDepth: 2
   maxFogDensity: 0.06
   minFogDensity: 0.03

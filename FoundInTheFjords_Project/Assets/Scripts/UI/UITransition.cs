@@ -32,6 +32,18 @@ public class UITransition : MonoBehaviour
 
     }
 
+    public virtual void UINextNoFade()
+    {
+
+
+        if (nextPanel != null)
+        {
+            nextPanel.DOFade(1, 1.5f);
+
+        }
+
+    }
+
     public void UIFade()
     {
 

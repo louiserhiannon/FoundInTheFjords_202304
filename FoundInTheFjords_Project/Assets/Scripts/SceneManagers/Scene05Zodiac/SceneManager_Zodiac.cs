@@ -12,6 +12,6 @@ public class SceneManager_Zodiac : MonoBehaviour
     private IEnumerator BackToBigShip()
     {
         yield return new WaitForSeconds(30);
-        ChangeScene.instance.SceneSwitch("Scnene06-CalltoAction");
+        ChangeScene.instance.SceneSwitch("Scene06-CalltoAction");
     }
 }
