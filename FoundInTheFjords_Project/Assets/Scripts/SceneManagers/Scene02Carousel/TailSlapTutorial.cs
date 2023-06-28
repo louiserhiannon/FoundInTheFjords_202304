@@ -119,7 +119,7 @@ public class TailSlapTutorial : MonoBehaviour
         tailslapChargeCanvas.GetComponentInChildren<CanvasGroup>().DOFade(0f, 1f);
 
         //stop other orca from spawning herring
-        CarouselManager.CM.maxSlapDistance = 0.5f;
+        CarouselManager.CM.stunHerring = false;
 
         //Step 0 Audio 
         momAudioSource.PlayOneShot(step00);
@@ -188,7 +188,10 @@ public class TailSlapTutorial : MonoBehaviour
 
         //move mom back
         orcaMom.transform.position -= (2 * orcaMom.transform.forward - orcaMom.transform.up);
-        
+
+        //resume other orca spawning herring
+        CarouselManager.CM.stunHerring = true;
+
 
     }
 

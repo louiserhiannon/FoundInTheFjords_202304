@@ -10,6 +10,7 @@ public class CarouselManager : MonoBehaviour
     public int numOrca;
     public List<GameObject> allAxes;
     public Transform carouselTransform;
+    public bool stunHerring = true;
     //public GameObject orcaPrefab;
     //public GameObject[] orcas;
 
