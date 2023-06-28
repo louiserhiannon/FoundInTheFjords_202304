@@ -91,8 +91,12 @@ public class TailslapController : PlayerInputController
             slapCharge = 0f;
             tailCharged = false;
             chargedText.text = string.Empty;
+            for (int i = 0; i < chargedSliders.Count; i++)
+            {
+                chargedSliders[i].enabled = false;
+            }
             //tailChargeText.text = string.Empty;
-            
+
         }
         lastValue = value;
 

@@ -21,6 +21,7 @@ public class CarouselMotion : MonoBehaviour
     private ParticleSystem bubbles;
     
     
+    
 
 
     void Start()
@@ -189,32 +190,37 @@ public class CarouselMotion : MonoBehaviour
                 bubbles.Play();
                 yield return new WaitForSeconds(3f);
                 bubbles.Stop();
-                tailslapAnimator.SetTrigger("Trigger_TailSlap");
-                yield return new WaitForSeconds(1.5f);
+                
 
-                SpawnStunnedHerring();
+                if (CarouselManager.CM.stunHerring)
+                {
+                    tailslapAnimator.SetTrigger("Trigger_TailSlap");
+                    yield return new WaitForSeconds(1.5f);
 
-                yield return new WaitForSeconds(1.0f);
+                    SpawnStunnedHerring();
 
-                tailslapAnimator.SetTrigger("Trigger_SlapToSwim");
+                    yield return new WaitForSeconds(1.0f);
 
-                yield return new WaitForSeconds(2.2f);
+                    tailslapAnimator.SetTrigger("Trigger_SlapToSwim");
 
-                tailslapAnimator.SetTrigger("Trigger_Bite");
+                    yield return new WaitForSeconds(2.2f);
 
-                yield return new WaitForSeconds(1.2f);
+                    tailslapAnimator.SetTrigger("Trigger_Bite");
 
-                tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
+                    yield return new WaitForSeconds(1.2f);
 
-                yield return new WaitForSeconds(2.2f);
+                    tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
 
-                tailslapAnimator.SetTrigger("Trigger_Bite");
+                    yield return new WaitForSeconds(2.2f);
 
-                yield return new WaitForSeconds(1.2f);
+                    tailslapAnimator.SetTrigger("Trigger_Bite");
 
-                tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
+                    yield return new WaitForSeconds(1.2f);
 
-                yield return new WaitForSeconds(2.2f);
+                    tailslapAnimator.SetTrigger("Trigger_BiteToSwim");
+
+                    yield return new WaitForSeconds(2.2f);
+                }             
 
                 yield return new WaitForSeconds(Random.Range(3f, 10f));
 
