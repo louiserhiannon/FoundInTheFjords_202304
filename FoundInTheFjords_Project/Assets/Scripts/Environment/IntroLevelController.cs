@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,9 +29,9 @@ public class IntroLevelController : MonoBehaviour
     public GameObject earthOrcaDistribution;
     public GameObject locationPin;
     public GameObject underwaterPanorama;
-    public Image fishingBoat;
-    public Image containerBoat;
-    public Image tourists;
+    public CanvasGroup fishingBoat;
+    public CanvasGroup containerBoat;
+    public CanvasGroup tourists;
     //public Material underwaterSkybox;
     
 
@@ -50,9 +51,9 @@ public class IntroLevelController : MonoBehaviour
         earthOrcaDistribution.SetActive(false);
         locationPin.SetActive(false);
         underwaterPanorama.SetActive(false);
-        fishingBoat.enabled = false;
-        containerBoat.enabled = false;
-        tourists.enabled = false;
+        fishingBoat.alpha = 0;
+        containerBoat.alpha = 0;
+        tourists.alpha = 0;
     }
 
     protected IEnumerator IntroLevel()
@@ -113,7 +114,7 @@ public class IntroLevelController : MonoBehaviour
         }
         earth.GetComponent<EarthRotation>().isRotating = false;
         //Wait until almost the end of the clip
-        yield return new WaitForSeconds(11.5f);
+        yield return new WaitForSeconds(22.5f);
         //Start Zoom03 animation
         if (xrRigZoomAnimator != null)
         {
@@ -139,15 +140,15 @@ public class IntroLevelController : MonoBehaviour
     private IEnumerator ShowPictures()
     {
         yield return new WaitForSeconds(17.5f);
-        fishingBoat.enabled = true;
-        yield return new WaitForSeconds(1);
-        containerBoat.enabled = true;
-        yield return new WaitForSeconds(1);
-        tourists.enabled = true;
+        fishingBoat.DOFade(1,0.5f);
+        yield return new WaitForSeconds(0.5f);
+        containerBoat.DOFade(1, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        tourists.DOFade(1, 0.5f);
         yield return new WaitForSeconds(6.5f);
-        fishingBoat.enabled = false;
-        containerBoat.enabled = false;
-        tourists.enabled = false;
+        fishingBoat.DOFade(0, 0.5f);
+        containerBoat.DOFade(0, 0.5f);
+        tourists.DOFade(0, 0.5f);
 
     }
 }

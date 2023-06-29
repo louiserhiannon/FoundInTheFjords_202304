@@ -52,7 +52,7 @@ public class UIT_locateBaitball : MonoBehaviour
         orcaMomSounds.PlayOneShot(voiceover3);
 
         //Wait some seconds
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(4.5f);
 
         //Repeat click and reflected Sound
         orcaMomSounds.PlayOneShot(clickTrain);

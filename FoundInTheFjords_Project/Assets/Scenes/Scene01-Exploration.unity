@@ -816,7 +816,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'But enough from me, time to explore! Look around and chat with Clara.
+  m_text: '<b>Mom:</b> But enough from me, time to explore! Look around and chat
+    with Clara.
 
 '
   m_isRightToLeft: 0
@@ -1212,8 +1213,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: First, some additional controls for you so you can move around more easily,
-    by snap turning and snap jumping up and down.
+  m_text: <b>Narrator:</b> First, some additional controls for you so you can move
+    around more easily, by snap turning and snap jumping up and down.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1558,10 +1559,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'There you are. We made it! I told you it''d be a long journey to het here,
-    but I knew you could do it. Did you have fun hanging out with Clara? She and
-    the other comb jellies are an important part of our ecosystem and they''re also
-    our good friends.
+  m_text: '<b>Mom:</b> There you are. We made it! I told you it''d be a long journey
+    to het here, but I knew you could do it. Did you have fun hanging out with Clara?
+    She and the other comb jellies are an important part of our ecosystem and they''re
+    also our good friends.
 
 '
   m_isRightToLeft: 0
@@ -2129,7 +2130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Me? How?
+  m_text: <b>Nora (you):</b> Me? How?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2374,8 +2375,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'It also means more oxygen created for animals and plants to breathe AND
-    more food to fuel the entire food web!
+  m_text: '<b>Clara:</b> It also means more oxygen created for animals and plants
+    to breathe AND more food to fuel the entire food web!
 
 '
   m_isRightToLeft: 0
@@ -3442,8 +3443,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Now that you\u2019ve learned about the fjord and how to move around this
-    special place, it\u2019s time for you to explore on your own."
+  m_text: "<b>Mom:</b> Now that you\u2019ve learned about the fjord and how to move
+    around this special place, it\u2019s time for you to explore on your own."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4170,10 +4171,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'When you poop, some of the nitrogen is released into the water. When this
-    happens at the surface, your poop fertilizes phytoplankton that lives in the
-    shallow water. More photosynthesizing phytoplankton means less warming carbon
-    dioxide in the atmosphere.
+  m_text: '<b>Clara:</b> When you poop, some of the nitrogen is released into the
+    water. When this happens at the surface, your poop fertilizes phytoplankton that
+    lives in the shallow water. More photosynthesizing phytoplankton means less warming
+    carbon dioxide in the atmosphere.
 
 '
   m_isRightToLeft: 0
@@ -5593,9 +5594,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Did you know cetaceans are really important to the planet? You keep the
-    marine food web balanced. And, because you''re so big, you also play a role in
-    regulating the climate through a process called carbon fixing.
+  m_text: '<b>Clara:</b> Did you know cetaceans are really important to the planet?
+    You keep the marine food web balanced. And, because you''re so big, you also
+    play a role in regulating the climate through a process called carbon fixing.
 
 '
   m_isRightToLeft: 0
@@ -5870,9 +5871,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The fjords are very important to Orca. Each year, when the days start
-    to get shorter, we migrate here and stay until the Spring. We come back every
-    year because we\u2019re following the herring."
+  m_text: "<b>Mom:</b> The fjords are very important to Orca. Each year, when the
+    days start to get shorter, we come here and stay until the Spring. We come back
+    every year because we\u2019re following the herring."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6020,10 +6021,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Nora, that means it\u2019s also time for you to learn how to find and
-    corral herring to eat! You\u2019ll learn the techniques our family has perfected
-    over generations. You\u2019ll also see the ways we\u2019ve had to adapt to new
-    things.\n"
+  m_text: "<b>Mom:</b> Nora, that means it\u2019s also time for you to learn how
+    to find and corral herring to eat! You\u2019ll learn the techniques our family
+    has perfected over generations. You\u2019ll also see the ways we\u2019ve had
+    to adapt to new things.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6213,14 +6214,14 @@ MonoBehaviour:
   headsetAudioSource: {fileID: 1770318214}
   voiceoverClips:
   - {fileID: 8300000, guid: b71aa099c7c8ac54481037f9c307dd9a, type: 3}
-  - {fileID: 8300000, guid: 3779b571079acfb4b8c77f1ff4bf272b, type: 3}
+  - {fileID: 8300000, guid: 2427ed8c167e49b469acf7adc9ad93b0, type: 3}
   - {fileID: 8300000, guid: 67751063464b2824b8c51efc9fc22532, type: 3}
-  - {fileID: 8300000, guid: 811671bcbebf17c458b1d01e960964be, type: 3}
+  - {fileID: 8300000, guid: 7a6ca54239240fe4fa8de656ba965cc2, type: 3}
   - {fileID: 8300000, guid: 8b5a5e3620d2d644e98560b934b6dc29, type: 3}
   voiceoverDurations:
   - 7
   - 14.5
-  - 2
+  - 4
   - 24
   - 16
   - 8
@@ -6228,7 +6229,7 @@ MonoBehaviour:
   - 17
   - 16
   - 7
-  - 4.5
+  - 5.3
   - 15
   subtitlePanel: {fileID: 676199577}
   subtitleSnippets:
@@ -7432,11 +7433,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "It\u2019s called the \u201CWhale Pump\u201D \u2014 after marine mammals
-    like you! When you eat, you take the carbon and nitrogen in your food and turn
-    it into energy to live and move, or you store it as muscle and fat. As you swim
-    up and down and across the seas, you move your carbon- and nitrogen-rich body
-    to all these different places and levels of the ocean.\n"
+  m_text: "<b>Clara:</b> It\u2019s called the \u201CWhale Pump\u201D \u2014 after
+    marine mammals like you! When you eat, you take the carbon and nitrogen in your
+    food and turn it into energy to live and move, or you store it as muscle and
+    fat. As you swim up and down and across the seas, you move your carbon- and nitrogen-rich
+    body to all these different places and levels of the ocean.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7463,8 +7464,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7617,10 +7618,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Have a look around before going back to your mom. Practice moving around
-    through the water and using those snap turns and jumps for when you get in a
-    tight spot. And don\u2019t forget to take a look above the surface - you can
-    surf along by gently moving your head up and down."
+  m_text: "<b>Clara:</b> Have a look around before going back to your mom. Practice
+    moving around through the water and using those snap turns and jumps for when
+    you get in a tight spot. And don\u2019t forget to take a look above the surface
+    - you can surf along by gently moving your head up and down."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7647,8 +7648,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8039,10 +8040,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "When you\u2019re ready, come back to me, and we\u2019ll go find the rest
-    of the family.  You can always find me because I\u2019m the only one in the family
-    with a solid white saddle patch - that\u2019s the flash of white behind my dorsal
-    fin. Everyone else has a greyish one.\n"
+  m_text: "<b>Mom:</b> When you\u2019re ready, come back to me, and we\u2019ll go
+    find the rest of the family.  You can always find me because I\u2019m the only
+    one in the family with a solid white saddle patch - that\u2019s the flash of
+    white behind my dorsal fin. Everyone else has a greyish one.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8319,8 +8320,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Then, after a long and happy life swimming across the world\u2019s great
-    oceans, a whale will die, and its body will sink to the bottom of the ocean.
+  m_text: "<b>Clara:</b> Then, after a long and happy life swimming across the world\u2019s
+    great oceans, a whale will die, and its body will sink to the bottom of the ocean.
     \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8501,9 +8502,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Over the Winter, the fish are at their juiciest; so, when we eat them,
-    we get the best nutrients. This helps you and the other young Orca grow big and
-    strong. This is our time to eat and enjoy some rest after a long journey.
+  m_text: '<b>Mom:</b> Over the Winter, the fish are at their juiciest; so, when
+    we eat them, we get the best nutrients. This helps you and the other young Orca
+    grow big and strong. This is our time to eat and enjoy some rest after a long
+    journey.
 
 '
   m_isRightToLeft: 0
@@ -16859,8 +16861,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You belong to the same family of marine mammals as dolphins and whales.
-    This family is called \u201Ccetaceans.\u201D\n"
+  m_text: "<b>Clara:</b> You belong to the same family of marine mammals as dolphins
+    and whales. This family is called \u201Ccetaceans.\u201D\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17202,8 +17204,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: These days the ocean is changing faster than ever, so, hopefully, all of
-    this will help you to thrive in the future.
+  m_text: <b>Mom:</b> These days the ocean is changing faster than ever, so, hopefully,
+    all of this will help you to thrive in the future.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20100,19 +20102,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   momAudioSource: {fileID: 8835191096302498442}
   voiceoverClips:
-  - {fileID: 8300000, guid: 2fef1be0ff8d1e0459ffa827ff4971b0, type: 3}
-  - {fileID: 8300000, guid: fab15af1711e75d49a21d87fedba2024, type: 3}
-  - {fileID: 8300000, guid: 4952048855254834bab838b411437014, type: 3}
-  - {fileID: 8300000, guid: ee08ed6a67207d04784b947e1cd86c57, type: 3}
+  - {fileID: 8300000, guid: 3111812226a06194b906879bb4b4b56d, type: 3}
+  - {fileID: 8300000, guid: ad29456aeb937434a86193877521927a, type: 3}
+  - {fileID: 8300000, guid: b514227f9b8afcb46a64d6c5875b4a82, type: 3}
+  - {fileID: 8300000, guid: 9c59021d953ec4a4bb576a9e7fe62ee9, type: 3}
   voiceoverDurations:
-  - 14.2
-  - 5.7
-  - 11
+  - 15.9
+  - 7.3
+  - 11.5
   - 14
-  - 15
-  - 7.5
-  - 4
-  - 15.4
+  - 13.8
+  - 7.8
+  - 5
+  - 14
   subtitleSnippets:
   - {fileID: 306888386}
   - {fileID: 523174333}
@@ -20489,8 +20491,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: So, whales like you help to keep everything balanced, including the planet's
-    food and climate systems.
+  m_text: <b>Clara:</b> So, whales like you help to keep everything balanced, including
+    the planet's food and climate systems.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20638,9 +20640,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Orca like you are pretty good at this, but the bigger whales - like humpback
-    whales, fin whales or the giant blue whales - are even better! Each individual
-    whale can fix more than 30 tonnes of carbon over their lifetime.
+  m_text: '<b>Clara:</b> Orca like you are pretty good at this, but the bigger whales
+    - like humpback whales, fin whales or the giant blue whales - are even better!
+    Each individual whale can fix more than 30 tonnes of carbon over their lifetime.
 
 '
   m_isRightToLeft: 0
@@ -20972,10 +20974,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The carbon stored in its body after many years of eating yummy herring
-    and other tiny sea creatures gets locked \u2013 or \u201Cfixed\u201D - into the
-    rock slowly formed at the bottom of the ocean. Scientists call this \u201Cfixing\u201D
-    because we keep that carbon from adding to the atmosphere.\n"
+  m_text: "<b>Clara:</b> The carbon stored in its body after many years of eating
+    yummy herring and other tiny sea creatures gets locked \u2013 or \u201Cfixed\u201D
+    - into the rock slowly formed at the bottom of the ocean. Scientists call this
+    \u201Cfixing\u201D because we keep that carbon from adding to the atmosphere.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21002,8 +21004,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21260,6 +21262,7 @@ GameObject:
   - component: {fileID: 2111400758}
   - component: {fileID: 2111400757}
   - component: {fileID: 2111400756}
+  - component: {fileID: 2111400760}
   m_Layer: 5
   m_Name: ControllerInstructionCanvas
   m_TagString: Untagged
@@ -21460,6 +21463,23 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
+--- !u!114 &2111400760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111400753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &2112854151
 GameObject:
   m_ObjectHideFlags: 0
@@ -21563,7 +21583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: From me and my poop? That's amazing
+  m_text: <b>Nora (you):</b> From me and my poop? That's amazing
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -29055,6 +29075,7 @@ MonoBehaviour:
   level01: {fileID: 777817865}
   level02: {fileID: 0}
   panel: {fileID: 0}
+  secondaryPanel: {fileID: 0}
 --- !u!1 &7111442062942038697
 GameObject:
   m_ObjectHideFlags: 0
@@ -29787,6 +29808,7 @@ MonoBehaviour:
   level01: {fileID: 777817865}
   level02: {fileID: 0}
   panel: {fileID: 0}
+  secondaryPanel: {fileID: 0}
 --- !u!23 &8754322631928574576
 MeshRenderer:
   m_ObjectHideFlags: 0

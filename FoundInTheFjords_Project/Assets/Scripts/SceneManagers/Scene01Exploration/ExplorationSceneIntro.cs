@@ -33,6 +33,7 @@ public class ExplorationSceneIntro : MonoBehaviour
         controllerInstructions.DOFade(1.0f, 1.5f);
         controllerInstructions.interactable = true;
         controllerInstructions.blocksRaycasts = true;
+        controllerInstructionsButton.DOFade(1.0f, 1.5f);
 
         leftFin.SetActive(false);
         rightFin.SetActive(false);
@@ -41,10 +42,10 @@ public class ExplorationSceneIntro : MonoBehaviour
 
 
         //pause for learning and practice
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(10f);
 
-        //show button
-        controllerInstructionsButton.DOFade(1.0f, 1.5f);
+        //Activate button
+        
         controllerInstructionsButton.interactable = true;
         controllerInstructionsButton.blocksRaycasts = true;
 
