@@ -14276,31 +14276,31 @@ MonoBehaviour:
   nora: {fileID: 323955487}
   momBubbles: {fileID: 1136568826}
   voiceovers:
-  - {fileID: 8300000, guid: 18c597f800f59354ba38d8967ab595de, type: 3}
-  - {fileID: 8300000, guid: 78128f6f820a10440837fea5fe67b675, type: 3}
-  - {fileID: 8300000, guid: 8f0433f7cd60e36418aa426c90e1f435, type: 3}
-  - {fileID: 8300000, guid: 646aac039aaf2434fae786844b553bd0, type: 3}
-  - {fileID: 8300000, guid: b637fa1536f84284f86123d9b913ab7c, type: 3}
-  - {fileID: 8300000, guid: 3fb96d9fb143d7b4e9442807d630a7ed, type: 3}
-  - {fileID: 8300000, guid: 68c9c444f4ece8b4186802fffc718119, type: 3}
-  - {fileID: 8300000, guid: c4900bf1ff313c0489cc6cae0961ade7, type: 3}
-  - {fileID: 8300000, guid: d962dacdc1eb2884699afad8ddb22213, type: 3}
-  - {fileID: 8300000, guid: d0a21e79f37baa04e935b554f33d4e44, type: 3}
-  - {fileID: 8300000, guid: c3b49b9b9d204cb4c8efe4f1f8ac98fc, type: 3}
-  - {fileID: 8300000, guid: 978fe8afee702e54e9a14f912d7ca08d, type: 3}
+  - {fileID: 8300000, guid: e91465f69eef2c14f9f52b47aa94951b, type: 3}
+  - {fileID: 8300000, guid: cd27253fe6270d44181e6d1a3f5e1c53, type: 3}
+  - {fileID: 8300000, guid: 754bd219b8f81f64e811f734d6c73771, type: 3}
+  - {fileID: 8300000, guid: 527df08205f6aa649b74f3c288b617d9, type: 3}
+  - {fileID: 8300000, guid: e9eeb4d30c09bdd418e00433c5e701a7, type: 3}
+  - {fileID: 8300000, guid: 45f4d04f3711c1442afbd8b12ce32b91, type: 3}
+  - {fileID: 8300000, guid: d1c187a9a2ec9094f9b9f56d7bd7249b, type: 3}
+  - {fileID: 8300000, guid: 45aedbddd55076048ba70bfdf3beb057, type: 3}
+  - {fileID: 8300000, guid: dda212ee9256b9d4cacbbe6b02982db6, type: 3}
+  - {fileID: 8300000, guid: eb1b03d2177fde246abd3ec20ad1f8a4, type: 3}
+  - {fileID: 8300000, guid: f195f2985f73b2e47b52612e621cb2c5, type: 3}
+  - {fileID: 8300000, guid: 8d3a0d0fc134256489ad39498374d433, type: 3}
   voiceoverDurations:
-  - 10.6
-  - 7.5
-  - 8
-  - 19.8
-  - 16
-  - 9.5
+  - 8.5
+  - 6.4
+  - 8.3
+  - 21
+  - 18.2
+  - 7.7
+  - 4.2
+  - 39.2
+  - 3.5
   - 3.3
-  - 35
-  - 3.8
-  - 4.3
-  - 73
-  - 5.2
+  - 75.5
+  - 8.2
 --- !u!114 &836212985
 MonoBehaviour:
   m_ObjectHideFlags: 0

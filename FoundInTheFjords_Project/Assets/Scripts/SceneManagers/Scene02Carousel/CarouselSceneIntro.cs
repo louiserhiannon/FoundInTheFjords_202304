@@ -8,7 +8,10 @@ public class CarouselSceneIntro : MonoBehaviour
 {
     public AudioSource orcaMomSounds;
     public AudioSource reflectedSounds;
-    public AudioClip voiceover01;
+    public AudioSource noraSounds;
+    public AudioClip voiceover01a;
+    public AudioClip voiceover01b;
+    public AudioClip voiceover01c;
     public AudioClip voiceover02;
     public AudioClip clickTrain;
     public Canvas arrowCanvas;
@@ -16,9 +19,9 @@ public class CarouselSceneIntro : MonoBehaviour
     public OceanMovement oceanMovement;
     public Animator orcaMomAnimator;
     public float timeBeforeVoiceover1;
-    public float voiceover1Part1Duration;
-    public float voiceover1Part2Duration;
-    public float voiceover1Part3Duration;
+    public float voiceover1Part1aDuration;
+    public float voiceover1Part1bDuration;
+    public float voiceover1Part1cDuration;
     public float pauseAfterClick;
     public float voiceover2Duration;
     public float pauseForReflection;
@@ -29,16 +32,19 @@ public class CarouselSceneIntro : MonoBehaviour
     {
         //wait some seconds
         yield return new WaitForSeconds(timeBeforeVoiceover1);
-        //Start voiceover 1
-        orcaMomSounds.PlayOneShot(voiceover01);
+        //Start voiceover 1a
+        orcaMomSounds.PlayOneShot(voiceover01a);
         //wait some seconds
-        yield return new WaitForSeconds(voiceover1Part1Duration);
+        yield return new WaitForSeconds(voiceover1Part1aDuration);
+        //Start voiceover 1b
+        noraSounds.PlayOneShot(voiceover01b);
+        
         //Slow down surroundings and stop
         oceanMovement.isMoving = false;
         //Stop swim animation
         orcaMomAnimator.SetTrigger("Trigger_StopSwim");
         //Wait some seconds
-        yield return new WaitForSeconds(voiceover1Part2Duration);
+        yield return new WaitForSeconds(voiceover1Part1bDuration);
         //show echolocation canvas
         if (echolocationPanels[0] != null)
         {
@@ -46,8 +52,10 @@ public class CarouselSceneIntro : MonoBehaviour
             echolocationPanels[0].interactable = true;
             echolocationPanels[0].blocksRaycasts = true;
         }
-        //Wait some seconds
-        yield return new WaitForSeconds(voiceover1Part3Duration);
+        //Start voiceover 1a
+        orcaMomSounds.PlayOneShot(voiceover01c);
+        //wait some seconds
+        yield return new WaitForSeconds(voiceover1Part1cDuration);
         //play click sound
         orcaMomSounds.PlayOneShot(clickTrain);
         //wait some seconds
