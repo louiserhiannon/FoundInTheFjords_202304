@@ -18,6 +18,8 @@ public class HumpbackTestController : MonoBehaviour
     public TailSlapTutorial tailslapTutorial;
     public ParticleSystem herringScales;
     public List<GameObject> interactionSignifiers;
+    public AudioSource humpbackAudioSource;
+    public AudioClip humpbackOmnomnom;
     
 
     // Start is called before the first frame update
@@ -118,7 +120,8 @@ public class HumpbackTestController : MonoBehaviour
         animationController.StopSwim();
         yield return new WaitForSeconds(0.1f);
         animationController.StartGulp();
-
+        humpbackAudioSource.PlayOneShot(humpbackOmnomnom); 
+        // aya memo: can add modifier to volume using `, 2`
     }
 
     public IEnumerator OrcaSwimAway()
