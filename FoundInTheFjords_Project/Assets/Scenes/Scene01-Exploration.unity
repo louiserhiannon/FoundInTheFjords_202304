@@ -6213,11 +6213,11 @@ MonoBehaviour:
   claraAudioSource: {fileID: 440454723627930455}
   headsetAudioSource: {fileID: 1770318214}
   voiceoverClips:
-  - {fileID: 8300000, guid: b71aa099c7c8ac54481037f9c307dd9a, type: 3}
+  - {fileID: 8300000, guid: b50fb45a43aa1d247941a2b7d4d03672, type: 3}
   - {fileID: 8300000, guid: 2427ed8c167e49b469acf7adc9ad93b0, type: 3}
-  - {fileID: 8300000, guid: 67751063464b2824b8c51efc9fc22532, type: 3}
+  - {fileID: 8300000, guid: 988f6516df160f14f96c7ba490de0fce, type: 3}
   - {fileID: 8300000, guid: 7a6ca54239240fe4fa8de656ba965cc2, type: 3}
-  - {fileID: 8300000, guid: 8b5a5e3620d2d644e98560b934b6dc29, type: 3}
+  - {fileID: 8300000, guid: 2d660d5aee96a814c9c67d7e6ae21149, type: 3}
   voiceoverDurations:
   - 7
   - 14.5
@@ -10689,10 +10689,10 @@ MonoBehaviour:
   m_TrackingStateInput:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State Input
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: ea926c7b-89f5-4402-a5d8-3a1f8b91bbaf
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
