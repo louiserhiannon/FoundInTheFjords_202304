@@ -10,9 +10,9 @@ public class OrientationSceneIntro : MonoBehaviour
     public AudioClip voiceover01;
     public AudioClip voiceover02;
     public AudioClip voiceover03;
-    private float voiceover01Duration = 8.3f;
-    private float voiceover02Duration = 9.3f;
-    private float voiceover03Duration = 12;
+    private float voiceover01Duration = 8.6f;
+    private float voiceover02Duration = 10.5f;
+    private float voiceover03Duration = 12.5f;
     public CanvasGroup controllerInstructions;
     public CanvasGroup controllerInstructionsButton;
     public GameObject leftFin;

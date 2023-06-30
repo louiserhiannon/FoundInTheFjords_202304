@@ -30,9 +30,9 @@ public class IdentitySwap : MonoBehaviour
 
 
     private AudioSource audioSource;
-    private float voiceover41Duration = 2f;
-    private float voiceover42Duration = 25.5f;
-    private float voiceover43Duration = 15.8f;
+    private float voiceover41Duration = 3.2f;
+    private float voiceover42Duration = 14.8f;
+    private float voiceover43Duration = 14.0f;
     private GameObject nora;
     private Material cameraFilterMaterial;
     private Color cameraFilterColour;

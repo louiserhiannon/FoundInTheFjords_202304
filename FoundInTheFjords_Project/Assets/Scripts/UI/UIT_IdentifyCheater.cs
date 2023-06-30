@@ -19,8 +19,8 @@ public class UIT_IdentifyCheater : UITransition
     private float voiceover10Duration = 11.5f;
     private float voiceover11Duration = 26.6f;
     private float voiceover12Duration = 13.2f;
-    private float voiceover13aDuration = 8.5f;
-    private float voiceover13bDuration = 11.5f;
+    private float voiceover13aDuration = 8f;
+    private float voiceover13bDuration = 10f;
     private float voiceover13cDuration = 11.5f;
     public Canvas identifyThief;
     public Canvas eatDirectionsCanvas;

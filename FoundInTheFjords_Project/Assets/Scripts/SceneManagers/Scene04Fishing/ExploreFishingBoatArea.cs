@@ -19,8 +19,8 @@ public class ExploreFishingBoatArea : MonoBehaviour
     public AudioSource momAudioSource;
     public AudioClip voiceover23;
     public AudioClip voiceover24;
-    private float voiceover23Duration = 12.9f;
-    private float voiceover24Duration = 15.8f;
+    private float voiceover23Duration = 13.1f;
+    private float voiceover24Duration = 16.1f;
     public EatingController eatingController;
 
     public IEnumerator ExploreSurroundings01()
@@ -69,19 +69,19 @@ public class ExploreFishingBoatArea : MonoBehaviour
 
         //start moving interactivejellies into place
 
-        StartCoroutine(SDGJelly1Move());
-        StartCoroutine(SDGJelly2Move());
+        //StartCoroutine(SDGJelly1Move());
+        //StartCoroutine(SDGJelly2Move());
         //Set Clara Transform
         clara.SetParent(zodiac);
         clara.localPosition = new Vector3(5.5f, -1f, 5f);
         clara.eulerAngles = new Vector3(0, 60, 0);
 
-        moveToMom.distance = Vector3.Distance(moveToMom.targetTransform.position, moveToMom.transform.position);
-        while (moveToMom.distance > moveToMom.minDistance)
-        {
-            moveToMom.MoveToMinimumDistance();
-            yield return null;
-        }
+        //moveToMom.distance = Vector3.Distance(moveToMom.targetTransform.position, moveToMom.transform.position);
+        //while (moveToMom.distance > moveToMom.minDistance)
+        //{
+        //    moveToMom.MoveToMinimumDistance();
+        //    yield return null;
+        //}
 
         //wait for seconds
         yield return new WaitForSeconds(voiceover23Duration);
@@ -102,25 +102,25 @@ public class ExploreFishingBoatArea : MonoBehaviour
     }
 
 
-    public IEnumerator SDGJelly1Move()
-    {
-        sDGJelly1.distance = Vector3.Distance(sDGJelly1.targetTransform.position, sDGJelly1.transform.position);
-        while (sDGJelly1.distance > sDGJelly1.minDistance)
-        {
-            sDGJelly1.MoveToMinimumDistance();
-            yield return null;
-        }
-    }
+    //public IEnumerator SDGJelly1Move()
+    //{
+    //    sDGJelly1.distance = Vector3.Distance(sDGJelly1.targetTransform.position, sDGJelly1.transform.position);
+    //    while (sDGJelly1.distance > sDGJelly1.minDistance)
+    //    {
+    //        sDGJelly1.MoveToMinimumDistance();
+    //        yield return null;
+    //    }
+    //}
 
-    public IEnumerator SDGJelly2Move()
-    {
-        sDGJelly2.distance = Vector3.Distance(sDGJelly2.targetTransform.position, sDGJelly2.transform.position);
-        while (sDGJelly2.distance > sDGJelly2.minDistance)
-        {
-            sDGJelly2.MoveToMinimumDistance();
-            yield return null;
-        }
-    }
+    //public IEnumerator SDGJelly2Move()
+    //{
+    //    sDGJelly2.distance = Vector3.Distance(sDGJelly2.targetTransform.position, sDGJelly2.transform.position);
+    //    while (sDGJelly2.distance > sDGJelly2.minDistance)
+    //    {
+    //        sDGJelly2.MoveToMinimumDistance();
+    //        yield return null;
+    //    }
+    //}
 
     
 

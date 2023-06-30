@@ -19,11 +19,11 @@ public class FishingSceneIntro : MonoBehaviour
     public AudioClip voiceover03;
     public AudioClip voiceover04;
     public AudioClip voiceover05;
-    private float voiceover01Duration = 17.5f;
-    private float voiceover02Duration = 6.2f;
-    private float voiceover03Duration = 19.2f;
-    private float voiceover04Duration = 27f;
-    private float voiceover05Duration = 8.5f;
+    private float voiceover01Duration = 17.8f;
+    private float voiceover02Duration = 6.4f;
+    private float voiceover03Duration = 19.5f;
+    private float voiceover04Duration = 27.3f;
+    private float voiceover05Duration = 8.7f;
     public Canvas identifyThief;
 
 

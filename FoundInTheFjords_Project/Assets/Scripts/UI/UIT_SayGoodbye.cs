@@ -10,7 +10,7 @@ public class UIT_SayGoodbye : UITransition
     public Canvas thisCanvas;
     public AudioClip voiceover46;
     public AudioClip voiceover47;
-    private float voiceover46Duration = 8.3f;
+    private float voiceover46Duration = 5.5f;
 
     
     public override void UINext()

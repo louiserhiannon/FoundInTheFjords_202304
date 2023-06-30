@@ -13075,6 +13075,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9fe2d5480220e33448198a3f591245ed, type: 3}
   - {fileID: 8300000, guid: c368f72b8c34da74981cc6bc26fd2609, type: 3}
   - {fileID: 8300000, guid: 6af88b4ae71ca7c44a57769ec0da23ee, type: 3}
+  - {fileID: 8300000, guid: d4b7fb59a6740c24882aee0c54597e2f, type: 3}
   controllerInstructions: {fileID: 970523559}
   leftFin: {fileID: 1188501813}
   rightFin: {fileID: 1990363533}

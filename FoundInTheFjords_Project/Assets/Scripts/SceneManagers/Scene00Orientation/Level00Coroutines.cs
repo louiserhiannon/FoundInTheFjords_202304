@@ -7,11 +7,11 @@ public class Level00Coroutines : MonoBehaviour
 {
     public AudioSource claraAudioSource;
     public List<AudioClip> voiceoverClips; //voiceovers 7-11
-    private float voiceover07Duration = 11.8f;
-    private float voiceover08Duration = 10.0f;
+    private float voiceover07Duration = 13.1f;
+    private float voiceover08Duration = 11.3f;
     private float voiceover09Duration = 13.8f;
-    private float voiceover10Duration = 19.5f;
-    private float voiceover11Duration = 12.0f;
+    private float voiceover10Duration = 21.2f;
+    private float voiceover11Duration = 15.3f;
     public CanvasGroup subtitlePanel;
     public List<CanvasGroup> subtitleSnippets;
     public CanvasGroup ready;

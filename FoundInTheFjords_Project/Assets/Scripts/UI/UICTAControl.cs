@@ -10,6 +10,8 @@ public class UICTAControl : MonoBehaviour
     public Canvas learnMoreCanvas;
     public CanvasGroup introPanel;
     public List<CanvasGroup> actionPanels;
+    public AudioClip intro;
+    private AudioSource uISource;
 
     void Start()
     {
@@ -25,13 +27,18 @@ public class UICTAControl : MonoBehaviour
             panel.interactable = false;
             panel.blocksRaycasts = false;
         }
+        uISource = GetComponent<AudioSource>();
 
         StartCoroutine(UIAppear());
     }
 
     public IEnumerator UIAppear()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(3f);
+        
+        uISource.PlayOneShot(intro);
+        
+        yield return new WaitForSeconds(9f);
 
         introPanel.DOFade(1, 2);
 

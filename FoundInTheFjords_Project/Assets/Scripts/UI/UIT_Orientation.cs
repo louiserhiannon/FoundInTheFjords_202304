@@ -9,8 +9,9 @@ public class UIT_Orientation : MonoBehaviour
     public AudioSource claraAudioSource;
     public List<AudioClip> voiceoverClips; //voiceovers 4-6
     private float voiceover04Duration = 11.4f;
-    private float voiceover05Duration = 7.1f;
+    private float voiceover05Duration = 9.5f;
     private float voiceover06Duration = 10.4f;
+    private float voiceover07Duration = 8.7f;
     public Canvas controllerInstructions;
     public GameObject leftFin;
     public GameObject rightFin;
@@ -89,6 +90,9 @@ public class UIT_Orientation : MonoBehaviour
         claraInteractionSignifierReflected.SetActive(true); 
         //wait for duration of clip
         yield return new WaitForSeconds(voiceover06Duration);
+        //start voiceover 07
+        claraAudioSource.PlayOneShot(voiceoverClips[3]);
+        yield return new WaitForSeconds(voiceover07Duration);
         subtitleSnippets[2].DOFade(0, 1);
         yield return new WaitForSeconds(1f);
 

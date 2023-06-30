@@ -4174,7 +4174,7 @@ MonoBehaviour:
   m_text: '<b>Clara:</b> When you poop, some of the nitrogen is released into the
     water. When this happens at the surface, your poop fertilizes phytoplankton that
     lives in the shallow water. More photosynthesizing phytoplankton means less warming
-    carbon dioxide in the atmosphere.
+    carbon dioxide in the atmosphere and this means less warming.
 
 '
   m_isRightToLeft: 0
@@ -4203,8 +4203,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6219,18 +6219,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7a6ca54239240fe4fa8de656ba965cc2, type: 3}
   - {fileID: 8300000, guid: 2d660d5aee96a814c9c67d7e6ae21149, type: 3}
   voiceoverDurations:
-  - 7
-  - 14.5
-  - 4
-  - 24
-  - 16
   - 8
-  - 10
-  - 17
-  - 16
-  - 7
-  - 5.3
   - 15
+  - 4
+  - 28
+  - 23
+  - 11
+  - 10
+  - 22
+  - 16
+  - 7.5
+  - 5.3
+  - 17.5
   subtitlePanel: {fileID: 676199577}
   subtitleSnippets:
   - {fileID: 1498055756}
