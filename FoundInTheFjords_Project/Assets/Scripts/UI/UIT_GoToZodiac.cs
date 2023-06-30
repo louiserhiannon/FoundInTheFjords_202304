@@ -14,7 +14,7 @@ public class UIT_GoToZodiac : UITransition
     public ParticleSystem scales;
     public MovementControls moveControls;
 
-    private float voiceover44duration = 10.3f;
+    private float voiceover44duration = 8f;
     
     public override void UINext()
     {

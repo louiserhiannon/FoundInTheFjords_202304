@@ -25,11 +25,11 @@ public class UIT_SeeScientists : UITransition
     public CanvasGroup panel;
     public List<GameObject> orcas;
     
-    private float voiceover26Duration = 10f;
-    private float voiceover27Duration = 8.5f;
-    private float voiceover28Duration = 7f;
-    private float voiceover29Duration = 10.2f;
-    private float voiceover30Duration = 8.3f;
+    private float voiceover26Duration = 12f;
+    private float voiceover27Duration = 9.2f;
+    private float voiceover28Duration = 8.5f;
+    private float voiceover29Duration = 12f;
+    private float voiceover30Duration = 8.9f;
     
     //public CanvasGroup introduceSnorkelersPanel;
     //public CanvasGroup introduceSnorkelersButton;

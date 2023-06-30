@@ -19,8 +19,8 @@ public class ExploreFishingBoatArea : MonoBehaviour
     public AudioSource momAudioSource;
     public AudioClip voiceover23;
     public AudioClip voiceover24;
-    private float voiceover23Duration = 12.5f;
-    private float voiceover24Duration = 14.2f;
+    private float voiceover23Duration = 12.9f;
+    private float voiceover24Duration = 15.8f;
     public EatingController eatingController;
 
     public IEnumerator ExploreSurroundings01()
