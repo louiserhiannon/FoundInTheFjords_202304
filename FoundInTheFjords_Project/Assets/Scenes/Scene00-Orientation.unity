@@ -4409,9 +4409,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   claraAudioSource: {fileID: 0}
   voiceoverClips:
-  - {fileID: 8300000, guid: d5c63e288b78c884fbb80652be5aaef6, type: 3}
-  - {fileID: 8300000, guid: 2cce0688682df524cb8139c408c100a4, type: 3}
-  - {fileID: 8300000, guid: 1961e3f02602a5240839d2dc40438590, type: 3}
+  - {fileID: 8300000, guid: 9fe2d5480220e33448198a3f591245ed, type: 3}
+  - {fileID: 8300000, guid: c368f72b8c34da74981cc6bc26fd2609, type: 3}
+  - {fileID: 8300000, guid: 6af88b4ae71ca7c44a57769ec0da23ee, type: 3}
   controllerInstructions: {fileID: 1667283674}
   leftFin: {fileID: 1188501813}
   rightFin: {fileID: 1990363533}
@@ -6152,9 +6152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   claraAudioSource: {fileID: 5532020196333613165}
-  voiceover01: {fileID: 8300000, guid: 0325e1a9f08c5cc43a9c159107aa9bb1, type: 3}
-  voiceover02: {fileID: 8300000, guid: a58c90af959e62247b2bee0044093342, type: 3}
-  voiceover03: {fileID: 8300000, guid: 16d24265b93b0fe408ba645b629cd5fa, type: 3}
+  voiceover01: {fileID: 8300000, guid: 8451e9ffef8cd9e4daf662fd2ebe16f2, type: 3}
+  voiceover02: {fileID: 8300000, guid: b6eb17da6a015504290c63fdd1822d76, type: 3}
+  voiceover03: {fileID: 8300000, guid: cccfbd8e089dd364f9cca11bb17b2a75, type: 3}
   controllerInstructions: {fileID: 173225552}
   controllerInstructionsButton: {fileID: 1811833229}
   leftFin: {fileID: 1188501813}
@@ -6204,11 +6204,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   claraAudioSource: {fileID: 5532020196333613165}
   voiceoverClips:
-  - {fileID: 8300000, guid: 092e0a7e51b86794ea5464909db5700c, type: 3}
-  - {fileID: 8300000, guid: a6ef4f46590e7274d8d0e751e758a317, type: 3}
-  - {fileID: 8300000, guid: 132cdf714b88a6d4aa946d24fcd6d80b, type: 3}
-  - {fileID: 8300000, guid: 51aa6f877db63ee4f8e7b1ab62bb5730, type: 3}
-  - {fileID: 8300000, guid: 8b31777b46193744080fb9a0f4e2d2d9, type: 3}
+  - {fileID: 8300000, guid: 85aa96287a8806a4582ceddc780c5a48, type: 3}
+  - {fileID: 8300000, guid: 3db64cf98f5cb2f4ab18c305e2e652b5, type: 3}
+  - {fileID: 8300000, guid: 397b00945b5095e48a074397af1d429b, type: 3}
+  - {fileID: 8300000, guid: e707827617fcdf54cb97fe0864c5d030, type: 3}
+  - {fileID: 8300000, guid: 0cbfb7ffa6a85bb4893ea8ff48c4b5fc, type: 3}
   subtitlePanel: {fileID: 1909094937}
   subtitleSnippets:
   - {fileID: 72464564}
@@ -13072,9 +13072,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   claraAudioSource: {fileID: 5532020196333613165}
   voiceoverClips:
-  - {fileID: 8300000, guid: d5c63e288b78c884fbb80652be5aaef6, type: 3}
-  - {fileID: 8300000, guid: 2cce0688682df524cb8139c408c100a4, type: 3}
-  - {fileID: 8300000, guid: 1961e3f02602a5240839d2dc40438590, type: 3}
+  - {fileID: 8300000, guid: 9fe2d5480220e33448198a3f591245ed, type: 3}
+  - {fileID: 8300000, guid: c368f72b8c34da74981cc6bc26fd2609, type: 3}
+  - {fileID: 8300000, guid: 6af88b4ae71ca7c44a57769ec0da23ee, type: 3}
   controllerInstructions: {fileID: 970523559}
   leftFin: {fileID: 1188501813}
   rightFin: {fileID: 1990363533}

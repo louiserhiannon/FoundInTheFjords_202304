@@ -26202,11 +26202,11 @@ MonoBehaviour:
   claraAudioSource: {fileID: 6869094021340141703}
   ctd: {fileID: 1908653903}
   hydrophone: {fileID: 1216499677}
-  voiceover26: {fileID: 8300000, guid: 047d089d50748b446abeb520b6f31c06, type: 3}
-  voiceover27: {fileID: 8300000, guid: 4b2529f192a6d6145965bce7dba5a347, type: 3}
-  voiceover28: {fileID: 8300000, guid: 78b94638b045cc84889515a4a0947d58, type: 3}
-  voiceover29: {fileID: 8300000, guid: d9bd4279bd0637a4ba23779694050e0c, type: 3}
-  voiceover30: {fileID: 8300000, guid: b0f891422fdefff48ae972c648b62af3, type: 3}
+  voiceover26: {fileID: 8300000, guid: e65ddc4eed9a9b2418d2467054beae07, type: 3}
+  voiceover27: {fileID: 8300000, guid: 3758725e43a3a2d44bac4987660a9e0d, type: 3}
+  voiceover28: {fileID: 8300000, guid: d6e29e81e2de9454899098a7ba59ddd5, type: 3}
+  voiceover29: {fileID: 8300000, guid: a4ce55120c501de419b384942e8d1311, type: 3}
+  voiceover30: {fileID: 8300000, guid: f47e5ea13722dc440b7508d4a85fba31, type: 3}
   panel: {fileID: 2135474303}
   orcas:
   - {fileID: 1975764725}
@@ -26603,11 +26603,11 @@ MonoBehaviour:
   xRRig: {fileID: 562568031}
   isRight: 1
   orcaMomAudio: {fileID: 1245079177}
-  voiceover09: {fileID: 8300000, guid: 6d456629a6703d44d8b2900e84acc2c1, type: 3}
-  voiceover10: {fileID: 8300000, guid: 5de318ca567cdc94fb6e667cf030098b, type: 3}
-  voiceover11: {fileID: 8300000, guid: e9e3d3ca0f6267f4eba21dd5b6cebf68, type: 3}
-  voiceover12: {fileID: 8300000, guid: a163eddd4edbdba4d945ae50b030732d, type: 3}
-  voiceover13: {fileID: 8300000, guid: c17cf0710e6b8cd438149c405aae9680, type: 3}
+  voiceover09: {fileID: 8300000, guid: 4b7a3f3da5ba1414093c0a45a6e792a4, type: 3}
+  voiceover10: {fileID: 8300000, guid: e388e14920c03ab4682355d1901b8e53, type: 3}
+  voiceover11: {fileID: 8300000, guid: 6699deeb6d9d11a418f2e5c41d0ff281, type: 3}
+  voiceover12: {fileID: 8300000, guid: e832fb44f2412ba4aae186e34269eeca, type: 3}
+  voiceover13: {fileID: 8300000, guid: fbf9e14e7fbcdfe4796a50915010ae17, type: 3}
   identifyThief: {fileID: 1300554446}
   eatDirectionsCanvas: {fileID: 771994738}
   step01Text: {fileID: 1889416965}
@@ -26631,7 +26631,7 @@ MonoBehaviour:
   infoUI: {fileID: 1300554446}
   icon: {fileID: 844893757}
   audioSource: {fileID: 1300554442}
-  hoverSound: {fileID: 8300000, guid: ac71cb1f6102c24448363848fa6a9978, type: 3}
+  hoverSound: {fileID: 8300000, guid: 7c45dd6df6a6b70428e6b06ddcd2c734, type: 3}
   selectSound: {fileID: 8300000, guid: 8fff23651a4de6d43a42523413afe9ba, type: 3}
   onClick:
     m_PersistentCalls:
@@ -37453,10 +37453,10 @@ MonoBehaviour:
   m_TrackingStateInput:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State Input
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: fdb422cf-e816-4396-85a3-34a5573595b0
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -40281,7 +40281,7 @@ MonoBehaviour:
   interactableObject: {fileID: 5688143039969556470}
   jellyCanvas: {fileID: 1010638648}
   firstPanel: {fileID: 2135474303}
-  jellyClip: {fileID: 8300000, guid: 5f24b5d7a85b74343b572482c6caf970, type: 3}
+  jellyClip: {fileID: 8300000, guid: 9f9e64f995c2de348b5884886acd5ee0, type: 3}
   firstButton: {fileID: 834454186}
   clipDuration: 4
   interactionSignifier: {fileID: 5688143039969556459}
@@ -40292,15 +40292,15 @@ MonoBehaviour:
   zodiacDriverAudioSource: {fileID: 4047476469021877821}
   claraAudioSource: {fileID: 6869094021340141703}
   noraAudioSource: {fileID: 562568039}
-  voiceover31: {fileID: 8300000, guid: ae6ea024fb423f44192fd90366ab436d, type: 3}
-  voiceover32: {fileID: 8300000, guid: de3407464083f38419b4ec01020ca017, type: 3}
-  voiceover33: {fileID: 8300000, guid: 0f96dc81f365ad442a8f268647229d37, type: 3}
-  voiceover34: {fileID: 8300000, guid: 3a9475bc8cf3b9b408ab6d2f85c55f56, type: 3}
-  voiceover35: {fileID: 8300000, guid: 6d05c0e88046f1142bb5332a938846cc, type: 3}
-  voiceover36: {fileID: 8300000, guid: 341e621cda8499b4f86731bfbc087f09, type: 3}
-  voiceover37: {fileID: 8300000, guid: 5ded137299cedfd4c9a9c83172bb227c, type: 3}
-  voiceover38: {fileID: 8300000, guid: c20b46d5907517443b5b5fb57aa1f115, type: 3}
-  voiceover39: {fileID: 8300000, guid: ea5e40fa0972b7349b3e87b2c87b806e, type: 3}
+  voiceover31: {fileID: 8300000, guid: 2d92d837871bfaf41a1852fdb6bca4fa, type: 3}
+  voiceover32: {fileID: 8300000, guid: 2768d70483753a54387910f283181d8c, type: 3}
+  voiceover33: {fileID: 8300000, guid: 7910f78b5976da7498d31a89cd6ad42c, type: 3}
+  voiceover34: {fileID: 8300000, guid: 69add2b3cbabb52479945e0aa4ea97c0, type: 3}
+  voiceover35: {fileID: 8300000, guid: fe0a2eda8891df64a8d1672f7f5d5cec, type: 3}
+  voiceover36: {fileID: 8300000, guid: d5ae60ef0c3a0a54f8b42814012f083b, type: 3}
+  voiceover37: {fileID: 8300000, guid: 2da21929add783a46a40999c8d31798c, type: 3}
+  voiceover38: {fileID: 8300000, guid: 12745f01b6dd9294a8e8a85712f735af, type: 3}
+  voiceover39: {fileID: 8300000, guid: 8dc5b338f952a86408c7bc2c87355ebb, type: 3}
   coroutineName: IntroduceSnorkelers
   firstSelectionAudio: 1
   firstSelectionUI: 1
@@ -64743,11 +64743,11 @@ MonoBehaviour:
   xRRig: {fileID: 562568031}
   isRight: 0
   orcaMomAudio: {fileID: 1245079177}
-  voiceover09: {fileID: 8300000, guid: 6d456629a6703d44d8b2900e84acc2c1, type: 3}
-  voiceover10: {fileID: 8300000, guid: 5de318ca567cdc94fb6e667cf030098b, type: 3}
-  voiceover11: {fileID: 8300000, guid: e9e3d3ca0f6267f4eba21dd5b6cebf68, type: 3}
-  voiceover12: {fileID: 8300000, guid: a163eddd4edbdba4d945ae50b030732d, type: 3}
-  voiceover13: {fileID: 8300000, guid: c17cf0710e6b8cd438149c405aae9680, type: 3}
+  voiceover09: {fileID: 8300000, guid: 4b7a3f3da5ba1414093c0a45a6e792a4, type: 3}
+  voiceover10: {fileID: 8300000, guid: e388e14920c03ab4682355d1901b8e53, type: 3}
+  voiceover11: {fileID: 8300000, guid: 6699deeb6d9d11a418f2e5c41d0ff281, type: 3}
+  voiceover12: {fileID: 8300000, guid: e832fb44f2412ba4aae186e34269eeca, type: 3}
+  voiceover13: {fileID: 8300000, guid: fbf9e14e7fbcdfe4796a50915010ae17, type: 3}
   identifyThief: {fileID: 1300554446}
   eatDirectionsCanvas: {fileID: 771994738}
   step01Text: {fileID: 1889416965}
@@ -64771,7 +64771,7 @@ MonoBehaviour:
   infoUI: {fileID: 1300554446}
   icon: {fileID: 1471642590}
   audioSource: {fileID: 1300554442}
-  hoverSound: {fileID: 8300000, guid: f9b80829818db0040a262946a2755719, type: 3}
+  hoverSound: {fileID: 8300000, guid: c5ae926748be01d4ea15faede12dd4e3, type: 3}
   selectSound: {fileID: 8300000, guid: 8fff23651a4de6d43a42523413afe9ba, type: 3}
   onClick:
     m_PersistentCalls:
@@ -64955,8 +64955,8 @@ MonoBehaviour:
   ladder: {fileID: 8116690165865082736}
   thisCanvas: {fileID: 1414629462}
   sayGoodbyeToMom: {fileID: 169127941}
-  voiceover44: {fileID: 8300000, guid: 26d5f42bfbdd8da41b3667dfb81acdec, type: 3}
-  voiceover45: {fileID: 8300000, guid: 4f5fc54c09a758649abd456446d72c19, type: 3}
+  voiceover44: {fileID: 8300000, guid: 235a26159f0d28d46ac8363b062511ed, type: 3}
+  voiceover45: {fileID: 8300000, guid: e32ea72279c7d4046a853d7b4fdf51c3, type: 3}
   swirl: {fileID: 1276499552}
   scales: {fileID: 1668710350}
   moveControls: {fileID: 562568044}
@@ -77685,8 +77685,8 @@ MonoBehaviour:
   nextPanel: {fileID: 0}
   audioSource: {fileID: 562568039}
   thisCanvas: {fileID: 169127941}
-  voiceover46: {fileID: 8300000, guid: b0cc144b14fc07f4aabc6864a614f96a, type: 3}
-  voiceover47: {fileID: 8300000, guid: 18c06a23a8cb9be44a937315d3afdcfb, type: 3}
+  voiceover46: {fileID: 8300000, guid: 5fd6cda145b4e9e448e3ab462c920556, type: 3}
+  voiceover47: {fileID: 8300000, guid: ea8bf3522d64fa446a6cfd214908a3b6, type: 3}
 --- !u!1 &1606660044
 GameObject:
   m_ObjectHideFlags: 0
@@ -84116,11 +84116,11 @@ MonoBehaviour:
   mom: {fileID: 1245079179}
   claraAudioSource: {fileID: 6869094021340141703}
   momAudioSource: {fileID: 1245079177}
-  voiceover01: {fileID: 8300000, guid: b93770a930e03dc4aad4e4ece8db03ed, type: 3}
-  voiceover02: {fileID: 8300000, guid: ccdc092f876ebae4d87bcd910917b3db, type: 3}
-  voiceover03: {fileID: 8300000, guid: 7b17a0e03a596ba47be57b8538c35301, type: 3}
-  voiceover04: {fileID: 8300000, guid: eae6a7f1b1857e74fa843c02043500a4, type: 3}
-  voiceover05: {fileID: 8300000, guid: a9f59abe82e9cd04cb300c9434176f6d, type: 3}
+  voiceover01: {fileID: 8300000, guid: 9acefe0097d1ce544b770a1cda01584b, type: 3}
+  voiceover02: {fileID: 8300000, guid: b40d956574a75bc48b0e42449cebb364, type: 3}
+  voiceover03: {fileID: 8300000, guid: 6676691aa22ca3b498f5ce7331f7bca9, type: 3}
+  voiceover04: {fileID: 8300000, guid: cf84fe0326d694f428159edbbf22b7a6, type: 3}
+  voiceover05: {fileID: 8300000, guid: a442b90d46ec3f848abc729621f905bb, type: 3}
   identifyThief: {fileID: 1300554446}
 --- !u!4 &1694216346
 Transform:
@@ -84190,8 +84190,8 @@ MonoBehaviour:
   momInteractionSignifier: {fileID: 5688143039969556470}
   mom: {fileID: 1245079179}
   momAudioSource: {fileID: 1245079177}
-  voiceover23: {fileID: 8300000, guid: 26c656590c1d516468f580b24ad263b8, type: 3}
-  voiceover24: {fileID: 8300000, guid: 26ccfa811c1f57a4a925f56db9d267fa, type: 3}
+  voiceover23: {fileID: 8300000, guid: af6ae7faa97836143854bfafb21984c2, type: 3}
+  voiceover24: {fileID: 8300000, guid: a1bd043ac10d8ab4c9afcd49ef87d97c, type: 3}
   eatingController: {fileID: 562568036}
 --- !u!114 &1694216350
 MonoBehaviour:
@@ -89801,11 +89801,11 @@ MonoBehaviour:
   xRRig: {fileID: 562568031}
   isRight: 0
   orcaMomAudio: {fileID: 1245079177}
-  voiceover09: {fileID: 8300000, guid: 6d456629a6703d44d8b2900e84acc2c1, type: 3}
-  voiceover10: {fileID: 8300000, guid: 5de318ca567cdc94fb6e667cf030098b, type: 3}
-  voiceover11: {fileID: 8300000, guid: e9e3d3ca0f6267f4eba21dd5b6cebf68, type: 3}
-  voiceover12: {fileID: 8300000, guid: a163eddd4edbdba4d945ae50b030732d, type: 3}
-  voiceover13: {fileID: 8300000, guid: c17cf0710e6b8cd438149c405aae9680, type: 3}
+  voiceover09: {fileID: 8300000, guid: 4b7a3f3da5ba1414093c0a45a6e792a4, type: 3}
+  voiceover10: {fileID: 8300000, guid: e388e14920c03ab4682355d1901b8e53, type: 3}
+  voiceover11: {fileID: 8300000, guid: 6699deeb6d9d11a418f2e5c41d0ff281, type: 3}
+  voiceover12: {fileID: 8300000, guid: e832fb44f2412ba4aae186e34269eeca, type: 3}
+  voiceover13: {fileID: 8300000, guid: fbf9e14e7fbcdfe4796a50915010ae17, type: 3}
   identifyThief: {fileID: 1300554446}
   eatDirectionsCanvas: {fileID: 771994738}
   step01Text: {fileID: 1889416965}
@@ -89829,7 +89829,7 @@ MonoBehaviour:
   infoUI: {fileID: 1300554446}
   icon: {fileID: 1718438297}
   audioSource: {fileID: 1300554442}
-  hoverSound: {fileID: 8300000, guid: a08a2e194c969c5459d86ebf4ec780a0, type: 3}
+  hoverSound: {fileID: 8300000, guid: ddf2a41ac578d19438f223dc3b903a6b, type: 3}
   selectSound: {fileID: 8300000, guid: 8fff23651a4de6d43a42523413afe9ba, type: 3}
   onClick:
     m_PersistentCalls:
