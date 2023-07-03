@@ -10,9 +10,10 @@ public class UIT_Orientation : MonoBehaviour
     public List<AudioClip> voiceoverClips; //voiceovers 4-6
     private float voiceover04Duration = 11.4f;
     private float voiceover05Duration = 9.5f;
-    private float voiceover06Duration = 10.4f;
+    private float voiceover06Duration = 3.3f;
     private float voiceover07Duration = 8.7f;
     public Canvas controllerInstructions;
+    public CanvasGroup tailSlapPanel;
     public GameObject leftFin;
     public GameObject rightFin;
     public GameObject leftController;
@@ -70,6 +71,8 @@ public class UIT_Orientation : MonoBehaviour
         //Switch on locomotion controls
         MovementControls.MC.ActivateMovementControls();
         snapTurnProvider.enabled = false;
+
+        
         //wait for duration of clip
         yield return new WaitForSeconds(voiceover04Duration);
         subtitleSnippets[0].DOFade(0, 1);
@@ -97,7 +100,10 @@ public class UIT_Orientation : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         subtitlePanel.DOFade(0, 1);
-        
+
+        //show tailslap charge canvas
+        tailSlapPanel.DOFade(1, 1);
+
 
     }
 }

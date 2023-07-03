@@ -90,6 +90,7 @@ public class HumpbackTestController : MonoBehaviour
         herringScales.Play();
 
         tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17);
+        StartCoroutine(PlayExploreMusic());
 
         //activate interaction Signifiers
         for(int  i = 0; i < interactionSignifiers.Count; i++)
@@ -174,5 +175,11 @@ public class HumpbackTestController : MonoBehaviour
         }
 
 
+    }
+
+    private IEnumerator PlayExploreMusic()
+    {
+        yield return new WaitForSeconds(tailslapTutorial.voiceover17.length);
+        //play explore clip
     }
 }

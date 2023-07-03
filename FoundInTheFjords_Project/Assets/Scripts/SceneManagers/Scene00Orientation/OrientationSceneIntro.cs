@@ -51,8 +51,9 @@ public class OrientationSceneIntro : MonoBehaviour
         //show instructional panel and switch out fins for controllers
         controllerInstructions.DOFade(1.0f, 1.5f);
         controllerInstructions.interactable = true;
-        controllerInstructions.blocksRaycasts = true; 
-        
+        controllerInstructions.blocksRaycasts = true;
+        controllerInstructionsButton.DOFade(1.0f, 1.5f);
+
         leftFin.SetActive(false);
         rightFin.SetActive(false);
         leftController.SetActive(true);
@@ -62,8 +63,8 @@ public class OrientationSceneIntro : MonoBehaviour
         //pause for learning and practice
         yield return new WaitForSeconds(15f);
 
-        //show button
-        controllerInstructionsButton.DOFade(1.0f, 1.5f);
+        //activate button
+        
         controllerInstructionsButton.interactable = true;
         controllerInstructionsButton.blocksRaycasts = true;
 

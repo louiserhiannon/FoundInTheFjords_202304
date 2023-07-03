@@ -189,8 +189,6 @@ public class TailSlapTutorial : MonoBehaviour
         //move mom back
         orcaMom.transform.position -= (2 * orcaMom.transform.forward - orcaMom.transform.up);
 
-        //resume other orca spawning herring
-        CarouselManager.CM.stunHerring = true;
 
 
     }
@@ -211,6 +209,8 @@ public class TailSlapTutorial : MonoBehaviour
         MovementControls.MC.DeactivateMovementControls();
 
 
+        //resume other orca spawning herring
+        CarouselManager.CM.stunHerring = true;
 
         //fade panels
         foreach (CanvasGroup panel in combinedCanvas.GetComponentsInChildren<CanvasGroup>())

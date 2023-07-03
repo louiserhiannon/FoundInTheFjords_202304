@@ -84383,7 +84383,7 @@ GameObject:
   - component: {fileID: 1694216350}
   - component: {fileID: 1694216352}
   m_Layer: 0
-  m_Name: SceneInfoManager
+  m_Name: SceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
