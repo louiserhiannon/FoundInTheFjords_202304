@@ -8,7 +8,7 @@ public class OrcaCalls : MonoBehaviour
     
     public static OrcaCalls instance; //sets this class as a static reference, so anything in the game can call it. You can add it to any game object, but must only be added to one object per scene
     public List<AudioClip> calls; //public list of orca calls that you can draw from. You just add the files to the list in the inspector
-    public List<float> callDurations; //public list of the durations of each of the calls added in the sound file list above
+    //public List<float> callDurations; //public list of the durations of each of the calls added in the sound file list above
 
 
     private void Awake()
