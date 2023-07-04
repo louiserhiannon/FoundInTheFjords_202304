@@ -13,7 +13,7 @@ public class UIT_Orientation : MonoBehaviour
     private float voiceover06Duration = 3.3f;
     private float voiceover07Duration = 8.7f;
     public Canvas controllerInstructions;
-    public CanvasGroup tailSlapPanel;
+    //public CanvasGroup tailSlapPanel;
     public GameObject leftFin;
     public GameObject rightFin;
     public GameObject leftController;
@@ -102,7 +102,7 @@ public class UIT_Orientation : MonoBehaviour
         subtitlePanel.DOFade(0, 1);
 
         //show tailslap charge canvas
-        tailSlapPanel.DOFade(1, 1);
+        //tailSlapPanel.DOFade(1, 1);
 
 
     }

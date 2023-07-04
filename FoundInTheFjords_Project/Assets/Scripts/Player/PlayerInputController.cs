@@ -15,7 +15,7 @@ public class PlayerInputController : MonoBehaviour
     protected float tailChargeRequired = 100f;
     public bool tailCharged = false;
     public float tailChargeDisplayed;
-    public TMP_Text tailChargeText;
+    //public TMP_Text tailChargeText;
     public TMP_Text chargedText;
     [SerializeField] protected float yvalue;
     [SerializeField] protected float xvalue;
@@ -34,10 +34,10 @@ public class PlayerInputController : MonoBehaviour
             chargedText.text = "Ready";
         }
 
-        if (tailChargeText != null)
-        {
-            tailChargeText.text = "Ready";
-        }
+        //if (tailChargeText != null)
+        //{
+        //    tailChargeText.text = "Ready";
+        //}
 
         
         

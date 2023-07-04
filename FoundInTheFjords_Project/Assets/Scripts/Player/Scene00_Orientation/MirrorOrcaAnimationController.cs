@@ -12,7 +12,8 @@ public class MirrorOrcaAnimationController : PlayerInputController
 {
     //Script to convert controller inputs into mirror animations on the orca reflection during orientation   
     private Animator mirrorOrcaAnimator;
-    
+    private bool firstBite = true;
+    public CanvasGroup biteInstructionsPanel;
     
     
     
@@ -37,6 +38,11 @@ public class MirrorOrcaAnimationController : PlayerInputController
         if(mirrorOrcaAnimator!= null)
         {
             mirrorOrcaAnimator.SetTrigger("Trigger_Bite");
+            if (firstBite)
+            {
+                biteInstructionsPanel.DOFade(0, 1);
+                firstBite = false;
+            }
         }
     }
 
@@ -62,13 +68,14 @@ public class MirrorOrcaAnimationController : PlayerInputController
                 if (mirrorOrcaAnimator != null)
                 {
                     mirrorOrcaAnimator.SetTrigger("Trigger_TailSlap");
+                    chargedText.text = string.Empty;
                     StartCoroutine(ShowReadyText());
                     
                 }
             }
             slapCharge = 0f;
             tailCharged = false;
-            chargedText.text = string.Empty;
+            
             //tailChargeText.text = string.Empty;
             
 
@@ -101,7 +108,11 @@ public class MirrorOrcaAnimationController : PlayerInputController
     private IEnumerator ShowReadyText()
     {
         yield return new WaitForSeconds(4f);
-        chargedText.text = "Ready";
+        if(chargedText.text == string.Empty)
+        {
+            chargedText.text = "Ready";
+        }
+        
     }
 
     
