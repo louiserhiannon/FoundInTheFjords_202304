@@ -39,6 +39,8 @@ public class UITransition : MonoBehaviour
         if (nextPanel != null)
         {
             nextPanel.DOFade(1, 1.5f);
+            nextPanel.interactable = true;
+            nextPanel.blocksRaycasts = true;
 
         }
 
