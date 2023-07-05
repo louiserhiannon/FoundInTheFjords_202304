@@ -13,6 +13,8 @@ public class Level01Coroutines : MonoBehaviour
     public CanvasGroup subtitlePanel;
     public List<CanvasGroup> subtitleSnippets;
     public GameObject momInteractionSignifier;
+    public AudioSource bgmSource;
+    public AudioClip exploreMusic;
     public void StartCustomCoroutine(string name)
     {
         StartCoroutine(name);
@@ -78,6 +80,10 @@ public class Level01Coroutines : MonoBehaviour
         yield return new WaitForSeconds(voiceoverDurations[11]);
         subtitleSnippets[9].DOFade(0, 1);
         yield return new WaitForSeconds(1f);
+        bgmSource.clip = exploreMusic;
+        bgmSource.loop = true;
+        bgmSource.Play();
+        StartCoroutine(FadeAudioSource.StartFade(bgmSource, 5f, 1f));
 
         subtitlePanel.DOFade(0, 1);
         momInteractionSignifier.SetActive(true);

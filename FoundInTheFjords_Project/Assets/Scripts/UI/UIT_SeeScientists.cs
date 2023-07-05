@@ -22,6 +22,7 @@ public class UIT_SeeScientists : UITransition
     public AudioClip voiceover28;
     public AudioClip voiceover29;
     public AudioClip voiceover30;
+    public AudioSource bgmSource;
     public CanvasGroup panel;
     public List<GameObject> orcas;
     
@@ -110,7 +111,8 @@ public class UIT_SeeScientists : UITransition
         // Play voiceover 30
         claraAudioSource.PlayOneShot(voiceover30);
         yield return new WaitForSeconds(voiceover30Duration);
-        
+        // Start explore music
+        StartCoroutine(FadeAudioSource.StartFade(bgmSource, 5f, 1f));
         //reset and enable mom's interactability
         orcaMom.GetComponentInChildren<JellyInteractions>().coroutineName = "IntroduceSnorkelers";
         //orcaMom.GetComponentInChildren<XRSimpleInteractable>().enabled = true;

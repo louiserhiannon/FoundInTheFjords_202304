@@ -21,6 +21,8 @@ public class ExploreFishingBoatArea : MonoBehaviour
     public AudioClip voiceover24;
     private float voiceover23Duration = 13.1f;
     private float voiceover24Duration = 16.1f;
+    public AudioSource bgmSource;
+    public AudioClip exploreMusic;
     public EatingController eatingController;
 
     public IEnumerator ExploreSurroundings01()
@@ -96,7 +98,10 @@ public class ExploreFishingBoatArea : MonoBehaviour
         //make mom interactable
         momInteractionSignifier.GetComponent<XRSimpleInteractable>().enabled = true;
         momInteractionSignifier.SetActive(true);
-
+        bgmSource.clip = exploreMusic;
+        bgmSource.loop = true;
+        bgmSource.Play();
+        StartCoroutine(FadeAudioSource.StartFade(bgmSource, 5f, 1f));
 
         yield return null;
     }

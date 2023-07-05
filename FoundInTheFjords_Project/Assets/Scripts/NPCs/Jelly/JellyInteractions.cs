@@ -44,6 +44,7 @@ public class JellyInteractions : MonoBehaviour
     private float voiceover37Duration = 2.6f;
     private float voiceover38Duration = 12.4f;
     private float voiceover39Duration = 5.3f;
+    public AudioSource bgmSource;
     public string coroutineName;
     public bool firstSelectionAudio = true;
     public bool firstSelectionUI = true;
@@ -97,6 +98,7 @@ public class JellyInteractions : MonoBehaviour
     {
         if (firstSelectionAudio)
         {
+            StartCoroutine(FadeAudioSource.StartFade(bgmSource, 2f, 0f));
             if (jellyClip != null)
             {
                 jellyAudioSource.PlayOneShot(jellyClip);
@@ -175,6 +177,8 @@ public class JellyInteractions : MonoBehaviour
 
     public IEnumerator IntroduceSnorkelers()
     {
+        //Music fade out
+        StartCoroutine(FadeAudioSource.StartFade(bgmSource, 2f, 0f));
         //Play voiceover 31
         zodiacDriverAudioSource.PlayOneShot(voiceover31);
         yield return new WaitForSeconds(voiceover31Duration);

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class HumpbackTestController : MonoBehaviour
 {
     public HumpbackSwimAnimation animationController;
@@ -20,6 +19,9 @@ public class HumpbackTestController : MonoBehaviour
     public List<GameObject> interactionSignifiers;
     public AudioSource humpbackAudioSource;
     public AudioClip humpbackOmnomnom;
+    public AudioSource bgmSource;
+    public AudioClip exploreMusic;
+    // public AudioMixer mainMixer; Will switch to mixer fades later on
     
 
     // Start is called before the first frame update
@@ -183,6 +185,9 @@ public class HumpbackTestController : MonoBehaviour
     private IEnumerator PlayExploreMusic()
     {
         yield return new WaitForSeconds(tailslapTutorial.voiceover17.length);
-        //play explore clip
+        bgmSource.clip = exploreMusic;
+        bgmSource.loop = true;
+        bgmSource.Play();
+        StartCoroutine(FadeAudioSource.StartFade(bgmSource, 5f, 1f));
     }
 }
