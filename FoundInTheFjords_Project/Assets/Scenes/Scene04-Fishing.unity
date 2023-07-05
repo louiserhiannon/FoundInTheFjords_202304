@@ -6343,7 +6343,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 50
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -6394,7 +6394,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.2888889
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -6427,7 +6427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309123761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.5, y: -5.4, z: 80.3}
+  m_LocalPosition: {x: -40.7, y: -5.4, z: 49.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9404,7 +9404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableSpatialization: 1
-  gainBoostDb: 0
+  gainBoostDb: 3.6
   enableAcoustics: 0
   reverbSendDb: 0
 --- !u!82 &450763825
@@ -9427,7 +9427,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 60
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
