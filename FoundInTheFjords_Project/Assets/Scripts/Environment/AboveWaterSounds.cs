@@ -7,6 +7,7 @@ public class AboveWaterSounds : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip surfaceWaterClip;
     public DepthCalculator depthCalculator;
+    public GameObject affectedParticleSystem;
     private bool _isAboveWater;
     public bool isAboveWater {
         get { return _isAboveWater ; }
@@ -15,11 +16,14 @@ public class AboveWaterSounds : MonoBehaviour
             {
                 Debug.Log("Surfaced! isAboveWater changed from: " + _isAboveWater + "to: " + value);
                 audioSource.Play();
+                affectedParticleSystem.SetActive(false);
+                
             }
             if ( _isAboveWater == true && value == false )
             {
                 Debug.Log("Dove! isAboveWater changed from: " + _isAboveWater + "to: " + value);
                 audioSource.Stop();
+                affectedParticleSystem.SetActive(true);
             }
             _isAboveWater = value;
         }

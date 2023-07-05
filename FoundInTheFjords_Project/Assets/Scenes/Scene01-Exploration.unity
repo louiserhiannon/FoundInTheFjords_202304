@@ -6274,6 +6274,7 @@ MonoBehaviour:
   audioSource: {fileID: 930425147}
   surfaceWaterClip: {fileID: 8300000, guid: 9525574256278174088491ee75fb1200, type: 3}
   depthCalculator: {fileID: 777817862}
+  affectedParticleSystem: {fileID: 1928430977}
 --- !u!1 &794218702
 GameObject:
   m_ObjectHideFlags: 0
