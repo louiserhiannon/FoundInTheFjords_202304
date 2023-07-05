@@ -17386,7 +17386,6 @@ MonoBehaviour:
     type: 3}
   tailCharged: 0
   tailChargeDisplayed: 0
-  tailChargeText: {fileID: 0}
   chargedText: {fileID: 0}
   yvalue: 0
   xvalue: 0
@@ -17399,12 +17398,14 @@ MonoBehaviour:
   targetHerringCount: 6
   herringLifetime: 60
   successClips:
-  - {fileID: 8300000, guid: 9f6bf5a2508658046bfbef43a20d9377, type: 3}
-  - {fileID: 8300000, guid: 1a3fce31b21c4f247808029e34997c8d, type: 3}
-  - {fileID: 8300000, guid: 3f187a4b1824e1a4c9608bbe88b553ff, type: 3}
+  - {fileID: 8300000, guid: 7623cd5e068a2724d8a075e591a8f79d, type: 3}
+  - {fileID: 8300000, guid: 55457005847e93b48a4c5618e6bf25f0, type: 3}
+  - {fileID: 8300000, guid: 3c639023dd672274484e71eae884d8ad, type: 3}
+  - {fileID: 8300000, guid: 4dbc81e29ce84e64291e65a41b84b26c, type: 3}
+  - {fileID: 8300000, guid: 273fb4a526c6f8b428b028abdcdcef95, type: 3}
   failureClips:
-  - {fileID: 8300000, guid: 90a3f397ab3982b449ac928d217d9658, type: 3}
-  - {fileID: 8300000, guid: 6589e27f3188baf4bac28d7db53903b0, type: 3}
+  - {fileID: 8300000, guid: b10eed4a67e073942b58bd250f43ce57, type: 3}
+  - {fileID: 8300000, guid: 9d6c1423322efcd43895f64acd7ab98c, type: 3}
   targetActive: 0
   tutorial: {fileID: 0}
   explore: {fileID: 1694216348}
