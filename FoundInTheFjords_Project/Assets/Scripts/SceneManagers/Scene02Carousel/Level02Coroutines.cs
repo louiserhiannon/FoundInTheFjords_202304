@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Level02Coroutines : MonoBehaviour
 {
     public AudioSource momAudioSource;
     public AudioClip voiceover18;
     private float voiceover18Duration = 6.5f;
+    public AudioSource bgmSource;
     public void StartCustomCoroutine(string name)
     {
         StartCoroutine(name);
@@ -14,6 +16,8 @@ public class Level02Coroutines : MonoBehaviour
 
     public IEnumerator ReadyToTravel()
     {
+        // Fade music out
+        StartCoroutine(FadeAudioSource.StartFade(bgmSource, 5f, 0f));
         //play voiceover 17
         momAudioSource.PlayOneShot(voiceover18);
         //wait a bit
@@ -31,8 +35,7 @@ public class Level02Coroutines : MonoBehaviour
         {
             Destroy(HerringSpawner.HS);
         }
+        bgmSource.Stop();
         ChangeScene.instance.SceneSwitch("Scene03-Locomotion");
-        
-        
     }
 }
