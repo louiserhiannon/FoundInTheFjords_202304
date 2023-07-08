@@ -93,7 +93,8 @@ public class HumpbackTestController : MonoBehaviour
         //start herring scales particle system
         herringScales.Play();
 
-        tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17);
+        tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17a);
+        tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17b);
         StartCoroutine(PlayExploreMusic());
 
         //activate interaction Signifiers
@@ -184,7 +185,7 @@ public class HumpbackTestController : MonoBehaviour
 
     private IEnumerator PlayExploreMusic()
     {
-        yield return new WaitForSeconds(tailslapTutorial.voiceover17.length);
+        yield return new WaitForSeconds(tailslapTutorial.voiceover17a.length + tailslapTutorial.voiceover17b.length);
         bgmSource.clip = exploreMusic;
         bgmSource.loop = true;
         bgmSource.Play();

@@ -19,8 +19,12 @@ public class TailSlapTutorial : MonoBehaviour
     public AudioClip step04;
     public AudioClip tailslapGO;
     public AudioClip humpbackSong;
-    public AudioClip voiceover16;
-    public AudioClip voiceover17;
+    public AudioClip voiceover16a;
+    public AudioClip voiceover16b;
+    public AudioClip voiceover16c;
+    public AudioClip voiceover16d;
+    public AudioClip voiceover17a;
+    public AudioClip voiceover17b;
     private float voiceover14Duration = 7.5f;
     private float tailslapPracticeDuration = 8f;
     private float step00Duration = 4.0f;
@@ -29,7 +33,10 @@ public class TailSlapTutorial : MonoBehaviour
     private float step03Duration = 5.0f;
     private float step04Duration = 6.0f;
     private float tailslapGODuration = 4.0f;
-    private float voiceover16Duration = 22f;
+    private float voiceover16aDuration = 2.1f;
+    private float voiceover16bDuration = 13.5f;
+    private float voiceover16cDuration = 2.5f;
+    private float voiceover16dDuration = 5.5f;
 
     public Canvas herringCounterCanvas;
     public Canvas tailslapChargeCanvas;
@@ -224,8 +231,14 @@ public class TailSlapTutorial : MonoBehaviour
         EatingController.EC.eatenHerringCount = 0;
 
         //play shocked Nora
-        noraAudioSource.PlayOneShot(voiceover16);
-        yield return new WaitForSeconds(voiceover16Duration);
+        noraAudioSource.PlayOneShot(voiceover16a);
+        yield return new WaitForSeconds(voiceover16aDuration);
+        noraAudioSource.PlayOneShot(voiceover16b);
+        yield return new WaitForSeconds(voiceover16bDuration);
+        noraAudioSource.PlayOneShot(voiceover16c);
+        yield return new WaitForSeconds(voiceover16cDuration);
+        noraAudioSource.PlayOneShot(voiceover16d);
+        yield return new WaitForSeconds(voiceover16dDuration);
 
 
         //return to mom
