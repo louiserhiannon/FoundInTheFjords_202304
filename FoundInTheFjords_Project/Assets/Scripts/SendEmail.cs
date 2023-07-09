@@ -14,7 +14,7 @@ public class SendEmail : MonoBehaviour
 
     public IEnumerator PostData_Coroutine() 
     {
-        string jsonStr = "{\"personalizations\": [{\"to\": [{\"email\": \"" + changeScene.receipientEmailAddress + "\"}]}],\"from\": {\"email\": \"hello@foundinthefjords.org\"},\"subject\": \"Your commitment in Found in the Fjords\",\"content\": [{\"type\": \"text/plain\", \"value\": \"and easy to do anywhere, even with cURL\"}],\"template_id\":\"d-ffb3d161f22a482687a0e77cf325ba4c\"}";
+        string jsonStr = "{\"personalizations\": [{\"to\": [{\"email\": \"" + changeScene.receipientEmailAddress + "\"}]}],\"from\": {\"email\": \"hello@foundinthefjords.org\"},\"subject\": \"Your commitment in Found in the Fjords\",\"content\": [{\"type\": \"text/plain\", \"value\": \"and easy to do anywhere, even with cURL\"}],\"template_id\":\"d-5e1e649bb0f94f89a750120b620fb357\"}";
         // Transform string into byte array
         byte[] data = System.Text.Encoding.UTF8.GetBytes(jsonStr);
         Debug.Log(changeScene.receipientEmailAddress);
