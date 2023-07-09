@@ -7,6 +7,7 @@ public class ChangeScene : MonoBehaviour
 {
     public static ChangeScene instance;
     public SendEmail sendemail;
+    public string receipientEmailAddress = "fitf@mailinator.com";
     private void Awake()
     {
         if(instance != null && instance != this)

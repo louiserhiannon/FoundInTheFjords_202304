@@ -10944,6 +10944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da0bba6784a55404eb7a5d43a19afc13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sendemail: {fileID: 2051641158}
+  receipientEmailAddress: fitf@mailinator.com
 --- !u!4 &2051641157
 Transform:
   m_ObjectHideFlags: 0
@@ -10971,6 +10973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb8dff6e3852ec47baea5612d435424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeScene: {fileID: 2051641156}
 --- !u!1 &2091308172
 GameObject:
   m_ObjectHideFlags: 0
