@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public static ChangeScene instance;
+    public SendEmail sendemail;
     private void Awake()
     {
         if(instance != null && instance != this)
@@ -17,6 +18,11 @@ public class ChangeScene : MonoBehaviour
         {
             instance = this;
         }
+    }
+
+    public void Start() 
+    {
+        StartCoroutine(sendemail.PostData_Coroutine());
     }
 
     public void SceneSwitch(string sceneName)
