@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using DG.Tweening;
+using Unity.VisualScripting;
+using TMPro;
 
 public class UITransition : MonoBehaviour
 {
@@ -11,6 +13,11 @@ public class UITransition : MonoBehaviour
     public CanvasGroup nextPanel;
     //public CanvasGroup nextPanelButton;
     public AudioSource audioSource;
+    public CanvasGroup keyboard;
+    //public string storedTemplateID;
+    
+    
+    
     //public AudioClip clip;
     //public float audioClipDuration;
     
@@ -93,5 +100,39 @@ public class UITransition : MonoBehaviour
         //add something in code to make it look like I'm doing something
     }
 
+    public void ShowKeyboard()
+    {
+        keyboard.DOFade(1f, 1f);
+        keyboard.interactable = true;
+        keyboard.blocksRaycasts = true;
+    }
+
+    public void HideKeyboard()
+    {
+        keyboard.DOFade(0f, 1f);
+        keyboard.interactable = false;
+        keyboard.blocksRaycasts = false;
+    }
+
+
+    public void SetTemplateID(string templateID)
+    {
+        SendEmail.SE.templateID = templateID;
+        Debug.Log(SendEmail.SE.templateID);
+    }
+
+    public void PostData(TMP_InputField inputField)
+    {
+        if(SendEmail.SE != null)
+        {
+            string emailAddress = inputField.text;
+            string templateID = SendEmail.SE.templateID;
+            Debug.Log(templateID);
+            StartCoroutine(SendEmail.SE.PostData_Coroutine(emailAddress, templateID));
+        }
+        
+    }
+
     
+
 }
