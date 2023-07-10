@@ -85,7 +85,7 @@ public class UIT_locateBaitball : MonoBehaviour
         //    CarouselManager.CM.allAxes[i].SetActive(false);
         //}
         //Wait until end of voiceover 4
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(voiceover4.length + 0.5f);
         
         //start orca swim animation
         orcaMomAnimator.SetTrigger("Trigger_Swim");
@@ -102,24 +102,19 @@ public class UIT_locateBaitball : MonoBehaviour
         //Activate voiceover 5
         orcaMomSounds.PlayOneShot(voiceover5);
         //move towards baitball until min distance is reached (8)
-        while (moveToBaitball.distance > moveToBaitball.minDistance)
-        {
-            moveToBaitball.MoveToMinimumDistance();
-            //followMom.Follow();
-            yield return null;
-        }
+        StartCoroutine(MoveCloser()); 
         //stop swim animation
         orcaMomAnimator.SetTrigger("Trigger_StopSwim");
         //Wait until end of voiceover 5
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(voiceover5.length + 0.5f);
         //Activate voiceover 6
         orcaMomSounds.PlayOneShot(voiceover6);
         //Wait until end of Voiceover 6
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(voiceover6.length + 0.5f);
         //Activate voiceover 7
         orcaMomSounds.PlayOneShot(voiceover7);
         //Wait until end of Voiceover 7
-        yield return new WaitForSeconds(14f);
+        yield return new WaitForSeconds(voiceover7.length + 0.5f);
         //Activate voiceover 8
         orcaMomSounds.PlayOneShot(voiceover8);
         //Remove rig from orca parent
@@ -132,7 +127,7 @@ public class UIT_locateBaitball : MonoBehaviour
         EatingController.EC.eat_simple = true;
 
         //Show Counter Panel
-        herringCounterCanvas.GetComponentInChildren<CanvasGroup>().alpha= 1.0f;
+        herringCounterCanvas.GetComponentInChildren<CanvasGroup>().DOFade(1f,1f);
         herringCounter.displayActive = true;
         
 
@@ -150,5 +145,15 @@ public class UIT_locateBaitball : MonoBehaviour
         //    panel.interactable = true;
         //    panel.blocksRaycasts = true;
         //}
+    }
+
+    private IEnumerator MoveCloser()
+    {
+        while (moveToBaitball.distance > moveToBaitball.minDistance)
+        {
+            moveToBaitball.MoveToMinimumDistance();
+            //followMom.Follow();
+            yield return null;
+        }
     }
 }

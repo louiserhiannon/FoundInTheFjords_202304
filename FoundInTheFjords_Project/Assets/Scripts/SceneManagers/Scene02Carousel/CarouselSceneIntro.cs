@@ -105,7 +105,7 @@ public class CarouselSceneIntro : MonoBehaviour
         }
 
         //Wait some seconds
-        yield return new WaitForSeconds(voiceover2Duration / 2);
+        yield return new WaitForSeconds(voiceover2Duration / 4f);
 
         //Fade echolocation canvas
         if (echolocationPanels[0] != null)
@@ -116,7 +116,7 @@ public class CarouselSceneIntro : MonoBehaviour
         }
 
         //Wait some seconds
-        yield return new WaitForSeconds(voiceover2Duration / 2);
+        yield return new WaitForSeconds(voiceover2Duration / 4f);
 
         //play click sound
         orcaMomSounds.PlayOneShot(clickTrain);
