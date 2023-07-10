@@ -9,6 +9,7 @@ public class SendEmail : MonoBehaviour
 {
     private string uri = "https://api.sendgrid.com/v3/mail/send";
     public static SendEmail SE;
+    public string templateID;
 
     //public ChangeScene changeScene;
 
@@ -23,6 +24,7 @@ public class SendEmail : MonoBehaviour
         string jsonStr = "{\"personalizations\": [{\"to\": [{\"email\": \"" + emailAddress + "\"}]}],\"from\": {\"email\": \"hello@foundinthefjords.org\"},\"subject\": \"Your commitment in Found in the Fjords\",\"content\": [{\"type\": \"text/plain\", \"value\": \"and easy to do anywhere, even with cURL\"}],\"template_id\":\"" + templateID + "\"}";
         // Transform string into byte array
         byte[] data = System.Text.Encoding.UTF8.GetBytes(jsonStr);
+        Debug.Log(templateID);
         Debug.Log(emailAddress);
         Debug.Log(jsonStr);
         // Load API key from credebtials file, which is not tracked by git. Contact Aya for a copy.

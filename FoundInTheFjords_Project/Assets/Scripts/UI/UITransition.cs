@@ -14,7 +14,7 @@ public class UITransition : MonoBehaviour
     //public CanvasGroup nextPanelButton;
     public AudioSource audioSource;
     public CanvasGroup keyboard;
-    private string storedTemplateID = null;
+    //public string storedTemplateID;
     
     
     
@@ -117,7 +117,8 @@ public class UITransition : MonoBehaviour
 
     public void SetTemplateID(string templateID)
     {
-        storedTemplateID = templateID;
+        SendEmail.SE.templateID = templateID;
+        Debug.Log(SendEmail.SE.templateID);
     }
 
     public void PostData(TMP_InputField inputField)
@@ -125,7 +126,9 @@ public class UITransition : MonoBehaviour
         if(SendEmail.SE != null)
         {
             string emailAddress = inputField.text;
-            StartCoroutine(SendEmail.SE.PostData_Coroutine(emailAddress, storedTemplateID));
+            string templateID = SendEmail.SE.templateID;
+            Debug.Log(templateID);
+            StartCoroutine(SendEmail.SE.PostData_Coroutine(emailAddress, templateID));
         }
         
     }
