@@ -1,14 +1,17 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
+//using static UnityEngine.Rendering.DebugUI;
+
 
 public class UICTAControl : MonoBehaviour
 {
     public Canvas cTACanvas;
     public Canvas learnMoreCanvas;
     public CanvasGroup introPanel;
+    public CanvasGroup keyboard;
     public List<CanvasGroup> actionPanels;
     public AudioClip intro;
     private AudioSource uISource;
@@ -27,9 +30,31 @@ public class UICTAControl : MonoBehaviour
             panel.interactable = false;
             panel.blocksRaycasts = false;
         }
+
+        keyboard.alpha = 0f;
+        keyboard.interactable = false;
+        keyboard.blocksRaycasts = false;
+        
         uISource = GetComponent<AudioSource>();
 
         StartCoroutine(UIAppear());
+    }
+
+    public void FadeAllPanels()
+    {
+        foreach (CanvasGroup panel in cTACanvas.GetComponentsInChildren<CanvasGroup>())
+        {
+            panel.DOFade(0f, 1f);
+            panel.interactable = false;
+            panel.blocksRaycasts = false;
+        }
+
+        foreach (CanvasGroup panel in learnMoreCanvas.GetComponentsInChildren<CanvasGroup>())
+        {
+            panel.DOFade(0f, 1f);
+            panel.interactable = false;
+            panel.blocksRaycasts = false;
+        }
     }
 
     public IEnumerator UIAppear()
@@ -38,13 +63,13 @@ public class UICTAControl : MonoBehaviour
         
         uISource.PlayOneShot(intro);
         
-        yield return new WaitForSeconds(9f);
+        yield return new WaitForSeconds(intro.length - 4.5f);
 
-        introPanel.DOFade(1, 2);
+        //introPanel.DOFade(1, 2);
 
-        yield return new WaitForSeconds(5f);
+        //yield return new WaitForSeconds(5f);
 
-        introPanel.DOFade(0, 2);
+        //introPanel.DOFade(0, 2);
 
         for (int i = 0; i < actionPanels.Count; i++)
         {

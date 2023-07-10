@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public static ChangeScene instance;
-    public SendEmail sendemail;
-    public string receipientEmailAddress = "fitf@mailinator.com";
+    //public SendEmail sendemail;
+    //public string receipientEmailAddress = "fitf@mailinator.com";
     private void Awake()
     {
         if(instance != null && instance != this)
@@ -21,10 +21,10 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
-    public void Start() 
-    {
-        StartCoroutine(sendemail.PostData_Coroutine());
-    }
+    //public void Start() 
+    //{
+    //    StartCoroutine(sendemail.PostData_Coroutine());
+    //}
 
     public void SceneSwitch(string sceneName)
     {
