@@ -6190,7 +6190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headsetAudioSource: {fileID: 1770318214}
-  voiceover00: {fileID: 8300000, guid: 90b231be214a32c4ab2f24015e11cf6b, type: 3}
+  voiceover00: {fileID: 8300000, guid: f90aaf462e72a9b4a9dc004a618dee38, type: 3}
   subtitleSnippet0: {fileID: 226420508}
   controllerInstructions: {fileID: 227573007}
   controllerInstructionsButton: {fileID: 1915992810}
@@ -19460,7 +19460,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1853825830
 GameObject:

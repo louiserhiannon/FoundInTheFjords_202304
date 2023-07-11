@@ -4,18 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Networking;
+using TMPro;
 
 public class SendEmail : MonoBehaviour
 {
     private string uri = "https://api.sendgrid.com/v3/mail/send";
     public static SendEmail SE;
     public string templateID;
+    //public CanvasGroup aPIPanel;
+    //public TMP_Text key;
 
     //public ChangeScene changeScene;
 
     private void Awake()
     {
         SE = this;
+        //aPIPanel.alpha = 0;
+        //aPIPanel.blocksRaycasts = false;
     }
 
 
@@ -28,7 +33,9 @@ public class SendEmail : MonoBehaviour
         Debug.Log(emailAddress);
         Debug.Log(jsonStr);
         // Load API key from credebtials file, which is not tracked by git. Contact Aya for a copy.
-        string sgk = System.IO.File.ReadLines(Application.dataPath + "/key.txt").First(); 
+        string sgk = Resources.Load<TextAsset>("key").ToString();
+        //DisplayAPIKey(sgk);
+        //string sgk = System.IO.File.ReadLines(Application.dataPath + "/key.txt").First(); 
         //Debug.Log(sgk);
         // Using Post method for UnityWebRequest doesn't work well with sending JSON. Use this way instead.
         var www = new UnityWebRequest(uri, "POST");
@@ -50,4 +57,10 @@ public class SendEmail : MonoBehaviour
         }
         
     }
+
+    //private void DisplayAPIKey(string text)
+    //{
+    //    key.text = text;
+    //    aPIPanel.alpha = 1;
+    //}
 }
