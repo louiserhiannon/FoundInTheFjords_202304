@@ -74,3 +74,9 @@ crashlytics-build.properties
 # Keys for External API
 key.txt
 key.txt.meta
+
+# 360 degree videos
+zodiac.mp4
+zodiac.mp4.meta
+explorer.mp4
+explorer.mp4.meta
