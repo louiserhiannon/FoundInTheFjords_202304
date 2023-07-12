@@ -53,7 +53,7 @@ public class HumpbackTestController : MonoBehaviour
         StartCoroutine(OrcaSwimAway());
         //Debug.Log("orca swim away");
 
-        MovementControls.MC.ActivateMovementControls();
+        
 
         //humpback continues
         while (humpbackSwimToBaitball.distance > humpbackSwimToBaitball.minDistance)
@@ -93,9 +93,10 @@ public class HumpbackTestController : MonoBehaviour
         //start herring scales particle system
         herringScales.Play();
 
-        tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17a);
-        tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17b);
-        StartCoroutine(PlayExploreMusic());
+        MovementControls.MC.ActivateMovementControls();
+
+        
+        StartCoroutine(StartExplore());
 
         //activate interaction Signifiers
         for(int  i = 0; i < interactionSignifiers.Count; i++)
@@ -183,9 +184,12 @@ public class HumpbackTestController : MonoBehaviour
 
     }
 
-    private IEnumerator PlayExploreMusic()
+    private IEnumerator StartExplore()
     {
-        yield return new WaitForSeconds(tailslapTutorial.voiceover17a.length + tailslapTutorial.voiceover17b.length);
+        tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17a);
+        yield return new WaitForSeconds(tailslapTutorial.voiceover17a.length);
+        tailslapTutorial.momAudioSource.PlayOneShot(tailslapTutorial.voiceover17b);
+        yield return new WaitForSeconds(tailslapTutorial.voiceover17b.length);
         bgmSource.clip = exploreMusic;
         bgmSource.loop = true;
         bgmSource.Play();

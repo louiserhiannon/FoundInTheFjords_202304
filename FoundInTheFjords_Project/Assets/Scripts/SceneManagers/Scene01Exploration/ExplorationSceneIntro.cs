@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using TMPro;
 
 public class ExplorationSceneIntro : MonoBehaviour
 {
@@ -16,6 +17,17 @@ public class ExplorationSceneIntro : MonoBehaviour
     public GameObject leftController;
     public GameObject rightController;
     public CanvasGroup subtitlePanel;
+    private TMP_Text next;
+    private Color originalColour;
+    
+
+
+    private void Start()
+    {
+        next = controllerInstructionsButton.GetComponentInChildren<TMP_Text>();
+        originalColour = next.color;
+        next.color = Color.grey;
+    }
     public IEnumerator Scene01Intro()
     {
         yield return new WaitForSeconds(2f);
@@ -31,8 +43,8 @@ public class ExplorationSceneIntro : MonoBehaviour
         yield return new WaitForSeconds(1f);
         //show instructional panel and switch out fins for controllers
         controllerInstructions.DOFade(1.0f, 1.5f);
-        controllerInstructions.interactable = true;
-        controllerInstructions.blocksRaycasts = true;
+        //controllerInstructions.interactable = true;
+        //controllerInstructions.blocksRaycasts = true;
         controllerInstructionsButton.DOFade(1.0f, 1.5f);
 
         leftFin.SetActive(false);
@@ -45,7 +57,9 @@ public class ExplorationSceneIntro : MonoBehaviour
         yield return new WaitForSeconds(10f);
 
         //Activate button
-        
+        next.color = originalColour;
+        controllerInstructions.interactable = true;
+        controllerInstructions.blocksRaycasts = true;
         controllerInstructionsButton.interactable = true;
         controllerInstructionsButton.blocksRaycasts = true;
 

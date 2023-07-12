@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -21,9 +22,20 @@ public class OrientationSceneIntro : MonoBehaviour
     public GameObject rightController;
     public CanvasGroup subtitlePanel;
     public List<CanvasGroup> subtitleSnippets;
+    private TMP_Text next;
+    private Color originalColour;
     
+
+    private void Start()
+    {
+        next = controllerInstructionsButton.GetComponentInChildren<TMP_Text>();
+        originalColour = next.color;
+        next.color = Color.grey;
+    }
+
     public IEnumerator Scene00Intro()
     {
+        
         yield return new WaitForSeconds(2f);
         //play voiceover 1 and show subtitle 1
         claraAudioSource.PlayOneShot(voiceover01);
@@ -50,8 +62,8 @@ public class OrientationSceneIntro : MonoBehaviour
         yield return new WaitForSeconds(1f);
         //show instructional panel and switch out fins for controllers
         controllerInstructions.DOFade(1.0f, 1.5f);
-        controllerInstructions.interactable = true;
-        controllerInstructions.blocksRaycasts = true;
+        //controllerInstructions.interactable = true;
+        //controllerInstructions.blocksRaycasts = true;
         controllerInstructionsButton.DOFade(1.0f, 1.5f);
 
         leftFin.SetActive(false);
@@ -64,7 +76,10 @@ public class OrientationSceneIntro : MonoBehaviour
         yield return new WaitForSeconds(15f);
 
         //activate button
-        
+
+        next.color = originalColour;
+        controllerInstructions.blocksRaycasts = true;
+        controllerInstructions.interactable = true;
         controllerInstructionsButton.interactable = true;
         controllerInstructionsButton.blocksRaycasts = true;
 

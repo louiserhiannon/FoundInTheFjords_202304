@@ -689,6 +689,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 509344604}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &26461420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,6 +848,7 @@ MonoBehaviour:
   infoUI: {fileID: 1460102487}
   nextPanel: {fileID: 0}
   audioSource: {fileID: 1460102486}
+  keyboard: {fileID: 0}
 --- !u!114 &27707831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1636,6 +1638,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 509344604}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &95050568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4126,6 +4129,7 @@ MonoBehaviour:
   infoUI: {fileID: 2059321553}
   nextPanel: {fileID: 897390692}
   audioSource: {fileID: 2059321552}
+  keyboard: {fileID: 0}
 --- !u!114 &179543398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4802,6 +4806,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 1207217290}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &202121105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5612,6 +5617,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 405758193}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &247087960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8638,6 +8644,7 @@ MonoBehaviour:
   infoUI: {fileID: 7351510}
   nextPanel: {fileID: 0}
   audioSource: {fileID: 7351509}
+  keyboard: {fileID: 0}
 --- !u!114 &417819432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9271,6 +9278,7 @@ MonoBehaviour:
   infoUI: {fileID: 2059321553}
   nextPanel: {fileID: 18210576}
   audioSource: {fileID: 2059321552}
+  keyboard: {fileID: 0}
 --- !u!114 &445538894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15989,6 +15997,7 @@ MonoBehaviour:
   infoUI: {fileID: 1460102487}
   nextPanel: {fileID: 627433001}
   audioSource: {fileID: 1460102486}
+  keyboard: {fileID: 0}
 --- !u!114 &509178859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16212,6 +16221,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 234155483}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &509895650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18124,6 +18134,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 1484018537}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &614083361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25161,6 +25172,7 @@ MonoBehaviour:
   infoUI: {fileID: 2059321553}
   nextPanel: {fileID: 897390692}
   audioSource: {fileID: 2059321552}
+  keyboard: {fileID: 0}
 --- !u!114 &790134075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25968,6 +25980,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 1056028244}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &820050375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26293,6 +26306,7 @@ MonoBehaviour:
   infoUI: {fileID: 2059321553}
   nextPanel: {fileID: 164241673}
   audioSource: {fileID: 2059321552}
+  keyboard: {fileID: 0}
 --- !u!114 &829606734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26483,6 +26497,7 @@ MonoBehaviour:
   infoUI: {fileID: 1010638648}
   nextPanel: {fileID: 0}
   audioSource: {fileID: 0}
+  keyboard: {fileID: 0}
   orcaMom: {fileID: 1245079175}
   xRRig: {fileID: 562568031}
   momInteractionSignifier: {fileID: 5688143039969556470}
@@ -26890,6 +26905,7 @@ MonoBehaviour:
   infoUI: {fileID: 0}
   nextPanel: {fileID: 0}
   audioSource: {fileID: 1300554442}
+  keyboard: {fileID: 0}
   eatingController: {fileID: 562568036}
   moveControls: {fileID: 562568044}
   xRRig: {fileID: 562568031}
@@ -27890,7 +27906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Historny of the Fishery
+  m_text: History of the Fishery
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28373,6 +28389,7 @@ MonoBehaviour:
   infoUI: {fileID: 1460102487}
   nextPanel: {fileID: 1392037889}
   audioSource: {fileID: 1460102486}
+  keyboard: {fileID: 0}
 --- !u!114 &884799513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31336,6 +31353,7 @@ MonoBehaviour:
   infoUI: {fileID: 2059321553}
   nextPanel: {fileID: 897390692}
   audioSource: {fileID: 2059321552}
+  keyboard: {fileID: 0}
 --- !u!114 &1030266660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37056,6 +37074,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 509344604}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &1079411155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38965,6 +38984,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 509344604}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &1185719139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39091,6 +39111,7 @@ MonoBehaviour:
   infoUI: {fileID: 2059321553}
   nextPanel: {fileID: 95501772}
   audioSource: {fileID: 2059321552}
+  keyboard: {fileID: 0}
 --- !u!114 &1187980289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51918,7 +51939,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1353216070
 GameObject:
@@ -53541,6 +53562,7 @@ MonoBehaviour:
   infoUI: {fileID: 2059321553}
   nextPanel: {fileID: 897390692}
   audioSource: {fileID: 2059321552}
+  keyboard: {fileID: 0}
 --- !u!114 &1401805905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54123,6 +54145,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 509344604}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &1414325137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59697,6 +59720,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 1775581242}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &1440256694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65322,6 +65346,7 @@ MonoBehaviour:
   infoUI: {fileID: 0}
   nextPanel: {fileID: 0}
   audioSource: {fileID: 1300554442}
+  keyboard: {fileID: 0}
   eatingController: {fileID: 562568036}
   moveControls: {fileID: 0}
   xRRig: {fileID: 562568031}
@@ -65536,6 +65561,7 @@ MonoBehaviour:
   infoUI: {fileID: 0}
   nextPanel: {fileID: 0}
   audioSource: {fileID: 562568039}
+  keyboard: {fileID: 0}
   ladder: {fileID: 8116690165865082736}
   thisCanvas: {fileID: 1414629462}
   sayGoodbyeToMom: {fileID: 169127941}
@@ -77523,6 +77549,7 @@ MonoBehaviour:
   infoUI: {fileID: 2059321553}
   nextPanel: {fileID: 1651594986}
   audioSource: {fileID: 2059321552}
+  keyboard: {fileID: 0}
 --- !u!114 &1567318721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78268,9 +78295,13 @@ MonoBehaviour:
   infoUI: {fileID: 0}
   nextPanel: {fileID: 0}
   audioSource: {fileID: 562568039}
+  keyboard: {fileID: 0}
   thisCanvas: {fileID: 169127941}
   voiceover46: {fileID: 8300000, guid: 5fd6cda145b4e9e448e3ab462c920556, type: 3}
   voiceover47: {fileID: 8300000, guid: ea8bf3522d64fa446a6cfd214908a3b6, type: 3}
+  handModelLeft: {fileID: 7121833638184901678}
+  handModelRight: {fileID: 6054444784852762503}
+  ladderClimb: {fileID: 8930521646842459595}
 --- !u!1 &1606660044
 GameObject:
   m_ObjectHideFlags: 0
@@ -78410,6 +78441,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 509344604}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &1609614821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79115,6 +79147,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 2023204494}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &1641668327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84971,6 +85004,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 509344604}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &1700546856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90398,6 +90432,7 @@ MonoBehaviour:
   infoUI: {fileID: 0}
   nextPanel: {fileID: 0}
   audioSource: {fileID: 1300554442}
+  keyboard: {fileID: 0}
   eatingController: {fileID: 562568036}
   moveControls: {fileID: 0}
   xRRig: {fileID: 562568031}
@@ -90674,7 +90709,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7610526301786474132}
   m_Father: {fileID: 966481117}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -91758,6 +91794,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 509344604}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &1799850823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98764,7 +98801,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6867538462924154173}
   m_Father: {fileID: 1675655426}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -106954,6 +106992,7 @@ MonoBehaviour:
   infoUI: {fileID: 795560842}
   nextPanel: {fileID: 1484018537}
   audioSource: {fileID: 795560841}
+  keyboard: {fileID: 0}
 --- !u!114 &2098166315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107295,6 +107334,7 @@ MonoBehaviour:
   infoUI: {fileID: 2059321553}
   nextPanel: {fileID: 897390692}
   audioSource: {fileID: 2059321552}
+  keyboard: {fileID: 0}
 --- !u!114 &2105614061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119121,7 +119161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2242476739393901935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -635.5719, y: -8.587486, z: -663.35223}
+  m_LocalPosition: {x: -735, y: -8.5, z: -663}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -120015,6 +120055,49 @@ MonoBehaviour:
   level02: {fileID: 0}
   panel: {fileID: 0}
   secondaryPanel: {fileID: 0}
+--- !u!23 &5694037585676131922
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054444784852762503}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 626359415024840991, guid: 7da98b331152a354fbafd07a762ae472, type: 3}
+  - {fileID: -5473511107296324401, guid: 7da98b331152a354fbafd07a762ae472, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5700042337021556545
 GameObject:
   m_ObjectHideFlags: 0
@@ -120399,6 +120482,24 @@ GameObject:
   - component: {fileID: 4661992130499452592}
   m_Layer: 0
   m_Name: Bone.004
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &6054444784852762503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6867538462924154173}
+  - component: {fileID: 7557530891482966680}
+  - component: {fileID: 5694037585676131922}
+  m_Layer: 0
+  m_Name: Snorkeller_RightArmNoCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121287,6 +121388,14 @@ Transform:
   m_Father: {fileID: 7544940201858345411}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6787451081813068081
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7121833638184901678}
+  m_Mesh: {fileID: -1296976969852645106, guid: 7da98b331152a354fbafd07a762ae472, type: 3}
 --- !u!4 &6794971684101982150
 Transform:
   m_ObjectHideFlags: 0
@@ -121377,6 +121486,21 @@ Transform:
   m_Father: {fileID: 3159805264270590537}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &6867538462924154173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054444784852762503}
+  m_LocalRotation: {x: -0.19111873, y: -0.34078354, z: -0.28699014, w: 0.87462956}
+  m_LocalPosition: {x: 0.15, y: -0.13, z: -0.09}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1936911369}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -32, y: -35, z: -26}
 --- !u!114 &6869094021340141699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121995,6 +122119,24 @@ Transform:
   m_Father: {fileID: 284391335275073135}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7121833638184901678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7610526301786474132}
+  - component: {fileID: 6787451081813068081}
+  - component: {fileID: 8778968703323602427}
+  m_Layer: 0
+  m_Name: Snorkeller_LeftArm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &7144583350567139027
 GameObject:
   m_ObjectHideFlags: 0
@@ -122465,6 +122607,14 @@ Transform:
   m_Father: {fileID: 4649303271728799013}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7557530891482966680
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054444784852762503}
+  m_Mesh: {fileID: -1296976969852645106, guid: 7da98b331152a354fbafd07a762ae472, type: 3}
 --- !u!4 &7582114002573594821
 Transform:
   m_ObjectHideFlags: 0
@@ -122481,6 +122631,21 @@ Transform:
   m_Father: {fileID: 8978634345602958159}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &7610526301786474132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7121833638184901678}
+  m_LocalRotation: {x: -0.1434904, y: 0.31280026, z: 0.20416774, w: 0.91645086}
+  m_LocalPosition: {x: -0.15, y: -0.13, z: -0.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1744894739}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -23, y: 34, z: 18}
 --- !u!4 &7629079516061385799
 Transform:
   m_ObjectHideFlags: 0
@@ -123949,6 +124114,49 @@ Transform:
   m_Father: {fileID: 717703728995808060}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &8778968703323602427
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7121833638184901678}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 626359415024840991, guid: 7da98b331152a354fbafd07a762ae472, type: 3}
+  - {fileID: -5473511107296324401, guid: 7da98b331152a354fbafd07a762ae472, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &8816253072029002168
 Animator:
   serializedVersion: 5
@@ -124240,6 +124448,8 @@ MonoBehaviour:
   ladder: {fileID: 8930521646842459594}
   reverseParent: {fileID: 1750099365}
   climbSpeed: 0.5
+  isFlashingLeft: 1
+  isFlashingRight: 1
 --- !u!4 &8938684700799931222
 Transform:
   m_ObjectHideFlags: 0

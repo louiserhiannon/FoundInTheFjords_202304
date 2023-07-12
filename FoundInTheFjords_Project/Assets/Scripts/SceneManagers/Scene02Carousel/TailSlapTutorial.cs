@@ -249,6 +249,8 @@ public class TailSlapTutorial : MonoBehaviour
             yield return null;
         }
 
+        StartCoroutine(humpbackController.GoHumpback());
+
         //rotate to align to mom
 
         while (xRRig.transform.eulerAngles.y < moveToMom.targetTransform.eulerAngles.y - 2 || xRRig.transform.eulerAngles.y > moveToMom.targetTransform.eulerAngles.y + 2)
@@ -258,9 +260,9 @@ public class TailSlapTutorial : MonoBehaviour
             //xRRig.transform.rotation != moveToMom.targetTransform.rotation
         }
 
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
 
-        StartCoroutine(humpbackController.GoHumpback());
+        
        
     }
 

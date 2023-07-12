@@ -14,11 +14,23 @@ public class LadderClimb : MonoBehaviour
     public Transform ladder;
     public Transform reverseParent;
     public float climbSpeed;
-    
-    
+    public bool isFlashingLeft = true;
+    public bool isFlashingRight = true;
+
+
     // Update is called once per frame
     void Update()
     {
+        if (lefthand.isGrabbed && isFlashingLeft)
+        {
+            isFlashingLeft = false;
+        }
+
+        if (righthand.isGrabbed && isFlashingRight)
+        {
+            isFlashingRight = false;
+        }
+
         if (lefthand.isGrabbed && righthand.isGrabbed)
         {
             if (!coroutineRunning)

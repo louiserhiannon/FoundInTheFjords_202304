@@ -15,8 +15,14 @@ public class Level00Coroutines : MonoBehaviour
     public CanvasGroup subtitlePanel;
     public List<CanvasGroup> subtitleSnippets;
     public CanvasGroup ready;
-    
-    
+    public GameObject interactionSignifier;
+
+    private void Awake()
+    {
+        interactionSignifier.SetActive(false);
+    }
+
+
     public void StartCustomCoroutine(string name)
     {
         StartCoroutine(name);
@@ -59,6 +65,7 @@ public class Level00Coroutines : MonoBehaviour
 
         //start voiceover 11 and subtitles
         claraAudioSource.PlayOneShot(voiceoverClips[4]);
+        StartCoroutine(ShowInteractionSignifier());
         subtitleSnippets[4].DOFade(1, 1);
         //wait for duration of clip
         yield return new WaitForSeconds(voiceover11Duration);
@@ -71,5 +78,13 @@ public class Level00Coroutines : MonoBehaviour
         ready.DOFade(1, 1);
         ready.interactable = true;
         ready.blocksRaycasts = true;
+    }
+
+    private IEnumerator ShowInteractionSignifier()
+    {
+        yield return new WaitForSeconds(6);
+        interactionSignifier.SetActive(true);
+        yield return new WaitForSeconds(8);
+        interactionSignifier.SetActive(false);
     }
 }

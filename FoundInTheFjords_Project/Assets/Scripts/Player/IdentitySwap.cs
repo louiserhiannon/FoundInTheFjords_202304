@@ -90,7 +90,7 @@ public class IdentitySwap : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
         //voiceover 41
         audioSource.PlayOneShot(voiceover41);
-        yield return new WaitForSeconds(voiceover41Duration);
+        //yield return new WaitForSeconds(voiceover41Duration);
 
         //Fade lights down
         cameraFilterMaterial.DOColor(Color.black, 0.5f);

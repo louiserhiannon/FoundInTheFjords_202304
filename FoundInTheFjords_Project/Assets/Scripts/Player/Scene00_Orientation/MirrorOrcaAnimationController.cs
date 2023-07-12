@@ -21,7 +21,7 @@ public class MirrorOrcaAnimationController : PlayerInputController
     protected override void Awake()
     {
         base.Awake();
-        mirrorOrcaAnimator= GetComponent<Animator>();
+        mirrorOrcaAnimator = GetComponent<Animator>();
     }
 
     
