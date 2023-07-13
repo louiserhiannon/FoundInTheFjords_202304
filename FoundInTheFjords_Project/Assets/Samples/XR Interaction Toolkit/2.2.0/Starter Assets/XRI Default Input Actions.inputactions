@@ -530,7 +530,7 @@
                     "name": "",
                     "id": "a46b49d0-0754-4dac-a9a5-a822e10751f2",
                     "path": "<XRController>{LeftHand}/Primary2DAxis",
-                    "interactions": "Sector(directions=12,sweepBehavior=1),Sector(directions=2,sweepBehavior=2)",
+                    "interactions": "Sector(directions=12,sweepBehavior=1,pressPoint=0),Sector(directions=2,sweepBehavior=2)",
                     "processors": "",
                     "groups": "Generic XR Controller;Noncontinuous Move",
                     "action": "Snap Turn",
@@ -1524,6 +1524,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SnapTurn",
+                    "type": "Value",
+                    "id": "3f66cf9b-dd96-4924-827a-5bbd1abf9d95",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -1541,7 +1550,7 @@
                 {
                     "name": "",
                     "id": "94e6cfe0-0ab6-49b7-8c88-60b84993c4ab",
-                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1552,11 +1561,22 @@
                 {
                     "name": "",
                     "id": "11d5bce3-cd48-4811-9d71-a00e2378fcc9",
-                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "path": "<XRController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "JumpDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1107c8da-816d-43fb-9a7d-7c8466917406",
+                    "path": "<XRController>{LeftHand}/thumbstick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "SnapTurn",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

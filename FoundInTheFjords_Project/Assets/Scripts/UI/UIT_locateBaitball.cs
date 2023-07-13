@@ -121,7 +121,7 @@ public class UIT_locateBaitball : MonoBehaviour
         xRRig.transform.SetParent(null);
         //Activate controls
         xRRig.GetComponent<LocomotionController_General>().enabled = true;
-        xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = true;
+        //xRRig.GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = true;
         xRRig.GetComponent<EatingController>().enabled = true;
         xRRig.GetComponent<EatingController>().targetActive= true;
         EatingController.EC.eat_simple = true;

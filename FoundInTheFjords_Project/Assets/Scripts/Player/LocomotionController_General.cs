@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class LocomotionController_General : LocomotionController
 {
+    public float snapDelay;
+    public float turnAmount;
+    private bool isTurning = false;
     //public BoundingNetController net;
     public override void MoveForwardRelativeToCamera(float relativeForwardSpeed)
     {
@@ -95,4 +98,46 @@ public class LocomotionController_General : LocomotionController
         //}
         
     }
+
+    public override void Snap(float value)
+    {
+        //Debug.Log(value);
+        
+        //turn left
+        if (value < -0.90f && !isTurning)
+            {
+                StartCoroutine(DelaySnapLeft());
+                isTurning = true;
+            }
+        //turn right
+        else if (value > 0.90f && !isTurning)
+            {
+                StartCoroutine(DelaySnapRight());
+                isTurning = true;
+            }
+                
+        //reset bool
+        if (value > -0.1 && value < 0.1)
+        {
+            isTurning = false;
+        }
+
+    }
+
+
+    private IEnumerator DelaySnapLeft()
+    {
+        yield return new WaitForSeconds(snapDelay);
+        transform.Rotate(0, -turnAmount, 0);
+        
+    }
+
+    private IEnumerator DelaySnapRight()
+    {
+        yield return new WaitForSeconds(snapDelay);
+        transform.Rotate(0, turnAmount, 0);
+        
+    }
+
+
 }

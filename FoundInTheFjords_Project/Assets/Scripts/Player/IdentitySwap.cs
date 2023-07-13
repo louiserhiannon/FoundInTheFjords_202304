@@ -27,10 +27,11 @@ public class IdentitySwap : MonoBehaviour
     public Transform snorkeler03;
     public Transform snorkeler02BackToBoat;
     public Transform snorkeler03BackToBoat;
+    public AudioSource backgroundMusic;
 
 
     private AudioSource audioSource;
-    private float voiceover41Duration = 3.2f;
+    //private float voiceover41Duration = 3.2f;
     private float voiceover42Duration = 14.8f;
     private float voiceover43Duration = 14.0f;
     private GameObject nora;
@@ -82,7 +83,8 @@ public class IdentitySwap : MonoBehaviour
         //Start swirl animation
         swirl.Play();
         //Start swirl music
-        audioSource.PlayOneShot(swirlMusic, 0.2f);
+        audioSource.PlayOneShot(swirlMusic, 0.4f);
+        backgroundMusic.Stop();
         yield return new WaitForSeconds(1.5f);
         //start herring scales animation
         scales.Play();

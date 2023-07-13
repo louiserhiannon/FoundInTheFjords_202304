@@ -20,7 +20,7 @@ public class UIT_Orientation : MonoBehaviour
     public GameObject rightController;
     public CanvasGroup subtitlePanel;
     public List<CanvasGroup> subtitleSnippets;
-    public ActionBasedSnapTurnProvider snapTurnProvider;
+    //public ActionBasedSnapTurnProvider snapTurnProvider;
     public GameObject claraInteractionSignifierActual;
     public GameObject claraInteractionSignifierReflected;
     
@@ -70,7 +70,7 @@ public class UIT_Orientation : MonoBehaviour
         subtitleSnippets[0].DOFade(1, 1);
         //Switch on locomotion controls
         MovementControls.MC.ActivateMovementControls();
-        snapTurnProvider.enabled = false;
+        //snapTurnProvider.enabled = false;
 
         
         //wait for duration of clip

@@ -4541,7 +4541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5b7f1f4c5142a43859c603fe61462d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  claraAudioSource: {fileID: 0}
+  claraAudioSource: {fileID: 5532020196333613165}
   voiceoverClips:
   - {fileID: 8300000, guid: 9fe2d5480220e33448198a3f591245ed, type: 3}
   - {fileID: 8300000, guid: c368f72b8c34da74981cc6bc26fd2609, type: 3}
@@ -4556,9 +4556,9 @@ MonoBehaviour:
   - {fileID: 745452808}
   - {fileID: 636689718}
   - {fileID: 816213694}
-  snapTurnProvider: {fileID: 0}
-  claraInteractionSignifierActual: {fileID: 0}
-  claraInteractionSignifierReflected: {fileID: 0}
+  snapTurnProvider: {fileID: 1116545663}
+  claraInteractionSignifierActual: {fileID: 7145227068254352781}
+  claraInteractionSignifierReflected: {fileID: 2872877705482470708}
 --- !u!114 &563899297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8906,7 +8906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1116545662
 Transform:
   m_ObjectHideFlags: 0
@@ -8929,17 +8929,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116545661}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 1116545664}
-  m_TurnAmount: 60
+  m_TurnAmount: 40
   m_DebounceTime: 0.5
   m_EnableTurnLeftRight: 1
   m_EnableTurnAround: 1
-  m_DelayTime: 0.5
+  m_DelayTime: 0.2
   m_LeftHandSnapTurnAction:
     m_UseReference: 1
     m_Action:
@@ -8972,7 +8972,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116545661}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
   m_Name: 
@@ -20627,6 +20627,8 @@ MonoBehaviour:
   upJumpReference: {fileID: 6387002989369105328, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   downJumpReference: {fileID: 9137024802564582790, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
+  snapTurn: {fileID: -165346563414312256, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
   cameraForward: {x: 0, y: 0, z: 0}
   cameraRight: {x: 0, y: 0, z: 0}

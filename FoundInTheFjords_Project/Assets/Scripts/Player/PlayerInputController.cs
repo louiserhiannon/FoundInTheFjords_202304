@@ -73,6 +73,8 @@ public class PlayerInputController : MonoBehaviour
         
     }
 
+    
+
     public virtual void TailSlap(float value)
     {
         slapCharge += value;

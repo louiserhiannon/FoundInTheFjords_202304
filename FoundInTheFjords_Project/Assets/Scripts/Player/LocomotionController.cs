@@ -10,6 +10,7 @@ public class LocomotionController : MonoBehaviour
     public InputActionReference moveSpeedReference = null;
     public InputActionReference upJumpReference = null;
     public InputActionReference downJumpReference = null;
+    public InputActionReference snapTurn = null;
     protected Transform xrRig;
     protected Camera mainCamera;
     [SerializeField] protected Vector3 cameraForward = new Vector3();
@@ -64,7 +65,13 @@ public class LocomotionController : MonoBehaviour
         float xvalue = thumbstickPosition.x;        
         MoveForwardRelativeToCamera(yvalue);
         MoveSidewaysRelativeToCamera(xvalue);
-               
+
+        Vector2 snapPosition = snapTurn.action.ReadValue<Vector2>();
+        float snapValue = snapPosition.x;
+        Snap(snapValue);
+
+
+
     }
 
 
@@ -89,4 +96,11 @@ public class LocomotionController : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
+    public virtual void Snap(float value)
+    {
+        
+    }
+
+    
 }

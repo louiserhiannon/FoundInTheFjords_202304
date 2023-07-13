@@ -55,7 +55,7 @@ public class ActivateIdentitySwap : MonoBehaviour
 
             }
 
-            counter.text = count.ToString();
+            //counter.text = count.ToString();
             
         }
     }

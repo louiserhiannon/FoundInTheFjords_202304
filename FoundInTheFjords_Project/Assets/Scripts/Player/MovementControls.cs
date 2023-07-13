@@ -24,10 +24,10 @@ public class MovementControls : MonoBehaviour
             orientation.enabled = true;
         }
 
-        if (GetComponentInChildren<ActionBasedSnapTurnProvider>() != null)
-        {
-            GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = true;
-        }
+        //if (GetComponentInChildren<ActionBasedSnapTurnProvider>() != null)
+        //{
+        //    GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = true;
+        //}
     }
 
     public void DeactivateMovementControls()
@@ -48,10 +48,10 @@ public class MovementControls : MonoBehaviour
         }
             
 
-        if (GetComponentInChildren<ActionBasedSnapTurnProvider>() != null)
-        {
-            GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = false;
-        }
+        //if (GetComponentInChildren<ActionBasedSnapTurnProvider>() != null)
+        //{
+        //    GetComponentInChildren<ActionBasedSnapTurnProvider>().enabled = false;
+        //}
         
     }
 
