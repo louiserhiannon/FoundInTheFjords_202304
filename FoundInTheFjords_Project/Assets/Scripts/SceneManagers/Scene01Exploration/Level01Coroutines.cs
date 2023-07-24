@@ -12,6 +12,7 @@ public class Level01Coroutines : MonoBehaviour
     public List<float> voiceoverDurations;
     public CanvasGroup subtitlePanel;
     public List<CanvasGroup> subtitleSnippets;
+    public CanvasGroup sDGLogo;
     public GameObject momInteractionSignifier;
     public AudioSource bgmSource;
     public AudioClip exploreMusic;
@@ -30,11 +31,13 @@ public class Level01Coroutines : MonoBehaviour
         yield return new WaitForSeconds(voiceoverDurations[0]);
         subtitleSnippets[0].DOFade(0, 1);
         subtitleSnippets[1].DOFade(1, 1);
+        sDGLogo.DOFade(1, 1);
         yield return new WaitForSeconds(voiceoverDurations[1]);
         subtitleSnippets[1].DOFade(0, 1);
         yield return new WaitForSeconds(1f);
 
         //start voiceover 06
+
         headsetAudioSource.PlayOneShot(voiceoverClips[1]);
         subtitleSnippets[10].DOFade(1, 1);
         yield return new WaitForSeconds(voiceoverDurations[2]);
@@ -65,6 +68,7 @@ public class Level01Coroutines : MonoBehaviour
         subtitleSnippets[8].DOFade(1, 1);
         yield return new WaitForSeconds(voiceoverDurations[9]);
         subtitleSnippets[8].DOFade(0, 1);
+        sDGLogo.DOFade(0, 1);
         yield return new WaitForSeconds(1f);
 
         //start voiceover 08 and subtitles
