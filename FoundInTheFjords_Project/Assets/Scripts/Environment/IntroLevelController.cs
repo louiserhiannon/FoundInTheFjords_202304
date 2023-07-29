@@ -253,26 +253,26 @@ public class IntroLevelController : MonoBehaviour
 
         //move fish to final destination
         transformLogoFish.DOLocalMove(bigFishEndPosition, 5f);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 
         //move orca to final destination and start animation
         orcaAnimator.SetTrigger("PlayAnimation");
-        orcaImage.GetComponent<RectTransform>().DOLocalMove(orcaEndPosition, 8f);
-        yield return new WaitForSeconds(3f);
+        orcaImage.GetComponent<RectTransform>().DOLocalMove(orcaEndPosition, 12f);
+        yield return new WaitForSeconds(2f);
 
         //move humback to final destination and start animation
         humpbackAnimator.SetTrigger("PlayAnimation");
-        humpback.GetComponent<RectTransform>().DOLocalMove(humpbackEndPosition, 8f);
-        yield return new WaitForSeconds(3f);
+        humpback.GetComponent<RectTransform>().DOLocalMove(humpbackEndPosition, 12f);
+        yield return new WaitForSeconds(4f);
 
         // move boat and fish to final destination and start animation
-        boat.GetComponent<RectTransform>().DOLocalMove(boatEndPosition, 12f);
-        fish1.GetComponent<RectTransform>().DOLocalMove(fish1EndPosition, 11.5f);
-        fish2.GetComponent<RectTransform>().DOLocalMove(fish2EndPosition, 11.8f);
-        fish3.GetComponent<RectTransform>().DOLocalMove(fish3EndPosition, 12.2f);
-        fish4.GetComponent<RectTransform>().DOLocalMove(fish4EndPosition, 11.6f);
-        fish5.GetComponent<RectTransform>().DOLocalMove(fish5EndPosition, 12.3f);
-        fish6.GetComponent<RectTransform>().DOLocalMove(fish6EndPosition, 12.1f);
+        boat.GetComponent<RectTransform>().DOLocalMove(boatEndPosition, 14f);
+        fish1.GetComponent<RectTransform>().DOLocalMove(fish1EndPosition, 14.15f);
+        fish2.GetComponent<RectTransform>().DOLocalMove(fish2EndPosition, 13.9f);
+        fish3.GetComponent<RectTransform>().DOLocalMove(fish3EndPosition, 14.1f);
+        fish4.GetComponent<RectTransform>().DOLocalMove(fish4EndPosition, 13.85f);
+        fish5.GetComponent<RectTransform>().DOLocalMove(fish5EndPosition, 13.95f);
+        fish6.GetComponent<RectTransform>().DOLocalMove(fish6EndPosition, 14.05f);
 
 
 
