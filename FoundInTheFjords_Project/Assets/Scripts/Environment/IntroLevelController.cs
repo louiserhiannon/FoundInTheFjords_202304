@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class IntroLevelController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class IntroLevelController : MonoBehaviour
     public float cameraZoom02Duration;
     public float cameraZoom03Duration;
     public AudioSource audioSource;
+    public AudioClip sDGIntro;
     public AudioClip introVoiceover01;
     public AudioClip introVoiceover02;
     public AudioClip introVoiceover03;
@@ -32,8 +34,60 @@ public class IntroLevelController : MonoBehaviour
     public CanvasGroup fishingBoat;
     public CanvasGroup containerBoat;
     public CanvasGroup tourists;
-    //public Material underwaterSkybox;
     
+    public CanvasGroup subtitle;
+    public CanvasGroup sDG01;
+    public CanvasGroup sDG10;
+    public CanvasGroup sDG13;
+    public Image fITFLogo;
+    public Image sDGTitleNoWheel;
+    public Image sDGTitleWheel;
+    public Image sDGWheelEmpty;
+    public Image sDGWheelIcons;
+    public Image sDG14Background;
+    public Image spriteAnimation;
+    public Image spriteFinal;
+    public Image sDGLogoStart;
+    public Image sDGLogoFinalFish;
+    public Image sDGLogoFinalWaves;
+    public Image sDGLogoAnim;
+    public Image sDG14Title;
+    public Image orcaImage;
+    public Image humpback;
+    public Image fish1;
+    public Image fish2;
+    public Image fish3;
+    public Image fish4;
+    public Image fish5;
+    public Image fish6;
+    public Image boat;
+    public RectTransform maskTransform;
+    public Animator sDGanimator;
+    public Animator orcaAnimator;
+    public Animator humpbackAnimator;
+
+    private float sDG14StartScale = 1.053f;
+    private float sDG14EndScale = 1.3f;
+    private float sDGWheelEndScale = 1.0f;
+    private float sDGBackgroundEndScaleX = 4.55f;
+    private float sDGBackgroundEndScaleY = 6.27f;
+    private float sDGLogoEndScaleX = 1.35f;
+    private float sDGLogoEndScaleY = 0.90f;
+    private Vector3 sDGlogoEndPosition = new Vector3(51.2f, -23f, 0);
+    private Vector3 sDGBackgroudEndRotation = new Vector3(0, 0, 0);
+    private Vector3 orcaEndPosition = new Vector3(550, -151f, 0);
+    private Vector3 humpbackEndPosition = new Vector3(550f, -35, 0);
+    private Vector3 fish1EndPosition = new Vector3(550f, -52f, 0);
+    private Vector3 fish2EndPosition = new Vector3(550f, -101f, 0);
+    private Vector3 fish3EndPosition = new Vector3(550f, -153f, 0);
+    private Vector3 fish4EndPosition = new Vector3(550f, -82f, 0);
+    private Vector3 fish5EndPosition = new Vector3(550f, -147f, 0);
+    private Vector3 fish6EndPosition = new Vector3(550f, -118f, 0);
+    private Vector3 boatEndPosition = new Vector3(550f, 139f, 0);
+    private Vector3 titleEndPosition = new Vector3(-48f, 328f, 0);
+    
+    //public Material underwaterSkybox;
+
 
 
 
@@ -42,8 +96,7 @@ public class IntroLevelController : MonoBehaviour
         //set initial position of Rig
         xRRig.position = new Vector3(-35, 255, -875.5f);
         xRRig.eulerAngles = new Vector3(15.73f, 2.293f, 0f);
-        //Start zoom coroutine
-        StartCoroutine(IntroLevel());
+        
         
         //initialize game objects and materials
         orca.SetActive(false);
@@ -54,12 +107,179 @@ public class IntroLevelController : MonoBehaviour
         fishingBoat.alpha = 0;
         containerBoat.alpha = 0;
         tourists.alpha = 0;
+
+        //fade appropriate images
+        sDGWheelIcons.DOFade(0, 0);
+        sDG14Background.DOFade(0, 0);
+        spriteAnimation.DOFade(0, 0);
+        spriteFinal.DOFade(0, 0);
+        sDGLogoStart.DOFade(0, 0);
+        sDGLogoFinalFish.DOFade(0, 0);
+        sDGLogoFinalWaves.DOFade(0, 0);
+        sDGLogoAnim.DOFade(0, 0);
+        sDG14Title.DOFade(0, 0);
+        sDGTitleWheel.DOFade(0, 0);
+        sDG01.DOFade(0,0);
+        sDG10.DOFade(0,0);
+        sDG13.DOFade(0,0);
+
+        //Start zoom coroutine
+        StartCoroutine(IntroLevel());
     }
 
     protected IEnumerator IntroLevel()
     {
+        //Pause for a few seconds
+        yield return new WaitForSeconds(4f);
+
+        //Scale up wheel and fade FitF and Text
+        audioSource.PlayOneShot(sDGIntro);
+        //yield return new WaitForSeconds(0.25f);
+        sDGWheelEmpty.GetComponent<RectTransform>().DOScale(sDGWheelEndScale, 2);
+        fITFLogo.DOFade(0, 1);
+        sDGTitleNoWheel.DOFade(0, 1);
+        subtitle.DOFade(0, 1);
+
+        yield return new WaitForSeconds(2f);
+
+        //Fade in icons and centre title
+        sDGWheelIcons.DOFade(1, 2);
+        sDG14Background.DOFade(1, 2);
+        sDGTitleWheel.DOFade(1, 2);
+        sDGLogoStart.DOFade(1, 2f);
+        sDG01.DOFade(1, 2f);
+        sDG10.DOFade(1, 2f);
+        sDG13.DOFade(1, 2f);
+
+        //3 seconds down
+
+        yield return new WaitForSeconds(9.75f);
+        sDG01.GetComponent<RectTransform>().DOScale(sDG14EndScale, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        sDG01.GetComponent<RectTransform>().DOScale(sDG14StartScale, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        sDG10.GetComponent<RectTransform>().DOScale(sDG14EndScale, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        sDG10.GetComponent<RectTransform>().DOScale(sDG14StartScale, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        sDG13.GetComponent<RectTransform>().DOScale(sDG14EndScale, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        sDG13.GetComponent<RectTransform>().DOScale(sDG14StartScale, 0.5f);
+        
+        yield return new WaitForSeconds(3.25f);
+
+        //17 seconds down
+
+        //Pulse background image a few times
+        sDG14Background.GetComponent<RectTransform>().DOScale(sDG14EndScale, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        sDG14Background.GetComponent<RectTransform>().DOScale(sDG14StartScale, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        sDG14Background.GetComponent<RectTransform>().DOScale(sDG14EndScale, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        sDG14Background.GetComponent<RectTransform>().DOScale(sDG14StartScale, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        //sDG14Background.GetComponent<RectTransform>().DOScale(sDG14EndScale, 0.5f);
+        //yield return new WaitForSeconds(0.5f);
+        //sDG14Background.GetComponent<RectTransform>().DOScale(sDG14StartScale, 0.5f);
+        //yield return new WaitForSeconds(0.5f);
+
+        //fade in animation image
+        sDGWheelEmpty.DOFade(0, 0);
+        spriteAnimation.DOFade(1, 0f);
+        sDGLogoAnim.DOFade(1, 0f);
+        sDGLogoStart.DOFade(0, 0);
+        sDG14Background.DOFade(0, 0);
+
+
+        //Play animation
+        sDGanimator.SetTrigger("PlayAnimation");
+        yield return new WaitForSeconds(0.225f);
+
+
+        //Switch final and animation panels
+        spriteAnimation.DOFade(0, 0);
+        sDGLogoAnim.DOFade(0, 0);
+        spriteFinal.DOFade(1, 0f);
+        sDGLogoFinalFish.DOFade(1, 0);
+        sDGLogoFinalWaves.DOFade(1, 0);
+
+        //Rotate panel
+        var transformBG = spriteFinal.GetComponent<RectTransform>();
+        transformBG.DOLocalRotate(sDGBackgroudEndRotation, 1);
+        
+        //Scale background
+        transformBG.DOScaleX(sDGBackgroundEndScaleX, 1);
+        transformBG.DOScaleY(sDGBackgroundEndScaleY, 1);
+        //yield return new WaitForSeconds(2);
+
+        //Scale and move logo
+        var transformLogoFish = sDGLogoFinalFish.GetComponent<RectTransform>();
+        transformLogoFish.DOScaleX(sDGLogoEndScaleX, 1);
+        transformLogoFish.DOScaleY(sDGLogoEndScaleY, 1);
+        transformLogoFish.DOLocalMove(sDGlogoEndPosition, 1);
+
+        var transformLogoWaves = sDGLogoFinalWaves.GetComponent<RectTransform>();
+        transformLogoWaves.DOScaleX(sDGLogoEndScaleX, 1);
+        transformLogoWaves.DOScaleY(sDGLogoEndScaleY, 1);
+        transformLogoWaves.DOLocalMove(sDGlogoEndPosition, 1);
+
+        yield return new WaitForSeconds(1f);
+
+
+        //Fade in title
+        sDG14Title.DOFade(1, 1);
+        yield return new WaitForSeconds(8);
+
+        //Parent title,fish and waves to Mask
+        transformLogoFish.SetParent(maskTransform);
+        transformLogoWaves.SetParent(maskTransform);
+        RectTransform transformTitle = sDG14Title.GetComponent<RectTransform>();
+        transformTitle.SetParent(maskTransform);
+        
+
+        Vector3 wavesEndPosition = new Vector3(0.0035f, 330, 0);
+        Vector3 bigFishEndPosition = new Vector3(550f, -61.21f, 0);
+
+        //Move title (1s)
+        transformTitle.DOLocalMove(titleEndPosition, 1);
+        yield return new WaitForSeconds(1);
+
+        //move waves out of the way (1)
+        transformLogoWaves.DOLocalMove(wavesEndPosition, 2);
+        yield return new WaitForSeconds(3);
+
+        //Wait out rest of voiceover (20s)
+
+        //move fish to final destination
+        transformLogoFish.DOLocalMove(bigFishEndPosition, 5f);
+        yield return new WaitForSeconds(2);
+
+        //move orca to final destination and start animation
+        orcaAnimator.SetTrigger("PlayAnimation");
+        orcaImage.GetComponent<RectTransform>().DOLocalMove(orcaEndPosition, 8f);
+        yield return new WaitForSeconds(3f);
+
+        //move humback to final destination and start animation
+        humpbackAnimator.SetTrigger("PlayAnimation");
+        humpback.GetComponent<RectTransform>().DOLocalMove(humpbackEndPosition, 8f);
+        yield return new WaitForSeconds(3f);
+
+        // move boat and fish to final destination and start animation
+        boat.GetComponent<RectTransform>().DOLocalMove(boatEndPosition, 12f);
+        fish1.GetComponent<RectTransform>().DOLocalMove(fish1EndPosition, 11.5f);
+        fish2.GetComponent<RectTransform>().DOLocalMove(fish2EndPosition, 11.8f);
+        fish3.GetComponent<RectTransform>().DOLocalMove(fish3EndPosition, 12.2f);
+        fish4.GetComponent<RectTransform>().DOLocalMove(fish4EndPosition, 11.6f);
+        fish5.GetComponent<RectTransform>().DOLocalMove(fish5EndPosition, 12.3f);
+        fish6.GetComponent<RectTransform>().DOLocalMove(fish6EndPosition, 12.1f);
+
+
+
+        yield return new WaitForSeconds(8f);
+
         //Start Zoom01 animation
-        if(xrRigZoomAnimator != null)
+        if (xrRigZoomAnimator != null)
         {
             xrRigZoomAnimator.SetTrigger("CameraZoom01");
         }
@@ -74,12 +294,12 @@ public class IntroLevelController : MonoBehaviour
         //play voiceover 2a
         audioSource.PlayOneShot(introVoiceover02);
         //wait fraction of a second
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(4.0f);
         //activate orca model (with locomotion animation)
         orca.SetActive(true);
 
         //Wait some seconds
-        yield return new WaitForSeconds(clipDuration02);
+        yield return new WaitForSeconds(clipDuration02-1);
         //play voiceover 2b
         audioSource.PlayOneShot(introVoiceover03);
         StartCoroutine(ShowPictures());
@@ -108,13 +328,14 @@ public class IntroLevelController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         //Activate pin
         locationPin.SetActive(true);
+        yield return new WaitForSeconds(10);
         while(earth.transform.eulerAngles.y > 90)
         {
             yield return null;
         }
         earth.GetComponent<EarthRotation>().isRotating = false;
         //Wait until almost the end of the clip
-        yield return new WaitForSeconds(22.5f);
+        yield return new WaitForSeconds(6f);
         //Start Zoom03 animation
         if (xrRigZoomAnimator != null)
         {

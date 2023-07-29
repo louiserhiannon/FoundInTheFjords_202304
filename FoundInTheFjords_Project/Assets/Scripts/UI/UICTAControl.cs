@@ -15,6 +15,8 @@ public class UICTAControl : MonoBehaviour
     public List<CanvasGroup> actionPanels;
     public AudioClip intro;
     private AudioSource uISource;
+    public float fadeAlpha;
+    
 
     void Start()
     {
@@ -57,6 +59,27 @@ public class UICTAControl : MonoBehaviour
         }
     }
 
+    public void PartialFadeOut()
+    {
+        for (int i = 0; i < actionPanels.Count; i++)
+        {
+            actionPanels[i].DOFade(fadeAlpha, 1f);
+            actionPanels[i].interactable = false;
+            actionPanels[i].blocksRaycasts = false;
+        }
+
+    }
+
+    public void PanelFadeIn()
+    {
+        for (int i = 0; i < actionPanels.Count; i++)
+        {
+            actionPanels[i].DOFade(1f, 1.5f);
+            actionPanels[i].interactable = true;
+            actionPanels[i].blocksRaycasts = true;
+        }
+    }
+
     public IEnumerator UIAppear()
     {
         yield return new WaitForSeconds(3f);
@@ -71,11 +94,6 @@ public class UICTAControl : MonoBehaviour
 
         //introPanel.DOFade(0, 2);
 
-        for (int i = 0; i < actionPanels.Count; i++)
-        {
-            actionPanels[i].DOFade(1f, 2.0f);
-            actionPanels[i].interactable = true;
-            actionPanels[i].blocksRaycasts = true;
-        }
+        PanelFadeIn();
     }
 }
