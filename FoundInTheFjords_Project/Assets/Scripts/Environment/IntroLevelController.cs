@@ -69,22 +69,22 @@ public class IntroLevelController : MonoBehaviour
     private float sDG14StartScale = 1.053f;
     private float sDG14EndScale = 1.3f;
     private float sDGWheelEndScale = 1.0f;
-    private float sDGBackgroundEndScaleX = 4.55f;
-    private float sDGBackgroundEndScaleY = 6.27f;
-    private float sDGLogoEndScaleX = 1.35f;
-    private float sDGLogoEndScaleY = 0.90f;
-    private Vector3 sDGlogoEndPosition = new Vector3(51.2f, -23f, 0);
+    private float sDGBackgroundEndScaleX = 1.143f;
+    private float sDGBackgroundEndScaleY = 1.571f;
+    private float sDGLogoEndScaleX = 0.54f;
+    private float sDGLogoEndScaleY = 0.36f;
+    private Vector3 sDGlogoEndPosition = new Vector3(819.2f, -368f, 0);
     private Vector3 sDGBackgroudEndRotation = new Vector3(0, 0, 0);
-    private Vector3 orcaEndPosition = new Vector3(550, -151f, 0);
-    private Vector3 humpbackEndPosition = new Vector3(550f, -35, 0);
-    private Vector3 fish1EndPosition = new Vector3(550f, -52f, 0);
-    private Vector3 fish2EndPosition = new Vector3(550f, -101f, 0);
-    private Vector3 fish3EndPosition = new Vector3(550f, -153f, 0);
-    private Vector3 fish4EndPosition = new Vector3(550f, -82f, 0);
-    private Vector3 fish5EndPosition = new Vector3(550f, -147f, 0);
-    private Vector3 fish6EndPosition = new Vector3(550f, -118f, 0);
-    private Vector3 boatEndPosition = new Vector3(550f, 139f, 0);
-    private Vector3 titleEndPosition = new Vector3(-48f, 328f, 0);
+    private Vector3 orcaEndPosition = new Vector3(2200, -604f, 0);
+    private Vector3 humpbackEndPosition = new Vector3(2200f, -140, 0);
+    private Vector3 fish1EndPosition = new Vector3(2200f, -208f, 0);
+    private Vector3 fish2EndPosition = new Vector3(2200f, -404f, 0);
+    private Vector3 fish3EndPosition = new Vector3(2200f, -612f, 0);
+    private Vector3 fish4EndPosition = new Vector3(2200f, -328f, 0);
+    private Vector3 fish5EndPosition = new Vector3(2200f, -588f, 0);
+    private Vector3 fish6EndPosition = new Vector3(2200f, -472f, 0);
+    private Vector3 boatEndPosition = new Vector3(2200f, 553f, 0);
+    private Vector3 titleEndPosition = new Vector3(-192f, 1312f, 0);
     
     //public Material underwaterSkybox;
 
@@ -224,6 +224,14 @@ public class IntroLevelController : MonoBehaviour
         transformLogoWaves.DOScaleY(sDGLogoEndScaleY, 1);
         transformLogoWaves.DOLocalMove(sDGlogoEndPosition, 1);
 
+        //fade out wheel
+        sDGWheelIcons.DOFade(0, 1);
+        sDGTitleWheel.DOFade(0, 0);
+        sDG01.DOFade(0, 0);
+        sDG10.DOFade(0, 0);
+        sDG13.DOFade(0, 0);
+
+
         yield return new WaitForSeconds(1f);
 
 
@@ -238,8 +246,8 @@ public class IntroLevelController : MonoBehaviour
         transformTitle.SetParent(maskTransform);
         
 
-        Vector3 wavesEndPosition = new Vector3(0.0035f, 330, 0);
-        Vector3 bigFishEndPosition = new Vector3(550f, -61.21f, 0);
+        Vector3 wavesEndPosition = new Vector3(0.014f, 1320, 0);
+        Vector3 bigFishEndPosition = new Vector3(2200f, -244.84f, 0);
 
         //Move title (1s)
         transformTitle.DOLocalMove(titleEndPosition, 1);
@@ -257,13 +265,13 @@ public class IntroLevelController : MonoBehaviour
 
         //move orca to final destination and start animation
         orcaAnimator.SetTrigger("PlayAnimation");
-        orcaImage.GetComponent<RectTransform>().DOLocalMove(orcaEndPosition, 12f);
-        yield return new WaitForSeconds(2f);
+        orcaImage.GetComponent<RectTransform>().DOLocalMove(orcaEndPosition, 10f);
+        yield return new WaitForSeconds(3f);
 
         //move humback to final destination and start animation
         humpbackAnimator.SetTrigger("PlayAnimation");
         humpback.GetComponent<RectTransform>().DOLocalMove(humpbackEndPosition, 12f);
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
 
         // move boat and fish to final destination and start animation
         boat.GetComponent<RectTransform>().DOLocalMove(boatEndPosition, 14f);
@@ -328,14 +336,14 @@ public class IntroLevelController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         //Activate pin
         locationPin.SetActive(true);
-        yield return new WaitForSeconds(10);
+        //yield return new WaitForSeconds(10);
         while(earth.transform.eulerAngles.y > 90)
         {
             yield return null;
         }
         earth.GetComponent<EarthRotation>().isRotating = false;
         //Wait until almost the end of the clip
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(22.5f);
         //Start Zoom03 animation
         if (xrRigZoomAnimator != null)
         {
