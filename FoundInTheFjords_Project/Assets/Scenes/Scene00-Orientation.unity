@@ -4556,7 +4556,6 @@ MonoBehaviour:
   - {fileID: 745452808}
   - {fileID: 636689718}
   - {fileID: 816213694}
-  snapTurnProvider: {fileID: 1116545663}
   claraInteractionSignifierActual: {fileID: 7145227068254352781}
   claraInteractionSignifierReflected: {fileID: 2872877705482470708}
 --- !u!114 &563899297
@@ -14311,7 +14310,6 @@ MonoBehaviour:
   - {fileID: 745452808}
   - {fileID: 636689718}
   - {fileID: 816213694}
-  snapTurnProvider: {fileID: 1116545663}
   claraInteractionSignifierActual: {fileID: 7145227068254352781}
   claraInteractionSignifierReflected: {fileID: 2872877705482470708}
 --- !u!1 &1813331074
@@ -21506,7 +21504,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145184301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -11}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21515,7 +21513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 123}
+  m_AnchoredPosition: {x: 0, y: 152}
   m_SizeDelta: {x: 100, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2145184303
