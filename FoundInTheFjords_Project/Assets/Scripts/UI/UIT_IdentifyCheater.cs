@@ -89,9 +89,7 @@ public class UIT_IdentifyCheater : UITransition
         //Step 3 Audio and Text
         step03Text.DOFade(1f, 1f);
 
-        //start herring swimming
-        SpawnEatableHerring.SH.spawnHerring = true;
-        SpawnEatableHerring.SH.StartSpawning();
+        
         
         yield return new WaitForSeconds(voiceover13cDuration);
 

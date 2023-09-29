@@ -40,7 +40,7 @@ public class SpawnEatableHerring : MonoBehaviour
         while (spawnHerring)
         {
             count = 0;
-            yield return new WaitForSeconds(Random.Range(3f, 7f));
+            yield return new WaitForSeconds(Random.Range(2f, 5f));
             for (int i = 0; i < HerringSpawner.HS.herringList.Count; i++)
             {
                 if (!HerringSpawner.HS.herringList[i].activeSelf) 

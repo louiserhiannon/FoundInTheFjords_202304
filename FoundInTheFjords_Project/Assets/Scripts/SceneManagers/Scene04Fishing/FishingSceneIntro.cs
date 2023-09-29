@@ -40,8 +40,12 @@ public class FishingSceneIntro : MonoBehaviour
 
     public IEnumerator Scene04Intro()
     {
+        //start herring swimming
+        SpawnEatableHerring.SH.spawnHerring = true;
+        SpawnEatableHerring.SH.StartSpawning();
+
         //Move to Clara
-        
+
         if (noraMoveToTarget != null)
         {
             noraMoveToTarget.distance = Vector3.Distance(noraMoveToTarget.targetTransform.position, noraMoveToTarget.transform.position);

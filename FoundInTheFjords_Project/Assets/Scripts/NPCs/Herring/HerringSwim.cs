@@ -6,7 +6,7 @@ public class HerringSwim : MonoBehaviour
 {
     private MoveToObject swim;
     public GameObject herringTargetPrefab;
-    public Transform herringStorageArea;
+    public Vector3 herringStorageArea;
     private GameObject herringTarget;
 
     private void Awake()
@@ -20,7 +20,7 @@ public class HerringSwim : MonoBehaviour
         herringTarget = Instantiate(herringTargetPrefab, pos, Quaternion.identity);
         swim.targetTransform = herringTarget.transform;
         //herringTarget.SetActive(false);
-        herringStorageArea = transform;
+        herringStorageArea = transform.position;
         //this.gameObject.SetActive(false);
     }
 
@@ -43,11 +43,13 @@ public class HerringSwim : MonoBehaviour
             yield return null;
         }
 
-        //if (gameObject.activeSelf)
-        //{
-        //    gameObject.SetActive(false);
-        //    gameObject.transform.position = herringStorageArea.position;
-        //}
-        
+        gameObject.transform.position = herringStorageArea;
+
+        if (gameObject.activeSelf)
+        {
+            gameObject.SetActive(false);
+            
+        }
+
     }
 }
